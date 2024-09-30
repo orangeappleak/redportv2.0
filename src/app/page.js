@@ -52,11 +52,11 @@ export default function Home() {
       }}>
         <section ref={homeRef} id='home-page-wrapper' className="h-[150vh] w-screen">
           <div id="home-page" className="relative top-0 m-0 p-0 overflow-hidden h-lvh w-screen">
-            <div id="home-page-content" className="h-full bg-black flex flex-col p-[5em] max-[500px]:p-[2em]">
+            <div id="home-page-content" className="h-full bg-stone-950 flex flex-col p-[5em] max-[500px]:p-[2em]">
               <div id="home-page-heading" className="flex-[2] max-[500px]:flex-[8] w-full h-auto flex flex-row max-[500px]:flex-col justify-center items-center">
-                <h1 className="flex-1 text-white/50 text-3xl max-[500px]:text-2xl font-light flex items-center">Software</h1>
+                <h1 className="flex-1 text-stone-400 text-3xl max-[500px]:text-2xl font-light flex items-center">Software</h1>
                 <div id="middle-content-wrapper" className="flex-1 h-full flex flex-col justify-center items-center">
-                  <p className="text-white leading-none">Meet</p>
+                  <p className="text-stone-300 leading-none">Meet</p>
                   <AnimatedElement staggerEl="span" config={{
                     from: {
                       transform: 'translate(0%, 0%)',
@@ -74,10 +74,10 @@ export default function Home() {
                     }
                   }}>
                     <WordSplit>
-                      <h1 splitStyle="flex overflow-hidden leading-none" className="leading-none my-5 text-white font-normal text-[10vw] max-[500px]:text-[20vw] tracking-normal">Karthik</h1>
+                      <h1 splitStyle="flex overflow-hidden leading-none" className="leading-none my-5 text-stone-300 font-normal text-[10vw] max-[500px]:text-[20vw] tracking-normal">Karthik</h1>
                     </WordSplit>
                   </AnimatedElement>
-                  <p className="text-white text-center text-xl max-[500px]:text-sm">Seasoned software developer crafting innovative digital solutions, from web pages to complex applications, all while embracing the journey of code magic.</p>
+                  <p className="text-stone-600 text-center text-xl max-[500px]:text-sm">Seasoned software developer crafting innovative digital solutions, from web pages to complex applications, all while embracing the journey of code magic.</p>
                 </div>
                 <h1 className="flex-1 text-white/50 text-3xl max-[500px]:text-2xl font-light flex items-center justify-end">Developer</h1>
               </div>
@@ -138,7 +138,7 @@ const IntroPage = () => {
           end: 'bottom top',
         }
       }}>
-        <h1 className="relative w-auto text-nowrap font-semibold z-[4] text-black">Pioneering change</h1>
+        <h1 className="relative w-auto text-nowrap font-semibold z-[4] text-stone-800">Pioneering change</h1>
       </AnimatedElement>
       <div id="middle" className="w-full flex flex-nowrap justify-center items-center z-[0] relative my-[0.5em]">
         {/* <h1 className="relative text-[5vw] font-semibold z-3">creative</h1>
@@ -159,7 +159,7 @@ const IntroPage = () => {
           end: 'bottom top',
         }
       }}>
-        <h1 className="relative text-nowrap font-semibold z-[4] text-black">Pioneering change</h1>
+        <h1 className="relative text-nowrap font-semibold z-[4] text-stone-800">Pioneering change</h1>
       </AnimatedElement>
     </div>
     <div id="intro-page-image" className="absolute w-full z-0 h-screen flex justify-center items-end max-[500px]:items-center max-[500px]:top-0 left-0">
@@ -191,12 +191,12 @@ const Manifesto = () => {
           top: 0,
           stagger: 0.06,
           ease: 'power4.inOut',
-          duration: 5,
+          duration: 3,
         },
         scrollTrigger: {
           scrub: 5,
           start: 'top bottom',
-          end: 'center 70%'
+          end: 'center 70%',
         }
       }}>
 
@@ -256,9 +256,9 @@ const About = () => {
     st.create({
       trigger: bodyRef.current.querySelector('#about-page #curly-heading'),
       pin: true,
-      endTrigger: bodyRef.current.querySelector('#about-page #about-cards3'),
+      endTrigger: bodyRef.current.querySelector('#about-cards-wrapper'),
       start: 'top top',
-      end: 'center center ',
+      end: 'bottom bottom ',
       anticipatePin: 1,
       pinSpacing: false,
     });
@@ -290,7 +290,7 @@ const About = () => {
 
 
   return <section id='about-page' className="relative h-full w-full my-20 box-border flex items-center flex-col max-[500px]:flex-col">
-    <div id="curly-heading" className="h-lvh w-1/2 flex py-[10em] max-[500px]:py-[2em] flex-col justify-center flex-1 max-[500px]:w-full">
+    <div id="curly-heading" className="h-lvh w-1/2 flex py-[5em] max-[500px]:py-[2em] flex-col justify-center flex-1 max-[500px]:w-full">
       <h1 className="text-xl text-slate-700 font-bold text-left">Work Flow</h1>
       <p className="text-3xl text-left mt-5">Innovating solutions, perfecting user experiences, and delivering high-quality software with precision and agility.</p>
     </div>
@@ -313,9 +313,9 @@ const About = () => {
               <h1 className="relative flex-1 opacity-5 text-[40vw] text-center leading-none">&#125;</h1>
           </div>
       </div> */}
-    <div id="about-cards-wrapper" className="w-full box-border flex-1 justify-center items-center flex flex-col max-[500px]:w-full">
+    <div id="about-cards-wrapper" className="w-full pb-[50em] box-border flex-1 justify-center items-center flex flex-col max-[500px]:w-full">
       {aboutData.map((el, index) => {
-        return <div key={index} id={"about-cards" + index} className={`w-full ${index != (aboutData.length - 1) ? "mb-[20em]" : "mb-0"} px-[15em] relative h-auto max-[500px]:px-0`}>
+        return <div key={index} id={"about-cards" + index} className={`w-full ${index != (aboutData.length - 1) ? "mb-[20em]" : "mb-0"} px-[0em] relative h-auto max-[500px]:px-0`}>
           <AboutCard content={el.content} heading={el.title} index={index} id={'page' + index} src={el.src}></AboutCard>
         </div>
       })}
@@ -335,29 +335,35 @@ const AboutCard = ({ id, index, heading, content, src }) => {
     st.create({
       trigger: bodyRef.current.querySelector(`#about-page #${id}`),
       pin: true,
-      endTrigger: bodyRef.current.querySelector('#about-page #about-cards3'),
+      ease: 'power4.inOut',
+      endTrigger: bodyRef.current.querySelector('#about-cards-wrapper'),
       start: `top ${startPos + (index * 15)}`,
+      end: 'bottom bottom',
       anticipatePin: 1,
-      end: 'center center',
       pinSpacing: false,
     })
   }, [id]);
 
   return <AnimatedElement config={{
-    to: {
+    from: {
       scale: 1,
     },
+    to: {
+      scale: 0.9,
+      duration: 4
+    },
     scrollTrigger: {
-      scrub: 0.2,
-      start: 'center center',
-      end: 'bottom bottom',
+      scrub: 1,
+      start: 'top center',
+      end: 'center top',
+      ease: 'power4.inOut',
     }
-  }} id={id} className="h-[40vh] backdrop-blur-sm max-[500px]:backdrop-blur-0 overflow-hidden bg-white/80 rounded-3xl box-border shadow-2xl">
-    <div id="about-content" className="relative flex h-full flex-row max-[500px]:flex-col overflow-hidden">
-      <div id="about-content-image" className="flex flex-1 shadow-[10px_0_20px_1px] shadow-black/30 items-center justify-center overflow-hidden max-[500px]:absolute max-[500px]:h-[100%] top-0 left-0">
+  }} id={id} className="h-[70vh] border-slate-500 border-2 w-full overflow-hidden bg-stone-900 rounded-3xl box-border shadow-2xl">
+    <div id="about-content" className="relative flex h-full px-10 flex-row max-[500px]:flex-col overflow-hidden">
+      {/* <div id="about-content-image" className="flex flex-1 shadow-[10px_0_20px_1px] shadow-black/30 items-center justify-center overflow-hidden max-[500px]:absolute max-[500px]:h-[100%] top-0 left-0">
         <Image loading="lazy" alt='alt' width={800} height={800} className="h-full w-auto max-[500px]:w-auto max-[500px]:h-full max-w-[100vw]" src={src} />
-      </div>
-      <div id="about-content-left" className="flex-col max-[500px]:backdrop-blur-none flex-1 flex items-start p-10 max-[500px]:p-10 justify-center">
+      </div> */}
+      <div id="about-content-left" className="flex-col max-[500px]:backdrop-blur-none w-3/4 flex items-start p-10 max-[500px]:p-10 justify-center">
         <AnimatedElement className="mb-5" staggerEl="span" config={{
           to: {
             transform: 'translate(0%, 0%)',
@@ -371,10 +377,10 @@ const AboutCard = ({ id, index, heading, content, src }) => {
           }
         }}>
           <WordSplit>
-            <h1 words={false} splitStyle='overflow-hidden flex items-center justify-center relative' className="relative opacity-1 translate-y-[100%] tracking-normal leading-none font-semibold text-black text-[3vw] max-[500px]:text-white max-[500px]:text-center max-[500px]:text-[6vw]">{heading}</h1>
+            <h1 words={false} splitStyle='overflow-hidden flex items-center justify-center relative' className="relative opacity-1 translate-y-[100%] tracking-normal leading-none font-semibold text-white text-9xl max-[500px]:text-white max-[500px]:text-center max-[500px]:text-[6vw]">{heading}</h1>
           </WordSplit>
         </AnimatedElement>
-        <p className="z-2 text-black text-md max-[500px]:text-sm max-[500px]:text-white">{content}</p>
+        <p className="z-2 text-stone-400 text-4xl max-[500px]:text-sm max-[500px]:text-white">{content}</p>
       </div>
     </div>
   </AnimatedElement>
@@ -389,7 +395,7 @@ const Projects = () => {
     st.create({
       trigger: bodyRef.current.querySelector("#projects-content-wrapper"),
       pin: true,
-      endTrigger: bodyRef.current.querySelector("#project2"),
+      endTrigger: bodyRef.current.querySelector("#project3"),
       start: 'top top',
       end: 'bottom bottom',
       pinSpacing: false,
