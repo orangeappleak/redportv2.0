@@ -29,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="overflow-x-hidden bg-black">
+        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
         <div ref={bodyRef}>
           <BodyRefProvider mainRef={bodyRef}>
             <ScrollTriggerProvider scrollTrigger={ScrollTrigger}>
