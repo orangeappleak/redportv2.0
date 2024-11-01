@@ -10,7 +10,7 @@ export default function TransitionLayout({ children }) {
     const [displayChildren, setDisplayChildren] = useState(children)
     const { timeline } = useContext(TransitionContext);
     const { contextSafe } = useGSAP();
-    const transitionRef = useRef(null);
+    // const transitionRef = useRef(null);
 
     const exit = contextSafe(() => {
         window.scrollTo(0, 0);
