@@ -216,9 +216,9 @@ export default function Index() {
 
   return (
     <div id="main-container" ref={container} className='h-auto w-screen flex flex-col'>
-      <section id="start-page" className="relative w-full h-[130vh] overflow-hidden">
+      <section id="start-page" className="relative w-full h-[130vh] max-[500px]:h-screen overflow-hidden">
         <div id="image" className='absolute w-full top-0 left-0 h-full overflow-hidden'>
-          <Image src={'/me2.jpg'} width={1000} height={1000} className='w-screen contrast-125 brightness-75 -translate-y-1/4' alt="me-image" priority />
+          <Image src={'/me2.jpg'} width={1000} height={1000} className='max-[500px]:scale-x-150 max-[500px]:w-auto w-screen absolute max-[500px]:h-screen contrast-125 brightness-75 -translate-y-1/4 max-[500px]:translate-y-0' alt="me-image" priority />
         </div>
         <AnimatedElement config={{
           to: {
@@ -231,16 +231,16 @@ export default function Index() {
             end: 'bottom top',
           }
         }}>
-          <div id="image-content" className='p-32 box-border h-screen flex items-end relative z-10'>
-            <h1 className='text-7xl w-1/2 text-white'>Creating pixel perfect implementations from design to development</h1>
+          <div id="image-content" className='p-32 max-[500px]:p-10 box-border h-screen flex items-end relative z-10'>
+            <h1 className='text-7xl max-[500px]:text-3xl font-medium w-1/2 max-[500px]:w-full text-white'>Creating pixel perfect implementations from design to development</h1>
           </div>
         </AnimatedElement>
       </section>
 
       <div id='next-sections' className='h-auto w-full bg-[#e3e6e4]'>
-        <section className='bg-[#e3e6e4] relative overflow-hidden h-auto w-full p-32 flex flex-col'>
-          <div id="first-wrapper" className='w-full flex flex-col items-end'>
-            <div id="inner-wrapper" className='w-3/4 flex flex-col'>
+        <section className='bg-[#e3e6e4] relative overflow-hidden h-auto w-full p-32 max-[500px]:p-10 flex flex-col'>
+          <div id="first-wrapper" className='w-full flex flex-col items-end max-[500px]:items-start'>
+            <div id="inner-wrapper" className='w-3/4 max-[500px]:w-full flex flex-col'>
               <div id="main-heading" className='mb-20'>
                 <AnimatedElement staggerEl='#alpha' config={{
                   from: {
@@ -259,16 +259,16 @@ export default function Index() {
                   }
                 }}>
                   <WordSplit>
-                    <p words={true} splitStyle="text-left max-[500px]:text-left inline-block" className={`text-stone-700 text-7xl font-extralight inline-block p-1`}>The developer's role is like an architect, designing efficient, scalable, and intuitive experiences that bring ideas to life with precision and creativity.
+                    <p words={true} splitStyle="text-left max-[500px]:text-left inline-block" className={`text-stone-700 text-7xl max-[500px]:text-3xl font-medium inline-block p-1 max-[500px]:py-0 max-[500px]:px-1`}>The developer's role is like an architect, designing efficient, scalable, and intuitive experiences that bring ideas to life with precision and creativity.
                     </p>
                   </WordSplit>
                 </AnimatedElement>
               </div>
-              <div id="some-words" className='flex flex-row'>
-                <div id="heading" className='flex-1'><h1 className='text-3xl'>Some words</h1></div>
-                <div id="some-words-content" className='z-10 flex-[2] text-2xl'>
+              <div id="some-words" className='flex flex-row max-[500px]:flex-col'>
+                <div id="heading" className='flex-1 max-[500px]:flex-[0.5]'><h1 className='text-3xl mb-7'>Some words</h1></div>
+                <div id="some-words-content" className='z-10 flex-[2] text-2xl max-[500px]:text-xl'>
 
-                  <p className="text-left max-[500px]:text-left inline-block">
+                  <p className="text-left max-[500px]:text-left font-light inline-block">
                     Hey there! I’m a 24-year-old developer with a passion for creating intuitive and engaging digital experiences. My journey in tech has equipped me with a diverse skill set in front-end development, primarily using React and JavaScript, but I also love exploring the depths of design and user experience. <br /><br />
 
                     When I’m not coding, you can find me immersed in competitive games, sketching out my next creative project, or delving into the fascinating stories of history. Badminton is my go-to sport on the weekends, where I enjoy the thrill of a good match, and music is a big part of my life—I’m a professional Veena player, blending traditional artistry with my tech-savvy nature.<br /><br />
@@ -281,35 +281,35 @@ export default function Index() {
             </div>
 
           </div>
-          <div id="second-wrapper" className='w-full mt-52 h-screen'>
+          <div id="second-wrapper" className='w-full mt-52 h-screen max-[500px]:h-auto'>
             <div id="facts-figures" className='flex flex-col'>
               <div id="heading" className='relative'>
-                <AnimatedElement trigger='#some-words' config={{
+                <AnimatedElement trigger='#image-content' config={{
                   from: {
-                    x: '0%',
+                    x: '10%',
                   },
                   to: {
-                    x: "-200%",
+                    x: "-500%",
                     ease: 'power4.inOut',
-                    duration: 4,
+                    duration: 2,
                   },
                   scrollTrigger: {
-                    endTrigger: "#second-wrapper",
-                    scrub: 4,
-                    start: 'top top',
-                    end: 'bottom bottom',
+                    endTrigger: "#third-wrapper",
+                    scrub: 1,
+                    start: 'center center',
+                    end: 'center center'
                   }
                 }}>
                   <h1 className='relative w-auto whitespace-nowrap leading-tight inline-block text-[15vw] font-semibold text-stone-700'>Facts & Figures . Facts & Figures . Facts & Figures</h1>
                 </AnimatedElement>
               </div>
-              <div id="fact-cards" className='mt-20 grid grid-cols-3 gap-10'>
+              <div id="fact-cards" className='mt-20 grid grid-cols-3 max-[500px]:grid-cols-1 gap-10'>
                 <AnimatedElement trigger="#second-wrapper" config={{
                   from: {
                     y: '0%',
                   },
                   to: {
-                    y: "-30%",
+                    y: "-15%",
                     ease: 'power4.inOut',
                     duration: 4,
                   },
@@ -333,12 +333,12 @@ export default function Index() {
                     y: '0%',
                   },
                   to: {
-                    y: "30%",
+                    y: "15%",
                     ease: 'power4.inOut',
                     duration: 4,
                   },
                   scrollTrigger: {
-                    scrub: 2,
+                    scrub: 1,
                     start: 'top bottom',
                     end: 'bottom top',
                   }
@@ -352,27 +352,25 @@ export default function Index() {
             </div>
           </div>
 
-          <div id="third-wrapper" className='relative h-[800vh] overflow-hidden'>
+          <div id="third-wrapper" className='relative h-[800vh] w-full box-border overflow-hidden'>
             <div ref={pinElement1} id="super-powers-heading" className='relative top-0 w-full left-0 h-screen flex flex-col justify-center items-center'>
-              <h1 className='text-[8vw] text-stone-700 font-bold text-center leading-tight'>What are my</h1>
-              <h1 className='text-[8vw] text-stone-700 font-bold text-center leading-tight'>Super Powers?</h1>
+              <h1 className='text-[8vw] text-stone-700 font-bold max-[500px]:font-light max-[500px]:text-4xl text-center leading-tight'>What are my</h1>
+              <h1 className='text-[8vw] max-[500px]:text-[20vw] text-stone-700 font-bold text-center  leading-none'>Super Powers?</h1>
             </div>
-
-            <div id="third-inner-wrapper" className=' absolute top-[70vh] h-auto box-border flex w-full'>
-              <div id="super-power-card-data1" className='h-auto top-full box-border p-10 flex-1 flex flex-col justify-center items-center relative w-full'>
+            <div id="third-inner-wrapper" className='absolute top-[70vh] h-auto box-border flex flex-row w-full'>
+              <div id="super-power-card-data1" className='h-auto max-[500px]:absolute z-10 top-full box-border p-10 flex-1 flex flex-col justify-center items-center relative w-full'>
                 {superPowerData1.map((data, index) => {
                   return <SuperCardBox key={index} cardInfo={{ data, index }} />
                 })}
               </div>
-              <div id='super-power-card-wrapper' className='flex h-screen justify-center items-center top-0 flex-1'>
-                <div id="super-power-card" className='h-[80vh] w-full border-2 overflow-hidden justify-center items-center border-black/50 rounded-3xl relative'>
+              <div id='super-power-card-wrapper' className='flex  box-border w-full h-screen justify-center items-center top-0 flex-1'>
+                <div id="super-power-card" className='h-[80vh] border-4 border-orange-500 w-full overflow-hidden justify-center items-center border-black/50 rounded-3xl relative'>
                   {superImageContent.map((data, index) => {
                     return <SuperImageContent key={index} data={data} />
                   })}
-
                 </div>
               </div>
-              <div id="super-power-card-data2" className='h-screen flex-1 p-10 relative top-0 w-full'>
+              <div id="super-power-card-data2" className='h-screen max-[500px]:hidden flex-1 p-10 relative top-0 w-full'>
                 {skillSet.map((data, index) => {
                   return <SuperCardBoxSkills key={index} data={data} />
                 })}
@@ -400,8 +398,8 @@ const SuperImageContent = ({ data }) => {
     updateCol(data.bgColor);
   }, [data])
 
-  return <div id="image-wrapper" className={`flex p-10 super-image top-0 relative w-full h-full overflow-visible ${data.bgColor}`} >
-    <div id="content-wrapper" className='flex flex-col justify-around'>
+  return <div id="image-wrapper" className={`flex p-10 max-[500px]:p-5 super-image top-0 relative w-full h-full overflow-visible ${data.bgColor}`} >
+    <div id="content-wrapper" className='w-full flex flex-col justify-around'>
       <div id="content-2">
         {data.content.map((datam, index) => {
           return <div key={index} className='mb-5' id="text-content">
@@ -412,7 +410,7 @@ const SuperImageContent = ({ data }) => {
       </div>
       <div id="content-1" className='flex flex-col items-start'>
         {data.headings.map((heading, index) => {
-          return <h1 key={index} className={`${data.headingColor} font-bold text-7xl`}>{heading}</h1>
+          return <h1 key={index} className={`${data.headingColor} font-bold text-8xl max-[500px]:text-6xl`}>{heading}</h1>
         })}
       </div>
     </div>
@@ -452,8 +450,8 @@ const SuperCardBox = ({ cardInfo }) => {
         className='h-screen w-full justify-center items-center flex-1'
       >
         <div ref={container} id="container" className='h-full flex justify-center py-10 items-center'>
-          <div ref={contContent} id="container-content" className='translate-x-0 w-full flex justify-center items-center h-1/5 bg-slate-700 rounded-xl'>
-            <h1 className='text-5xl text-white px-10 py-20'>{cardInfo.data}</h1>
+          <div ref={contContent} id="container-content" className='translate-x-0 w-full flex justify-center backdrop-blur-sm items-center h-1/5 max-[500px]:h-auto bg-black/60 border-2 border-orange-500 rounded-xl'>
+            <h1 className='text-5xl max-[500px]:text-xl text-white font-bold max-[500px]:p-5 px-10 py-20'>{cardInfo.data}</h1>
           </div>
         </div>
       </div>
@@ -494,8 +492,8 @@ const SuperCardBoxSkills = ({ data }) => {
 const FactCards = ({ number, title, colorG }) => {
   return (
     <div id="factCard" className='border-4 border-stone-600  rounded-3xl flex justify-between flex-col'>
-      <h1 className={`bg-clip-text ${colorG} py-10 px-5 text-8xl text-transparent font-bold`}>{number}</h1>
-      <h1 className='text-2xl py-2 px-5 text-slate-600 border-t-slate-600 border-t-[1px]'>{title}</h1>
+      <h1 className={`bg-clip-text ${colorG} py-10 px-5 max-[500px]:py-5 text-8xl max-[500px]:text-center max-[500px]:text-6xl text-transparent font-bold`}>{number}</h1>
+      <h1 className='text-2xl max-[500px]:text-lg py-2 px-5 text-slate-600 max-[500px]:text-center border-t-slate-600 border-t-[1px]'>{title}</h1>
     </div>
   )
 }
