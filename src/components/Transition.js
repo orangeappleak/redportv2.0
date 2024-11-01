@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useContext, useRef, useEffect } from "react"
+import { useState, useContext, useRef } from "react"
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { TransitionContext } from "@/context/TransitionContext";

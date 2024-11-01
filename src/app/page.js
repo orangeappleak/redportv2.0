@@ -1,6 +1,5 @@
 "use client"
 
-import { Inter } from "next/font/google";
 import { useGSAP } from '@gsap/react';
 import { TransitionContext } from '@/context/TransitionContext';
 import projectsData from './projectsData';
@@ -10,13 +9,13 @@ import { useBodyRef, useScrollTriggger } from "@/context/BodyRefContext";
 import { AnimatedElement, WordSplit, getRandomNumber } from '@/components/Utilities';
 
 import gsap from "gsap";
-import { useContext, useRef, useEffect, useState, useLayoutEffect, use } from 'react';
+import { useContext, useRef, useEffect, useState } from 'react';
 
 export default function Home() {
-  const { timeline } = useContext(TransitionContext);
+  // const { timeline } = useContext(TransitionContext);
   const container = useRef(null);
   const homeRef = useRef();
-  const { bodyRef } = useBodyRef();
+  // const { bodyRef } = useBodyRef();
 
   useEffect(() => {
     gsap.to(homeRef.current, {
@@ -322,7 +321,7 @@ const About = () => {
   </section>
 }
 
-const AboutCard = ({ id, index, heading, content, src }) => {
+const AboutCard = ({ id, index, heading, content }) => {
 
   const bodyRef = useBodyRef();
   const st = useScrollTriggger();
@@ -461,9 +460,9 @@ const Projects = () => {
   </section >
 }
 
-const Project = ({ st, bodyRef, data, id, index }) => {
+const Project = ({ data, id }) => {
 
-  let [mobile, updateMobile] = useState(false)
+  // let [mobile, updateMobile] = useState(false)
 
   // useEffect(() => {
   //   mobile = window.matchMedia("(max-width: 600px)").matches;

@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, createContext, useEffect } from "react"
+import React, { useState, createContext } from "react"
 import gsap from "gsap"
 
 const TransitionContext = createContext({})

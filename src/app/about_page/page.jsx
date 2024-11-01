@@ -11,8 +11,6 @@ export default function Index() {
   const { timeline } = useContext(TransitionContext);
   const container = useRef(null);
   const pinElement1 = useRef(null);
-  const [conts, setConts] = useState(null);
-  const boxRefs = useRef([]); // Store an array of refs
 
   const superPowerData1 = [
     "Full Stack Development",
@@ -130,9 +128,9 @@ export default function Index() {
 
     const targets = gsap.utils.toArray([".super-image"]);
     const containers = gsap.utils.toArray(['#container-content']);
-    setConts(containers);
+    // setConts(containers);
 
-    containers.forEach((target, index) => {
+    containers.forEach((target) => {
       gsap.fromTo(target, {
         opacity: 0,
         scale: 0.95,
@@ -392,11 +390,11 @@ export default function Index() {
 
 const SuperImageContent = ({ data }) => {
 
-  const [col, updateCol] = useState(null);
+  // const [col, updateCol] = useState(null);
 
-  useEffect(() => {
-    updateCol(data.bgColor);
-  }, [data])
+  // useEffect(() => {
+  //   updateCol(data.bgColor);
+  // }, [data])
 
   return <div id="image-wrapper" className={`flex p-10 max-[500px]:p-5 super-image top-0 relative w-full h-full overflow-visible ${data.bgColor}`} >
     <div id="content-wrapper" className='w-full flex flex-col justify-around'>
@@ -440,7 +438,7 @@ const SuperCardBox = ({ cardInfo }) => {
     });
 
 
-  }, [])
+  })
 
 
   return (

@@ -1,8 +1,5 @@
 "use client"
 
-import localFont from "next/font/local";
-
-
 // src/app/layout.tsx
 
 import { TransitionProvider } from "@/context/TransitionContext";
@@ -15,10 +12,6 @@ import React, { useRef } from 'react';
 import './globals.css';
 import { ScrollTrigger } from "gsap/all";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-});
-
 export default function RootLayout({
   children,
 }: {
@@ -29,7 +22,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="overflow-x-hidden bg-black">
-        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
         <div ref={bodyRef}>
           <BodyRefProvider mainRef={bodyRef}>
             <ScrollTriggerProvider scrollTrigger={ScrollTrigger}>

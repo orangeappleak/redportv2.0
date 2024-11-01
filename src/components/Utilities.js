@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useBodyRef } from "@/context/BodyRefContext";
+import { gsap } from "gsap/gsap-core";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const { default: gsap } = require("gsap");
-const { ScrollTrigger } = require("gsap/ScrollTrigger");
-const { useRef } = require("react")
+// const { default: gsap } = require("gsap");
+// const { ScrollTrigger } = require("gsap/ScrollTrigger");
+// const { useRef } = require("react")
 
 export const AnimatedElement = ({ id = "", children, config, className = "", staggerEl = "", trigger = "" }) => {
     const animation = useGsap(config, staggerEl, trigger);
@@ -41,6 +43,7 @@ const useGsap = (config, staggerEl, trigger) => {
         });
 
     }, [])
+
 
     return eleRef;
 }
