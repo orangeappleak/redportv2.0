@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useRef, useContext, useEffect, useState } from 'react';
+import React, { useRef, useContext, useEffect } from 'react';
 import { TransitionContext } from '@/context/TransitionContext';
 import gsap from 'gsap';
 import Image from 'next/image';

@@ -1,4 +1,4 @@
-import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
+import { ReactLenis } from '@studio-freight/react-lenis'
 
 export function LenisScroller({ children }) {
     // const lenis = useLenis(({ scroll }) => {

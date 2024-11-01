@@ -1,7 +1,6 @@
 "use client"
 
 import { useGSAP } from '@gsap/react';
-import { TransitionContext } from '@/context/TransitionContext';
 import projectsData from './projectsData';
 import Image from 'next/image';
 
@@ -9,7 +8,7 @@ import { useBodyRef, useScrollTriggger } from "@/context/BodyRefContext";
 import { AnimatedElement, WordSplit, getRandomNumber } from '@/components/Utilities';
 
 import gsap from "gsap";
-import { useContext, useRef, useEffect, useState } from 'react';
+import {useRef, useEffect } from 'react';
 
 export default function Home() {
   // const { timeline } = useContext(TransitionContext);
