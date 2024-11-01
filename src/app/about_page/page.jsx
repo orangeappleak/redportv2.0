@@ -141,6 +141,8 @@ export default function Index() {
           trigger: target,
           start: 'top bottom',
           end: 'bottom center',
+          pinSpacing: false,
+          pinReparent: false,
           scrub: 1,
         }
       })
@@ -214,9 +216,9 @@ export default function Index() {
 
   return (
     <div id="main-container" ref={container} className='h-auto w-screen flex flex-col'>
-      <section id="start-page" className="relative w-full h-[130vh] max-[500px]:h-screen overflow-hidden">
-        <div id="image" className='absolute w-full top-0 left-0 h-full overflow-hidden'>
-          <Image src={'/me2.jpg'} width={1000} height={1000} className='max-[500px]:scale-x-150 max-[500px]:w-auto w-screen absolute max-[500px]:h-screen contrast-125 brightness-75 -translate-y-1/4 max-[500px]:translate-y-0' alt="me-image" priority />
+      <section id="start-page" className="relative w-full h-[130vh] max-[500px]:h-[100svh] overflow-hidden">
+        <div id="image" className='absolute w-full top-0 left-0 h-full max-[500px]:h-[100svh] overflow-hidden'>
+          <Image src={'/me2.jpg'} width={1000} height={1000} className='max-[500px]:scale-x-150 max-[500px]:w-auto w-screen absolute max-[500px]:h-[100svh] contrast-125 brightness-75 -translate-y-1/4 max-[500px]:translate-y-0' alt="me-image" priority />
         </div>
         <AnimatedElement config={{
           to: {
@@ -229,14 +231,14 @@ export default function Index() {
             end: 'bottom top',
           }
         }}>
-          <div id="image-content" className='p-32 max-[500px]:p-10 box-border h-screen flex items-end relative z-10'>
+          <div id="image-content" className='p-32 max-[500px]:p-5 box-border h-screen max-[500px]:h-svh flex items-end relative z-10'>
             <h1 className='text-7xl max-[500px]:text-3xl font-medium w-1/2 max-[500px]:w-full text-white'>Creating pixel perfect implementations from design to development</h1>
           </div>
         </AnimatedElement>
       </section>
 
       <div id='next-sections' className='h-auto w-full bg-[#e3e6e4]'>
-        <section className='bg-[#e3e6e4] relative overflow-hidden h-auto w-full p-32 max-[500px]:p-10 flex flex-col'>
+        <section className='bg-[#e3e6e4] relative overflow-hidden h-auto w-full p-32 max-[500px]:p-5 flex flex-col'>
           <div id="first-wrapper" className='w-full flex flex-col items-end max-[500px]:items-start'>
             <div id="inner-wrapper" className='w-3/4 max-[500px]:w-full flex flex-col'>
               <div id="main-heading" className='mb-20'>
@@ -350,19 +352,19 @@ export default function Index() {
             </div>
           </div>
 
-          <div id="third-wrapper" className='relative h-[800vh] w-full box-border overflow-hidden'>
-            <div ref={pinElement1} id="super-powers-heading" className='relative top-0 w-full left-0 h-screen flex flex-col justify-center items-center'>
+          <div id="third-wrapper" className='relative h-[800lvh] max-[500px]:h-[800lvh] w-full box-border overflow-hidden'>
+            <div ref={pinElement1} id="super-powers-heading" className='relative top-0 w-full left-0 h-screen max-[500px]:h-lvh flex flex-col justify-center items-center'>
               <h1 className='text-[8vw] text-stone-700 font-bold max-[500px]:font-light max-[500px]:text-4xl text-center leading-tight'>What are my</h1>
               <h1 className='text-[8vw] max-[500px]:text-[20vw] text-stone-700 font-bold text-center  leading-none'>Super Powers?</h1>
             </div>
-            <div id="third-inner-wrapper" className='absolute top-[70vh] h-auto box-border flex flex-row w-full'>
+            <div id="third-inner-wrapper" className='absolute top-[70vh] max-[500px]:top-[500px] h-auto max-[500px]:h-lvh box-border flex flex-row w-full'>
               <div id="super-power-card-data1" className='h-auto max-[500px]:absolute z-10 top-full box-border p-10 flex-1 flex flex-col justify-center items-center relative w-full'>
                 {superPowerData1.map((data, index) => {
                   return <SuperCardBox key={index} cardInfo={{ data, index }} />
                 })}
               </div>
-              <div id='super-power-card-wrapper' className='flex  box-border w-full h-screen justify-center items-center top-0 flex-1'>
-                <div id="super-power-card" className='h-[80vh] border-4 border-orange-500 w-full overflow-hidden justify-center items-center border-black/50 rounded-3xl relative'>
+              <div id='super-power-card-wrapper' className='flex max-[500px]:pt-24 box-border w-full h-screen max-[500px]:h-[100svh] justify-center items-center top-0 flex-1'>
+                <div id="super-power-card" className='h-[80vh] max-[500px]:h-[80svh] border-4 border-orange-500 w-full overflow-hidden justify-center items-center border-black/50 rounded-3xl relative'>
                   {superImageContent.map((data, index) => {
                     return <SuperImageContent key={index} data={data} />
                   })}
@@ -401,14 +403,14 @@ const SuperImageContent = ({ data }) => {
       <div id="content-2">
         {data.content.map((datam, index) => {
           return <div key={index} className='mb-5' id="text-content">
-            <h2 className={`${data.headingColor} text-xl font-semibold`}>{datam.subHeading}</h2>
+            <h2 className={`${data.headingColor} text-xl max-[500px]:text-base font-semibold`}>{datam.subHeading}</h2>
             <p className={`${data.textColor} text-sm`}>{datam.text}</p>
           </div>
         })}
       </div>
-      <div id="content-1" className='flex flex-col items-start'>
+      <div id="content-1" className='flex flex-col max-[500px]:flex-row items-start'>
         {data.headings.map((heading, index) => {
-          return <h1 key={index} className={`${data.headingColor} font-bold text-8xl max-[500px]:text-6xl`}>{heading}</h1>
+          return <h1 key={index} className={`${data.headingColor} font-bold text-8xl max-[500px]:mx-2 max-[500px]:text-2xl`}>{heading}</h1>
         })}
       </div>
     </div>
@@ -423,21 +425,24 @@ const SuperCardBox = ({ cardInfo }) => {
   const contContent = useRef(null);
 
   useEffect(() => {
-    gsap.to(container.current, {
-      opacity: 1,
-      scale: 1,
-      scrollTrigger: {
-        pin: container.current,
-        trigger: box.current,
-        start: `top ${cardInfo.index * 1}%`,
-        endTrigger: '#third-inner-wrapper',
-        end: 'bottom bottom',
-        anticipatePin: 1,
-        toggleActions: 'play reverse play none'
-      }
-    });
 
+    const screenWidth = window.innerWidth;
 
+    if(screenWidth > 500){
+      gsap.to(container.current, {
+        opacity: 1,
+        scale: 1,
+        scrollTrigger: {
+          pin: container.current,
+          trigger: box.current,
+          start: `top ${cardInfo.index * 1}%`,
+          endTrigger: '#third-inner-wrapper',
+          end: 'bottom bottom',
+          anticipatePin: 1,
+          toggleActions: 'play reverse play none'
+        }
+      });
+    }
   })
 
 
@@ -449,7 +454,7 @@ const SuperCardBox = ({ cardInfo }) => {
       >
         <div ref={container} id="container" className='h-full flex justify-center py-10 items-center'>
           <div ref={contContent} id="container-content" className='translate-x-0 w-full flex justify-center backdrop-blur-sm items-center h-1/5 max-[500px]:h-auto bg-black/60 border-2 border-orange-500 rounded-xl'>
-            <h1 className='text-5xl max-[500px]:text-xl text-white font-bold max-[500px]:p-5 px-10 py-20'>{cardInfo.data}</h1>
+            <h1 className='text-5xl max-[500px]:text-lg text-white max-[500px]:text-center font-bold max-[500px]:p-5 px-10 py-20'>{cardInfo.data}</h1>
           </div>
         </div>
       </div>

@@ -265,22 +265,22 @@ const About = () => {
     {
       title: "Innovate & Craft",
       src: 'https://images.unsplash.com/photo-1699865574995-eb61e12d97bd?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      content: "Venturing into innovation, I craft novel solutions that captivate audiences. With innovative thinking, I shape ideas into tangible experiences that inspire. Each creation aims to leave an indelible mark, driving user-centric design evolution.",
+      content: "I craft novel, user-centered solutions that captivate and inspire, transforming ideas into impactful experiences that leave a lasting mark.",
     },
     {
       title: "Prototype & Perfect",
       src: 'https://images.unsplash.com/photo-1698825810716-d3f126a50385?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      content: "In prototyping, I refine the user experience tirelessly. From concepts to polished prototypes, I strive for perfection, fine-tuning every detail. Through iteration, I transform visions into intuitive interfaces that resonate with users.",
+      content: "I refine user experiences with precision, turning concepts into polished, intuitive prototypes that resonate with users through thoughtful iteration.",
     },
     {
       title: "Code & Create",
       src: 'https://images.unsplash.com/photo-1698825810702-10bb885eec26?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      content: "Diving into code, I craft elegant and efficient solutions , blending functionality with imagination. Through coding, I bring ideas to life, creating powerful and user-friendly software. Embracing complexity, I transform concepts into intuitive experiences that inspire.",
+      content: "I craft elegant, efficient code that blends functionality with creativity, transforming complex concepts into intuitive, inspiring software experiences.",
     },
     {
       title: "Develop & Deliver",
       src: 'https://images.unsplash.com/photo-1697898783543-18651b0db28f?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      content: "Throughout development, I navigate complexities with precision. From concept to deployment, I commit to high-quality software that exceeds expectations. With agility, I ensure timely, innovative solutions that enrich users' lives.",
+      content: "I navigate development with precision, delivering high-quality software from concept to deployment. Agile and focused, I create timely, innovative solutions that enrich users' lives.",
     },
 
   ]
@@ -355,7 +355,7 @@ const AboutCard = ({ id, index, heading, content }) => {
       end: 'center top',
       ease: 'power4.inOut',
     }
-  }} id={id} className="h-[60vh] max-[500px]:h-auto max-[500px]:p-5 max-[500px]:py-20 border-orange-500 border-2 w-3/4 max-[500px]:w-full overflow-hidden bg-stone-900 rounded-3xl box-border shadow-2xl">
+  }} id={id} className="h-[60vh] max-[500px]:h-[50svh] max-[500px]:p-5 max-[500px]:py-10 border-orange-500 border-2 w-2/3 max-[500px]:w-full overflow-hidden bg-stone-900 rounded-3xl box-border shadow-2xl">
     <div id="about-content" className="relative flex h-full px-10 max-[500px]:px-0 flex-row max-[500px]:flex-col max-[500px]:align-center max-[500px]:justify-center overflow-hidden">
       {/* <div id="about-content-image" className="flex flex-1 shadow-[10px_0_20px_1px] shadow-black/30 items-center justify-center overflow-hidden max-[500px]:absolute max-[500px]:h-[100%] top-0 left-0">
         <Image loading="lazy" alt='alt' width={800} height={800} className="h-full w-auto max-[500px]:w-auto max-[500px]:h-full max-w-[100vw]" src={src} />
@@ -377,7 +377,7 @@ const AboutCard = ({ id, index, heading, content }) => {
             <h1 words={false} splitStyle='overflow-hidden flex items-center justify-center relative' className="relative opacity-1 translate-y-[100%] tracking-normal leading-none font-semibold text-white text-9xl max-[500px]:text-white max-[500px]:text-center max-[500px]:text-2xl">{heading}</h1>
           </WordSplit>
         </AnimatedElement>
-        <p className="z-2 text-stone-400 text-4xl max-[500px]:text-xl max-[500px]:text-white">{content}</p>
+        <p className="z-2 text-stone-400 text-4xl max-[500px]:text-sm max-[500px]:text-white">{content}</p> 
       </div>
     </div>
   </AnimatedElement>

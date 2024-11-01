@@ -21,6 +21,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+       <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       <body className="overflow-x-hidden bg-black">
         <div ref={bodyRef}>
           <BodyRefProvider mainRef={bodyRef}>
