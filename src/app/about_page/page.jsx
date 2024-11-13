@@ -222,7 +222,7 @@ export default function Index() {
 
       <section id="start-page" className="relative h-[100vh] max-[500px]:h-[100svh] overflow-hidden">
         <div id="image" className='absolute top-0 left-0 h-screen w-screen max-[500px]:h-[100svh]'>
-          <Image quality={100} src={'/luffy.jpg'} alt="" fill style={{objectFit: "cover"}} priority />
+          <Image quality={100} src={'/doffy.jpg'} alt="" fill style={{objectFit: "cover"}} priority />
         </div>
         <AnimatedElement config={{
           to: {
@@ -514,7 +514,7 @@ const FourthWrapper = () => {
           }
         }}>
           <MeImages img={'/me4.jpg'} title={'The Creative Mastermind'} number={'1'} color={'bg-green-500'} />
-          <MeImages img={'/me5.jpg'} title={'The One Piece Enthusiast'} number={'2'} color={'bg-red-500'} />
+          <MeImages img={'/me2.jpg'} title={'The One Piece Enthusiast'} number={'2'} color={'bg-red-500'} />
           <MeImages img={'/me6.jpg'} title={'The Crazy Funny Guy'} number={'3'} color={'bg-purple-500'} />
         </AnimatedElement>
       </div>
@@ -523,7 +523,7 @@ const FourthWrapper = () => {
 
 const MeImages = ({ title, img, number, color }) => {
   return <div id="fourth-me-image-wrapper" className='group mx-2 max-[500px]:mx-0 max-[500px]:my-2 h-full flex items-center justify-center w-full relative overflow-hidden '>
-    <Image alt="" className='-translate-y-[0%] scale w-full h-auto' src={img} height={10000} width={10000} loading='lazy' />
+    <Image alt="" quality={75} className='-translate-y-[0%] scale w-full h-auto' src={img} height={10000} width={10000} loading='lazy' />
     <div id="image-hover-div" className={`absolute mix-blend-multiply ${color} w-full transition-transform rounded-2xl -translate-x-[100%] group-hover:-translate-x-[10%] rotate-45 group-hover:rotate-6 translate-y-[100%] duration-500 ease-[cubic-bezier(0.445, 0.05, 0.55, 0.95)] group-hover:translate-y-[50%] top-0 h-full`}>
 
 
