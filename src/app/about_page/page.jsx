@@ -221,7 +221,7 @@ export default function Index() {
     <div id="main-container" ref={container} className='h-auto'>
 
       <section id="start-page" className="relative h-[100vh] max-[500px]:h-[100svh] overflow-hidden">
-        <div id="image" className='absolute top-0 left-0 h-screen w-screen max-[500px]:h-[100svh]'>
+        <div id="image" className='absolute top-0 left-0 h-screen w-screen max-[500px]:h-screen'>
           <Image quality={100} src={'/doffy.jpg'} alt="" fill style={{objectFit: "cover"}} priority />
         </div>
         <AnimatedElement config={{
@@ -236,7 +236,7 @@ export default function Index() {
           }
         }}>
           <div id="image-content" className='p-32 max-[500px]:p-5 box-border h-screen max-[500px]:h-svh flex items-end relative z-10'>
-            <h1 className='text-7xl max-[500px]:text-4xl font-medium w-[40%] max-[500px]:w-full text-white'>Creating pixel perfect implementations from design to development</h1>
+            <h1 className='text-7xl max-[500px]:text-3xl font-medium w-[40%] max-[500px]:w-full text-white'>Creating pixel perfect implementations from design to development</h1>
           </div>
         </AnimatedElement>
       </section>
@@ -486,11 +486,11 @@ const FourthWrapper = () => {
         <div id="fourth-heading" className='relative max-[500px]:p-2 h-auto max-[500px]:h-screen max-[500px]:flex flex-col justify-center'>
           <h1 className="text-[10vw] max-[500px]:text-7xl text-white font-semibold leading-[0.8]">Of everything I've shared, this one means the most</h1>
           <div id="fourth-image" className='flex flex-col items-center justify-end'>
-            <Image id="fourth-image-img" alt="" className='w-[70vw] rounded-3xl max-[500px]:w-auto max-[500px]:h-full' src={'/luffy2.jpg'} style={{objectFit: 'cover'}} height={10000} width={10000} />
+            <Image id="fourth-image-img" alt="" className='w-[70vw] rounded-3xl max-[500px]:w-auto max-[500px]:h-auto' src={'/luffy2.jpg'} style={{objectFit: 'cover'}} height={10000} width={10000} />
           </div>
         </div>
       </div>
-      <div id="fourth-wrapper-content" className='absolute p-5 flex-1 bg-white w-full h-auto max-[500px]:h-auto translate-y-[100vh] box-border max-[500px]:p-2 top-0'>
+      <div id="fourth-wrapper-content" className='absolutep-5 flex-1 bg-white w-full h-auto max-[500px]:h-auto translate-y-[100vh] box-border max-[500px]:p-2 top-0'>
         <div id="the-story" className="flex-1 z-10 w-full">
           <p className='text-7xl max-[500px]:text-4xl font-normal'>
             The journey for my all-blue began back in 2015, when the first lines of my code came to life. Since then, it has been a path of learning and carving myself with every tool I can fully understand and use to my advantage. This self-learning journey has taught me a lot, and the wonders it offers will never cease. I want to keep pushing further, grasping even more from this vast sea of technological advancements, which is beautiful in itself
@@ -514,7 +514,7 @@ const FourthWrapper = () => {
           }
         }}>
           <MeImages img={'/me4.jpg'} title={'The Creative Mastermind'} number={'1'} color={'bg-green-500'} />
-          <MeImages img={'/me2.jpg'} title={'The One Piece Enthusiast'} number={'2'} color={'bg-red-500'} />
+          <MeImages img={'/me5.JPG'} title={'The One Piece Enthusiast'} number={'2'} color={'bg-red-500'} />
           <MeImages img={'/me6.jpg'} title={'The Crazy Funny Guy'} number={'3'} color={'bg-purple-500'} />
         </AnimatedElement>
       </div>
@@ -524,11 +524,11 @@ const FourthWrapper = () => {
 const MeImages = ({ title, img, number, color }) => {
   return <div id="fourth-me-image-wrapper" className='group mx-2 max-[500px]:mx-0 max-[500px]:my-2 h-full flex items-center justify-center w-full relative overflow-hidden '>
     <Image alt="" quality={75} className='-translate-y-[0%] scale w-full h-auto' src={img} height={10000} width={10000} loading='lazy' />
-    <div id="image-hover-div" className={`absolute mix-blend-multiply ${color} w-full transition-transform rounded-2xl -translate-x-[100%] group-hover:-translate-x-[10%] rotate-45 group-hover:rotate-6 translate-y-[100%] duration-500 ease-[cubic-bezier(0.445, 0.05, 0.55, 0.95)] group-hover:translate-y-[50%] top-0 h-full`}>
+    <div id="image-hover-div" className={`absolute mix-blend-multiply ${color} w-full transition-transform rounded-2xl -translate-x-[100%] group-hover:-translate-x-[10%] rotate-45 group-hover:rotate-6 translate-y-[100%] duration-500 ease-[cubic-bezier(0.445, 0.05, 0.55, 0.95)] group-hover:translate-y-[50%] max-[500px]:group-hover:translate-y-[30%] top-0 h-full`}>
 
 
     </div>
-    <div id="fourth-content-wrapper" className='flex flex-col p-2 box-border justify-start items-end absolute text-white w-full transition-transform -translate-x-[100%] group-hover:-translate-x-[20%] rotate-45 group-hover:rotate-6 translate-y-[100%] duration-500 ease-[cubic-bezier(0.445, 0.05, 0.55, 0.95)] group-hover:translate-y-[50%] top-0 h-full'>
+    <div id="fourth-content-wrapper" className='flex p-5 flex-col box-border justify-start items-end absolute text-white w-full transition-transform -translate-x-[100%] group-hover:-translate-x-[10%] rotate-45 group-hover:rotate-6 translate-y-[100%] duration-500 ease-[cubic-bezier(0.445, 0.05, 0.55, 0.95)] group-hover:translate-y-[50%] max-[500px]:group-hover:translate-y-[30%] top-0 h-full'>
       <h1 className='font-semibold text-white text-2xl'>{title}</h1>
       <h1 className='font-bold text-9xl'>{number}</h1>
     </div>

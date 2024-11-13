@@ -50,7 +50,7 @@ export default function Home() {
         scrollTrigger: { scrub: 1, start: 'center top', end: 'bottom top' }
       }}>
         <section ref={homeRef} id='home-page-wrapper' className="h-[150vh] w-screen">
-          <div id="home-page" className="relative top-0 m-0 p-0 overflow-hidden h-lvh w-screen">
+          <div id="home-page" className="relative top-0 m-0 p-0 overflow-hidden h-screen w-screen">
             <div id="home-page-content" className="h-full bg-stone-950 flex flex-col p-[5em] max-[500px]:p-[2em]">
               <div id="home-page-heading" className="flex-[2] max-[500px]:flex-[8] w-full h-auto flex flex-row max-[500px]:flex-col justify-center items-center">
                 <h1 className="flex-1 text-stone-400 text-3xl max-[500px]:text-2xl font-light flex items-center">Software</h1>
