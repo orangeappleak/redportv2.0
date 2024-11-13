@@ -1,11 +1,11 @@
 "use client"
 
-import React, { useRef, useContext, useEffect, useState, useLayoutEffect } from 'react';
+import React, { useRef, useContext, useEffect, useState } from 'react';
 import { TransitionContext } from '@/context/TransitionContext';
 import gsap from 'gsap';
 import Image from 'next/image';
 import { useGSAP } from '@gsap/react';
-import WordSplit, { AnimatedElement } from '@/components/Utilities';
+import { AnimatedElement } from '@/components/Utilities';
 import { ScrollTrigger } from 'gsap/all';
 
 export default function Index() {
@@ -486,7 +486,7 @@ const FourthWrapper = () => {
         <div id="fourth-heading" className='relative max-[500px]:p-2 h-auto max-[500px]:h-screen max-[500px]:flex flex-col justify-center'>
           <h1 className="text-[10vw] max-[500px]:text-7xl text-white font-semibold leading-[0.8]">Of everything I've shared, this one means the most</h1>
           <div id="fourth-image" className='flex flex-col items-center justify-end'>
-            <Image id="fourth-image-img" alt="" className='w-[70vw] rounded-xl max-[500px]:w-auto max-[500px]:h-full' src={'/luffy2.jpg'} objectFit='cover' height={10000} width={10000} />
+            <Image id="fourth-image-img" alt="" className='w-[70vw] rounded-3xl max-[500px]:w-auto max-[500px]:h-full' src={'/luffy2.jpg'} style={{objectFit: 'cover'}} height={10000} width={10000} />
           </div>
         </div>
       </div>
@@ -521,7 +521,7 @@ const FourthWrapper = () => {
     </div>)
 }
 
-const MeImages = ({ title, shortContent, img, number, color }) => {
+const MeImages = ({ title, img, number, color }) => {
   return <div id="fourth-me-image-wrapper" className='group mx-2 max-[500px]:mx-0 max-[500px]:my-2 h-full flex items-center justify-center w-full relative overflow-hidden '>
     <Image alt="" className='-translate-y-[0%] scale w-full h-auto' src={img} height={10000} width={10000} loading='lazy' />
     <div id="image-hover-div" className={`absolute mix-blend-multiply ${color} w-full transition-transform rounded-2xl -translate-x-[100%] group-hover:-translate-x-[10%] rotate-45 group-hover:rotate-6 translate-y-[100%] duration-500 ease-[cubic-bezier(0.445, 0.05, 0.55, 0.95)] group-hover:translate-y-[50%] top-0 h-full`}>

@@ -42,7 +42,7 @@ const useGsap = (config, staggerEl, trigger) => {
             }
         });
 
-    }, [])
+    });
 
 
     return eleRef;

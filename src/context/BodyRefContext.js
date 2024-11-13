@@ -1,3 +1,5 @@
+"use client"
+
 import React, { createContext, useContext, useLayoutEffect } from 'react';
 
 // Step 1: Create a context to hold the mainRef

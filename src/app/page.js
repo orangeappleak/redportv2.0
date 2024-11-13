@@ -27,6 +27,7 @@ export default function Home() {
         pinSpacing: false
       }
     })
+
   }, [])
 
   useGSAP(() => {
@@ -250,7 +251,6 @@ const About = () => {
   const st = useScrollTriggger();
 
   useEffect(() => {
-
     st.create({
       trigger: bodyRef.current.querySelector('#about-page #curly-heading'),
       pin: true,
@@ -260,7 +260,7 @@ const About = () => {
       anticipatePin: 1,
       pinSpacing: false,  
     });
-  }, [bodyRef]);
+  }, [bodyRef,st]);
 
   const aboutData = [
     {
@@ -340,7 +340,7 @@ const AboutCard = ({ id, index, heading, content }) => {
       anticipatePin: 1,
       pinSpacing: false,
     })
-  }, [id]);
+  }, [id, index, st, bodyRef]);
 
   return <AnimatedElement config={{
     from: {
@@ -398,7 +398,7 @@ const Projects = () => {
       end: 'bottom bottom',
       pinSpacing: false,
     })
-  }, [])
+  }, [st, bodyRef])
 
 
 
