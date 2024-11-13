@@ -490,7 +490,7 @@ const FourthWrapper = () => {
           </div>
         </div>
       </div>
-      <div id="fourth-wrapper-content" className='absolutep-5 flex-1 bg-white w-full h-auto max-[500px]:h-auto translate-y-[100vh] box-border max-[500px]:p-2 top-0'>
+      <div id="fourth-wrapper-content" className='absolute p-5 flex-1 bg-white w-full h-auto max-[500px]:h-auto translate-y-[100vh] box-border max-[500px]:p-2 top-0'>
         <div id="the-story" className="flex-1 z-10 w-full">
           <p className='text-7xl max-[500px]:text-4xl font-normal'>
             The journey for my all-blue began back in 2015, when the first lines of my code came to life. Since then, it has been a path of learning and carving myself with every tool I can fully understand and use to my advantage. This self-learning journey has taught me a lot, and the wonders it offers will never cease. I want to keep pushing further, grasping even more from this vast sea of technological advancements, which is beautiful in itself
