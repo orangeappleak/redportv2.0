@@ -54,7 +54,7 @@ export const WordSplit = ({ children }) => {
     const arr = Array.isArray(children) ? children : [children];
     const splitRef = useRef(null);
 
-    console.log(arr);
+    //console.log(arr);
 
     return (
         arr.map((child, index) => {

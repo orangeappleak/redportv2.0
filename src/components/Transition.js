@@ -21,7 +21,9 @@ export default function TransitionLayout({ children }) {
         })
     })
 
+
     useGSAP(() => {
+        window.scrollTo(0, 0);
         //if page is not the current page
         if (children.key !== displayChildren.key) {
             exit();

@@ -17,6 +17,7 @@ export default function Home() {
   // const { bodyRef } = useBodyRef();
 
   useEffect(() => {
+
     gsap.to(homeRef.current, {
       ease: 'bounce.inOut',
       scrollTrigger: {
@@ -71,10 +72,10 @@ export default function Home() {
                     }
                   }}>
                     <WordSplit>
-                      <h1 splitStyle="flex overflow-hidden leading-none" className="leading-none my-5 text-stone-300 font-normal text-[10vw] max-[500px]:text-[20vw] tracking-normal">Karthik</h1>
+                      <h1 splitStyle="flex overflow-hidden leading-none" className="leading-none my-5 text-white font-normal text-[10vw] max-[500px]:text-[20vw] tracking-normal">Karthik</h1>
                     </WordSplit>
                   </AnimatedElement>
-                  <p className="text-stone-600 text-center text-xl max-[500px]:text-sm">Seasoned software developer crafting innovative digital solutions, from web pages to complex applications, all while embracing the journey of code magic.</p>
+                  <p className="text-white text-center text-xl max-[500px]:text-sm">Seasoned software developer crafting innovative digital solutions, from web pages to complex applications, all while embracing the journey of code magic.</p>
                 </div>
                 <h1 className="flex-1 text-white/50 text-3xl max-[500px]:text-2xl font-light flex items-center justify-end">Developer</h1>
               </div>
@@ -198,7 +199,7 @@ const Manifesto = () => {
       }}>
 
         <WordSplit>
-          <p words={true} splitStyle="text-center max-[500px]:text-left inline-block" className={`text-black text-6xl inline-block p-1 max-[500px]:text-4xl max-[500px]:pl-0`}>In the realm of technology, I wield code as my tool, crafting digital experiences that inspire and empower. Fueled by curiosity, I constantly explore new frontiers, embracing challenges as opportunities for innovation. My mission is to push creative boundaries and shape a limitless future.
+          <p words={true} splitStyle="text-center max-[500px]:text-left inline-block" className={`text-black text-6xl leading-snug inline-block p-1 max-[500px]:text-4xl max-[500px]:pl-0`}>In the realm of technology, I wield code as my tool, crafting digital experiences that inspire and empower. Fueled by curiosity, I constantly explore new frontiers, embracing challenges as opportunities for innovation. My mission is to push creative boundaries and shape a limitless future.
           </p>
         </WordSplit>
       </AnimatedElement>
@@ -254,10 +255,10 @@ const About = () => {
       trigger: bodyRef.current.querySelector('#about-page #curly-heading'),
       pin: true,
       endTrigger: bodyRef.current.querySelector('#about-cards-wrapper'),
-      start: 'top top',
+      start: 'top 5%',
       end: 'bottom bottom ',
       anticipatePin: 1,
-      pinSpacing: false,
+      pinSpacing: false,  
     });
   }, [bodyRef]);
 
@@ -334,7 +335,7 @@ const AboutCard = ({ id, index, heading, content }) => {
       pin: true,
       ease: 'power4.inOut',
       endTrigger: bodyRef.current.querySelector('#about-cards-wrapper'),
-      start: `top ${startPos + (index * 15)}`,
+      start: `top ${startPos + (index * 15) + 70}`,
       end: 'bottom bottom',
       anticipatePin: 1,
       pinSpacing: false,
@@ -355,13 +356,13 @@ const AboutCard = ({ id, index, heading, content }) => {
       end: 'center top',
       ease: 'power4.inOut',
     }
-  }} id={id} className="h-[60vh] max-[500px]:h-[50svh] max-[500px]:p-5 max-[500px]:py-10 border-orange-500 border-2 w-2/3 max-[500px]:w-full overflow-hidden bg-stone-900 rounded-3xl box-border shadow-2xl">
+  }} id={id} className="h-[50vh] max-[500px]:h-[40svh] max-[500px]:p-5 max-[500px]:py-10 border-orange-500 border-2 w-2/3 max-[500px]:w-full overflow-hidden bg-stone-900 rounded-3xl box-border shadow-2xl">
     <div id="about-content" className="relative flex h-full px-10 max-[500px]:px-0 flex-row max-[500px]:flex-col max-[500px]:align-center max-[500px]:justify-center overflow-hidden">
       {/* <div id="about-content-image" className="flex flex-1 shadow-[10px_0_20px_1px] shadow-black/30 items-center justify-center overflow-hidden max-[500px]:absolute max-[500px]:h-[100%] top-0 left-0">
         <Image loading="lazy" alt='alt' width={800} height={800} className="h-full w-auto max-[500px]:w-auto max-[500px]:h-full max-w-[100vw]" src={src} />
       </div> */}
-      <div id="about-content-left" className="flex-col w-full max-[500px]:w-full flex items-start p-10 max-[500px]:p-0 justify-around">
-        <AnimatedElement className="mb-5 max-[500px]:mb-14" staggerEl="span" config={{
+      <div id="about-content-left" className="flex-col w-full max-[500px]:w-full flex items-start p-10 max-[500px]:p-0 justify-center">
+        <AnimatedElement className="mb-5 max-[500px]:mb-0" staggerEl="span" config={{
           to: {
             transform: 'translate(0%, 0%)',
             opacity: 1,
@@ -374,10 +375,10 @@ const AboutCard = ({ id, index, heading, content }) => {
           }
         }}>
           <WordSplit>
-            <h1 words={false} splitStyle='overflow-hidden flex items-center justify-center relative' className="relative opacity-1 translate-y-[100%] tracking-normal leading-none font-semibold text-white text-9xl max-[500px]:text-white max-[500px]:text-center max-[500px]:text-2xl">{heading}</h1>
+            <h1 words={false} splitStyle='overflow-hidden flex items-center justify-center relative' className="relative opacity-1 translate-y-[100%] tracking-normal leading-none font-semibold text-white text-8xl max-[500px]:text-white/30 max-[500px]:text-center max-[500px]:text-lg">{heading}</h1>
           </WordSplit>
         </AnimatedElement>
-        <p className="z-2 text-stone-400 text-4xl max-[500px]:text-sm max-[500px]:text-white">{content}</p> 
+        <p className="z-2 text-stone-400 text-4xl max-[500px]:text-xl max-[500px]:text-white">{content}</p> 
       </div>
     </div>
   </AnimatedElement>
@@ -480,9 +481,9 @@ const Project = ({ data, id }) => {
 
   return <div id={id} className="relative h-[100vh] max-[500px]:h-[35vh] w-full max-[500px]:w-screen max-[500px]:my-10 flex items-center justify-center">
     <div id="project-heading" className="absolute z-[4] w-full h-auto top-0 left-0 font-normal flex items-center justify-center">
-      <AnimatedElement className="relative translate-y-28 max-[500px]:translate-y-0 flex flex-col items-center justify-center" config={{
+      <AnimatedElement className="relative max-[500px]:translate-y-0 flex flex-col items-center justify-center" config={{
         to: {
-          yPercent: "-=40"
+          yPercent: "-=20"
         },
         scrollTrigger: {
           scrub: 0.3
