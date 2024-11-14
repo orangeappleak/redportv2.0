@@ -222,7 +222,7 @@ export default function Index() {
 
       <section id="start-page" className="relative h-[100vh] max-[500px]:h-[100svh] overflow-hidden">
         <div id="image" className='absolute top-0 left-0 h-screen w-screen max-[500px]:h-screen'>
-          <Image quality={100} src={'/doffy.jpg'} alt="" fill style={{objectFit: "cover"}} priority />
+          <Image quality={100} src={'/goku.jpg'} alt="" fill style={{objectFit: "cover"}} priority />
         </div>
         <AnimatedElement config={{
           to: {
@@ -236,7 +236,7 @@ export default function Index() {
           }
         }}>
           <div id="image-content" className='p-32 max-[500px]:p-5 box-border h-screen max-[500px]:h-svh flex items-end relative z-10'>
-            <h1 className='text-7xl max-[500px]:text-3xl font-medium w-[40%] max-[500px]:w-full text-white'>Creating pixel perfect implementations from design to development</h1>
+            <h1 className='text-7xl max-[500px]:text-3xl font-medium w-[50%] max-[500px]:w-full text-black'>Creating pixel perfect implementations from design to development</h1>
           </div>
         </AnimatedElement>
       </section>
@@ -349,7 +349,7 @@ export default function Index() {
                     end: 'bottom top',
                   }
                 }}>
-                  <div id="fact-cards-3" className='flex gap-10 flex-col'>
+                  <div id="fact-cards-3" className='flex flex-col'>
                     <FactCards colorG={'bg-gradient-to-b from-pink-400 to-blue-600'} number={'10000+'} title={"lines of code"} />
                     <FactCards colorG={'bg-gradient-to-b from-red-300 to-purple-800'} number={'500+'} title={"Cups of Coffee"} />
                   </div>
@@ -358,8 +358,8 @@ export default function Index() {
             </div>
           </div>
 
-          <div id="third-wrapper" className={`relative h-[600lvh] max-[500px]:h-[800lvh] w-full box-border overflow-hidden`}>
-            <div ref={pinElement1} id="super-powers-heading" className='relative top-0 w-full left-0 h-screen max-[500px]:h-lvh flex flex-col justify-center items-center'>
+          <div id="third-wrapper" className={`relative h-[600lvh] max-[500px]:h-[800vh] w-full box-border overflow-hidden`}>
+            <div ref={pinElement1} id="super-powers-heading" className='relative top-0 w-full left-0 h-screen max-[500px]:h-screen flex flex-col justify-center items-center'>
               <h1 className='text-[8vw] text-stone-700 font-bold max-[500px]:font-light max-[500px]:text-4xl text-center leading-tight'>What are my</h1>
               <h1 className='text-[8vw] max-[500px]:text-[20vw] text-stone-700 font-bold text-center  leading-none'>Super Powers?</h1>
             </div>
@@ -370,7 +370,7 @@ export default function Index() {
                 })}
               </div>
               <div id='super-power-card-wrapper' className='flex max-[500px]:pt-24 box-border w-full h-screen max-[500px]:h-[100svh] justify-center items-center top-0 flex-1'>
-                <div id="super-power-card" className='h-[80vh] max-[500px]:h-[80svh] border-4 border-orange-500 w-full overflow-hidden justify-center items-center border-black/50 rounded-3xl relative'>
+                <div id="super-power-card" className='h-[80vh] max-[500px]:h-[70svh] border-4 border-orange-500 w-full overflow-hidden justify-center items-center border-black/50 rounded-3xl relative'>
                   {superImageContent.map((data, index) => {
                     return <SuperImageContent key={index} data={data} />
                   })}
@@ -522,7 +522,7 @@ const FourthWrapper = () => {
 }
 
 const MeImages = ({ title, img, number, color }) => {
-  return <div id="fourth-me-image-wrapper" className='group mx-2 max-[500px]:mx-0 max-[500px]:my-2 h-full flex items-center justify-center w-full relative overflow-hidden '>
+  return <div id="fourth-me-image-wrapper" className='group rounded-t-3xl mx-2 max-[500px]:mx-0 max-[500px]:my-2 h-full flex items-center justify-center w-full relative overflow-hidden '>
     <Image alt="" quality={75} className='-translate-y-[0%] scale w-full h-auto' src={img} height={10000} width={10000} loading='lazy' />
     <div id="image-hover-div" className={`absolute mix-blend-multiply ${color} w-full transition-transform rounded-2xl -translate-x-[100%] group-hover:-translate-x-[10%] rotate-45 group-hover:rotate-6 translate-y-[100%] duration-500 ease-[cubic-bezier(0.445, 0.05, 0.55, 0.95)] group-hover:translate-y-[50%] max-[500px]:group-hover:translate-y-[30%] top-0 h-full`}>
 
@@ -544,19 +544,19 @@ const SuperImageContent = ({ data }) => {
   //   updateCol(data.bgColor);
   // }, [data])
 
-  return <div id="image-wrapper" className={`flex p-10 max-[500px]:p-5 super-image top-0 relative w-full h-full overflow-visible ${data.bgColor}`} >
+  return <div id="image-wrapper" className={`flex p-10 max-[500px]:p-5 super-image top-0 relative box-border w-full h-full overflow-hidden ${data.bgColor}`} >
     <div id="content-wrapper" className='w-full flex flex-col justify-around'>
       <div id="content-2">
         {data.content.map((datam, index) => {
           return <div key={index} className='mb-5' id="text-content">
-            <h2 className={`${data.headingColor} text-xl max-[500px]:text-base font-semibold`}>{datam.subHeading}</h2>
-            <p className={`${data.textColor} text-lg`}>{datam.text}</p>
+            <h2 className={`${data.headingColor} text-xl max-[500px]:text-sm font-semibold`}>{datam.subHeading}</h2>
+            <p className={`${data.textColor} text-lg max-[500px]:text-sm`}>{datam.text}</p>
           </div>
         })}
       </div>
-      <div id="content-1" className='flex flex-col max-[500px]:flex-row items-start'>
+      <div id="content-1" className='flex flex-col flex-wrap box-border items-start max-[500px]:items-center max-[500px]:w-full max-[500px]:h-full max-[500px]:justify-center max-[500px]:absolute max-[500px]:top-0 max-[500px]:left-0'>
         {data.headings.map((heading, index) => {
-          return <h1 key={index} className={`${data.headingColor} font-bold text-8xl max-[500px]:mx-2 max-[500px]:text-2xl`}>{heading}</h1>
+          return <h1 key={index} className={`${data.headingColor} max-[500px]:opacity-25 font-bold text-8xl max-[500px]:text-left max-[500px]:mx-0 max-[500px]:text-6xl`}>{heading}</h1>
         })}
       </div>
     </div>
@@ -599,8 +599,8 @@ const SuperCardBox = ({ cardInfo }) => {
         className='h-screen w-full justify-center items-center flex-1'
       >
         <div ref={container} id="container" className='h-full flex justify-center py-10 items-center'>
-          <div ref={contContent} id="container-content" className='translate-x-0 w-full flex justify-center backdrop-blur-sm items-center h-1/5 max-[500px]:h-auto bg-black/60 rounded-xl'>
-            <h1 className='text-5xl max-[500px]:text-lg text-white max-[500px]:text-center font-bold max-[500px]:p-5 px-10 py-20'>{cardInfo.data}</h1>
+          <div ref={contContent} id="container-content" className='translate-x-0 w-full flex justify-center backdrop-blur-sm items-center h-1/5 max-[500px]:h-auto bg-white/60 shadow-inner shadow-slate-400 rounded-xl'>
+            <h1 className='text-5xl max-[500px]:text-lg text-black max-[500px]:text-center font-medium max-[500px]:p-5 px-10 py-20'>{cardInfo.data}</h1>
           </div>
         </div>
       </div>
@@ -640,9 +640,9 @@ const SuperCardBoxSkills = ({ data }) => {
 
 const FactCards = ({ number, title, colorG }) => {
   return (
-    <div id="factCard" className='border-4 border-stone-600 flex justify-between flex-col'>
-      <h1 className={`bg-clip-text ${colorG} py-10 px-10 max-[500px]:py-5 text-[7vw] text-center max-[500px]:text-6xl text-transparent font-bold`}>{number}</h1>
-      <h1 className='text-2xl max-[500px]:text-lg py-2 px-10 text-slate-600 text-center border-t-slate-600 border-t-[1px]'>{title}</h1>
+    <div id="factCard" className='shadow-slate-400 shadow-inner rounded-3xl p-2 m-5 flex justify-between flex-col-reverse'>
+      <h1 className={`bg-clip-text ${colorG} py-5 px-10 max-[500px]:py-5 text-[6vw] text-left max-[500px]:text-6xl text-transparent font-bold`}>{number}</h1>
+      <h1 className='text-sm font-semibold max-[500px]:text-sm py-2 px-10 text-black/50 text-left'>{title}</h1>
     </div>
   )
 }
