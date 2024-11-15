@@ -38,7 +38,7 @@ export default function Home() {
   }, { scope: homeRef });
 
   return (
-    <div ref={container} className="overflow-hidden">
+    <div ref={container} className='overflow-hidden'>
       <AnimatedElement trigger="#home-page-wrapper" config={{
         from: {
           scale: 1,

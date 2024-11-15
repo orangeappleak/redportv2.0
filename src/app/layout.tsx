@@ -6,12 +6,13 @@ import { TransitionProvider } from "@/context/TransitionContext";
 import { BodyRefProvider, ScrollTriggerProvider } from "@/context/BodyRefContext";
 import Transition from "@/components/Transition";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { LenisScroller } from "@/components/LenisScroller";
 import React, { useRef } from 'react';
 
 import './globals.css';
 import { ScrollTrigger } from "gsap/all";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+//import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function RootLayout({
   children,
@@ -29,11 +30,12 @@ export default function RootLayout({
             <ScrollTriggerProvider scrollTrigger={ScrollTrigger}>
               <TransitionProvider>
                 <Transition>
-                  <Header></Header>
+                 <Header />
                   <LenisScroller>
                     {children}
-                    <SpeedInsights />
+                    {/* <SpeedInsights /> */}
                   </LenisScroller>
+                  <Footer />
                 </Transition>
               </TransitionProvider>
             </ScrollTriggerProvider>
