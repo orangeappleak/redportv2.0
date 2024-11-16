@@ -1,5 +1,7 @@
 import gsap from "gsap";
 import { useEffect } from "react";
+import { AnimatedElement } from "./Utilities";
+
 
 const Footer = () => {
 
@@ -14,7 +16,6 @@ const Footer = () => {
                 endTrigger: "#footer",
                 start: "bottom bottom",
                 end: "bottom bottom",
-                markers: true,
                 pinSpacing: false,
                 pinReparent: false
             }
@@ -22,19 +23,49 @@ const Footer = () => {
     }, [])
 
 
-    return <section id="footer" className="bg-transparent -z-10 relative h-[90vh] top-0">
-        <section id="pin-element" className="absolute top-0 bottom-0 w-full h-full -translate-y-full overflow-hidden">
-            <div id="footer-content" className="h-full w-full border-2 border-blue-500">
-                <div id="lets-connect" className="flex flex-col leading-[0.5] w-full h-full items-center justify-center absolute top-0">
-                    {Array.from({ length: 10 }, (_, index) => (
-                        <div id="heading" key={index} className={`opacity-${index * 10}`}>
-                            <h1
-                                className={`text-[10vw]  text-white`}
-                            >
-                                Let's Connect
-                            </h1>
-                        </div>
-                    ))}
+    return <section id="footer" className="bg-transparent box-border -z-10 relative h-[70vh] top-0 overflow-hidden">
+        <section id="pin-element" className="absolute bottom-0 w-full h-full -translate-y-full">
+            <div id="footer-content-wrapper" className="h-full w-full box-border">
+                <div id="lets-connect" className="absolute top-0 flex flex-row w-full items-center justify-center">
+                    <AnimatedElement trigger="#footer" id="lets" config={{
+                        from: {
+                            x: "-100%"
+                        },
+                        to: {
+                            x: 0
+                        },
+                        scrollTrigger: {
+                            scrub: 2,
+                            ease: 'power4.inOut',
+                            start: 'center bottom',
+                            endTrigger: '#footer',
+                            end: 'bottom bottom',
+                        }
+                    }}>
+                        <h1 className="bg-gradient-to-b mx-5 from-white/40 from-10% to-white/0 leading-none inline-block text-transparent bg-clip-text text-[15vw] font-extralight">Let's</h1>
+                    </AnimatedElement>
+                    <AnimatedElement id="connect" config={{
+                        from: {
+                            x: 1000
+                        },
+                        to: {
+                            x: 0
+                        },
+                        scrollTrigger: {
+                            scrub: 2,
+                            ease: 'power4.inOut',
+                            start: 'center bottom',
+                            endTrigger: '#footer',
+                            end: 'bottom bottom',
+                        }
+                    }}>
+                        <h1 className="bg-gradient-to-b mx-5 from-white/40 from-10% to-white/0 leading-none inline-block text-transparent bg-clip-text text-[15vw] font-extralight">Connect</h1>
+                    </AnimatedElement>
+                </div>
+                <div id="footer-content-inner-wrapper" className="absolute bottom-0 p-10  h-[70%] w-full box-border">
+                    <div id="footer-content" className="h-full w-full backdrop-blur-xl rounded-3xl bg-white/10 shadow-2xl shadow-white/10">
+
+                    </div>
                 </div>
             </div>
         </section>

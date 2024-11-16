@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --background: black;
@@ -16,8 +18,4 @@ body {
     text-wrap: balance;
     transition:cubic-bezier(0.445, 0.05, 0.55, 0.95)
   }
-}
-
-#mix-blend-mode{
-  mix-blend-mode: multiply;
 }

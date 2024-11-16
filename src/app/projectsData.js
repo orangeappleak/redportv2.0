@@ -12,7 +12,7 @@ const projectsData = {
             "skills": "Python (Programming Language) · React Redux · React.js · Flask · UI · Firebase · Cascading Style Sheets (CSS) · JSON · Firestore · HTML · Figma · React Spring"
         },
         {
-            "image": "/animehub.png",
+            "image": "/Desktop.jpg",
             "title": "Anime Hub",
             "shortDesc": "Driven by personal interest and a passion for quality anime information, I developed a website to offer comprehensive details on popular anime titles. Utilizing a public anime API in JSON format, the web app efficiently sorts and renders information for easy access.",
             "longDesc": "long desc",

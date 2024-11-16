@@ -107,7 +107,7 @@ export default function Home() {
           </div>
         </section>
       </AnimatedElement>
-      <div id="pages-wrapper" className='border-2 border-red relative z-[2] h-auto w-screen box-border shadow-white/50 shadow-xl rounded-[100px] max-[500px]:rounded-[30px] px-[2em] pb-[5em] max-[500px]:px-[1.5em] pt-[6em] max-[500px]:pt-0 bg-[#e3e6e4]'>
+      <div id="pages-wrapper" className='border-2 border-red relative z-[2] h-auto w-screen box-border rounded-[100px] max-[500px]:rounded-[30px] px-[2em] pb-[5em] max-[500px]:px-[1.5em] pt-[6em] max-[500px]:pt-0 bg-[#e3e6e4]'>
         <IntroPage />
         <Manifesto />
         <About />
@@ -540,7 +540,7 @@ const Project = ({ data, id }) => {
       }
     }}>
       <div id="image-wrapper" className="h-full w-full flex items-center justify-center">
-        <Image className="w-full border-2 border-red max-[500px]:h-auto max-[500px]:w-full" src={data.image} width={800} height={800} alt="project-image" />
+        <Image className="w-full border-2 border-red max-[500px]:h-auto max-[500px]:w-full" src={data.image} fetchPriority='high' quality={100} width={10000} height={10000} alt="project-image" />
       </div>
     </AnimatedElement>
   </div>
