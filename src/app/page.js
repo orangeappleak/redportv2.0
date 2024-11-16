@@ -107,7 +107,7 @@ export default function Home() {
           </div>
         </section>
       </AnimatedElement>
-      <div id="pages-wrapper" className='border-2 border-red relative z-[2] h-auto w-screen box-border rounded-[100px] max-[500px]:rounded-[30px] px-[2em] pb-[5em] max-[500px]:px-[1.5em] pt-[6em] max-[500px]:pt-0 bg-[#e3e6e4]'>
+      <div id="pages-wrapper" className='border-2 border-red relative z-[2] h-auto w-screen box-border rounded-3xl max-[500px]:rounded-[30px] px-[2em] pb-[5em] max-[500px]:px-[1.5em] pt-[6em] max-[500px]:pt-0 bg-[#e3e6e4]'>
         <IntroPage />
         <Manifesto />
         <About />

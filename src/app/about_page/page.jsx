@@ -218,7 +218,7 @@ export default function Index() {
   }, { scope: container });
 
   return (
-    <div id="main-container" ref={container} className='h-auto'>
+    <div id="main-container" ref={container} className='h-auto overflow-hidden'>
 
       <section id="start-page" className="relative h-[100vh] max-[500px]:h-[100svh] overflow-hidden">
         <div id="image" className='absolute top-0 left-0 h-screen w-screen max-[500px]:h-screen'>
@@ -243,7 +243,7 @@ export default function Index() {
 
       <FourthWrapper />
 
-      <div id='next-sections' className='p-5 relative max-[500px]:p-2 h-auto w-full bg-white'>
+      <div id='next-sections' className='p-5 z-10 relative rounded-b-3xl max-[500px]:p-2 h-auto w-full bg-white'>
         <section className='bg-white relative overflow-hidden h-auto w-full max-[500px]:p-0 flex flex-col'>
           <div id="first-wrapper" className='w-full flex flex-col items-end max-[500px]:items-start'>
             <div id="inner-wrapper" className='w-3/4 max-[500px]:w-full flex flex-col'>
