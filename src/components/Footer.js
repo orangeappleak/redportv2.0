@@ -3,12 +3,12 @@ import { useEffect } from "react";
 import { AnimatedElement } from "./Utilities";
 import Image from "next/image";
 import Link from "next/link";
-import useDownloader from "react-use-downloader";
+// import useDownloader from "react-use-downloader";
 
 
 const Footer = () => {
 
-    const {download} = useDownloader();
+    // const {download} = useDownloader();
 
 
     useEffect(() => {
