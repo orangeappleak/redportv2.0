@@ -86,18 +86,18 @@ const Footer = () => {
                         <div id="footer-cotent-upper" className="flex-[1] items-start justify-center flex flex-row max-[500px]:flex-col">
                             <div id="footer-cotent-upper-left" className="flex-1 max-[500px]:mb-5 h-full items-start flex flex-col justify-start">
                                 <h1 className="text-white text-lg">🌊 Chasing My All Blue Across Tech and Creativity</h1>
-                                <p className="text-white text-3xl max-[500px]:text-sm">Like the mythical All Blue, I seek the perfect fusion of innovation, creativity, and purpose in everything I do—whether it’s developing intuitive web applications, designing immersive experiences, or creating impactful solutions. Every project is a step closer to my ultimate dream.
+                                <p className="text-white text-2xl max-[500px]:text-sm">Like the mythical All Blue, I seek the perfect fusion of innovation, creativity, and purpose in everything I do—whether it’s developing intuitive web applications, designing immersive experiences, or creating impactful solutions. Every project is a step closer to my ultimate dream.
                                 </p>
                             </div>
-                            <div id="footer-cotent-upper-right" className="flex-[2] max-[500px]:w-full h-[100%] box-border">
+                            <div id="footer-cotent-upper-right" className="flex-[3] max-[500px]:w-full h-[100%] box-border">
                                 <div id="upper-content-right-wrapper" className="box-border w-full h-[100%] flex justify-end">
                                     <div id="inner-content-wrapper" className="w-[50%] max-[500px]:w-full h-full box-border flex flex-col">
                                         <div id="inner-content-upper" className="relative flex items-center justify-center flex-[5]">
                                             <div id="socials-grid" className="grid mr-5 max-[500px]:mr-1 flex-[1] h-[100%] gap-5 max-[500px]:gap-1 grid-cols-2 grid-rows-2">
-                                                <Link href="https://www.instagram.com/lama_momo_man/" passHref legacyBehavior><a target="_blank"><div id="box" className="p-0 h-full transition-all hover:bg-white/50 bg-white/5 relative rounded-3xl max-[500px]:rounded-lg w-full flex items-center cursor-pointer justify-center border-[0px] border-white group"><Image className="pointer-events-none duration-200 ease-[cubic-bezier(.52,.07,0,1.32)] transition-all  group-hover:scale-75 h-[50%] w-auto" src={'https://img.icons8.com/?size=100&id=85154&format=png&color=FFFFFF'} height={1000} width={1000} objectFit="cover" /></div></a></Link>
-                                                <Link href="https://www.linkedin.com/in/appannagari-karthik-212143147/" passHref legacyBehavior><a target="_blank"><div id="box" className="p-0 h-full transition-all hover:bg-white/50 bg-white/5 relative rounded-3xl max-[500px]:rounded-lg w-full flex items-center cursor-pointer justify-center border-[0px] border-white group"><Image className="pointer-events-none duration-200 ease-[cubic-bezier(.52,.07,0,1.32)] transition-all  group-hover:scale-75 h-[50%] w-auto" src={'https://img.icons8.com/?size=100&id=85044&format=png&color=FFFFFF'} height={1000} width={1000} objectFit="cover" /></div></a></Link>
-                                                <Link href="https://github.com/orangeappleak" passHref legacyBehavior><a target="_blank"><div id="box" className="p-0 h-full transition-all hover:bg-white/50 bg-white/5 relative rounded-3xl max-[500px]:rounded-lg w-full flex items-center cursor-pointer justify-center border-[0px] border-white group"><Image className="pointer-events-none duration-200 ease-[cubic-bezier(.52,.07,0,1.32)] transition-all  group-hover:scale-75 h-[50%] w-auto" src={'https://img.icons8.com/?size=100&id=106562&format=png&color=FFFFFF'} height={1000} width={1000} objectFit="cover" /></div></a></Link>
-                                                <Link href="mailto:redmango.karthik@gmail.com" passHref legacyBehavior><a target="_blank"><div id="box" className="p-0 h-full transition-all hover:bg-white/50 bg-white/5 relative rounded-3xl max-[500px]:rounded-lg w-full flex items-center cursor-pointer justify-center border-[0px] border-white group"><Image className="pointer-events-none duration-200 ease-[cubic-bezier(.52,.07,0,1.32)] transition-all  group-hover:scale-75 h-[50%] w-auto" src={'https://img.icons8.com/?size=100&id=85467&format=png&color=FFFFFF'} height={1000} width={1000} objectFit="cover" /></div></a></Link>
+                                                <Link href="https://www.instagram.com/lama_momo_man/" passHref legacyBehavior><a target="_blank"><div id="box" className="p-0 h-full transition-all hover:bg-white/50 bg-white/5 relative rounded-3xl max-[500px]:rounded-lg w-full flex items-center cursor-pointer justify-center border-[0px] border-white group"><Image className="pointer-events-none duration-200 ease-[cubic-bezier(.52,.07,0,1.32)] transition-all  group-hover:scale-150 h-[30%] w-auto" src={'https://img.icons8.com/?size=100&id=85154&format=png&color=FFFFFF'} height={1000} width={1000} objectFit="cover" /></div></a></Link>
+                                                <Link href="https://www.linkedin.com/in/appannagari-karthik-212143147/" passHref legacyBehavior><a target="_blank"><div id="box" className="p-0 h-full transition-all hover:bg-white/50 bg-white/5 relative rounded-3xl max-[500px]:rounded-lg w-full flex items-center cursor-pointer justify-center border-[0px] border-white group"><Image className="pointer-events-none duration-200 ease-[cubic-bezier(.52,.07,0,1.32)] transition-all  group-hover:scale-150 h-[30%] w-auto" src={'https://img.icons8.com/?size=100&id=85044&format=png&color=FFFFFF'} height={1000} width={1000} objectFit="cover" /></div></a></Link>
+                                                <Link href="https://github.com/orangeappleak" passHref legacyBehavior><a target="_blank"><div id="box" className="p-0 h-full transition-all hover:bg-white/50 bg-white/5 relative rounded-3xl max-[500px]:rounded-lg w-full flex items-center cursor-pointer justify-center border-[0px] border-white group"><Image className="pointer-events-none duration-200 ease-[cubic-bezier(.52,.07,0,1.32)] transition-all  group-hover:scale-150 h-[30%] w-auto" src={'https://img.icons8.com/?size=100&id=106562&format=png&color=FFFFFF'} height={1000} width={1000} objectFit="cover" /></div></a></Link>
+                                                <Link href="mailto:redmango.karthik@gmail.com" passHref legacyBehavior><a target="_blank"><div id="box" className="p-0 h-full transition-all hover:bg-white/50 bg-white/5 relative rounded-3xl max-[500px]:rounded-lg w-full flex items-center cursor-pointer justify-center border-[0px] border-white group"><Image className="pointer-events-none duration-200 ease-[cubic-bezier(.52,.07,0,1.32)] transition-all  group-hover:scale-150 h-[30%] w-auto" src={'https://img.icons8.com/?size=100&id=85467&format=png&color=FFFFFF'} height={1000} width={1000} objectFit="cover" /></div></a></Link>
                                             </div>
                                             <div id="location-map" className="relative flex-[0.75] h-[100%] overflow-hidden w-full rounded-2xl max-[500px]:rounded-lg">
                                                 <div id="location-image-wraper" className="relative h-full w-full" >
@@ -105,7 +105,7 @@ const Footer = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div id="inner-content-lower" className="flex-[1.25] bg-white/5 px-10 max-[500px]:px-5 box-border my-5 max-[500px]:my-1 rounded-3xl max-[500px]:rounded-lg">
+                                        {/* <div id="inner-content-lower" className="flex-[1.25] bg-white/5 px-10 max-[500px]:px-5 box-border my-5 max-[500px]:my-1 rounded-3xl max-[500px]:rounded-lg">
                                             <div id="resume-box-wrapper" className="w-full h-full flex flex-row justify-between">
                                                 <div id="resume-heading" className="flex-1 flex justify-start items-center">
                                                     <h1 className="text-white text-2xl max-[500px]:text-sm font-bold">Resume</h1>
@@ -119,14 +119,14 @@ const Footer = () => {
                                                     }} className="m-2 max-[500px]:m-1 flex items-center shadow-inner shadow-white/50 box-border justify-center relative flex-1 w-full transition-all duration-300 h-auto rounded-2xl max-[500px]:rounded-lg hover:bg-white/50 group"><Image src={'https://img.icons8.com/?size=100&id=85329&format=png&color=FFFFFF'} className="group-hover:scale-75 transition-all duration-300 h-1/2 w-auto" quality={100} objectFit="contain" height={50} width={50} /></div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div id="footer-content-lower" className="flex text-center items-center justify-between box-border">
                             <h1 className="text-white/10 max-[500px]:text-[8px]">Copyright © 2024 redport Limited</h1>
-                            <h1 className="text-white/10 max-[500px]:text-[8px]">DESIGNED AND DEVELOPED BY KARTHIK</h1>
+                            <h1 className="text-white/10 max-[500px]:text-[8px]">Designed and developed by Karthik.A</h1>
                             <h1 className="text-white/10 max-[500px]:text-[8px]"> Made with ❤️ with nextJS GSAP.</h1>
                         </div>
                     </AnimatedElement>
