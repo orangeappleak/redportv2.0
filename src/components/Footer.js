@@ -31,10 +31,12 @@ const Footer = () => {
                 <div id="lets-connect" className="absolute top-0 pointer-events-none flex flex-row w-full items-center justify-center">
                     <AnimatedElement trigger="#footer" id="lets" config={{
                         from: {
-                            y: "-100%"
+                            y: "-100%",
+                            opacity: -2
                         },
                         to: {
-                            y: 0
+                            y: 0,
+                            opacity: 1
                         },
                         scrollTrigger: {
                             scrub: 2,
@@ -48,10 +50,12 @@ const Footer = () => {
                     </AnimatedElement>
                     <AnimatedElement trigger="#footer" id="connect" config={{
                         from: {
-                            y: "-500%"
+                            y: "-300%",
+                            opacity: -2
                         },
                         to: {
-                            y: 0
+                            y: 0,
+                            opacity: 1
                         },
                         scrollTrigger: {
                             scrub: 2,
