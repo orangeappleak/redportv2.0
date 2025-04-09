@@ -21,6 +21,35 @@ export default function Index() {
     "Amazon Cloud Services"
   ]
 
+  const whyConsiderData = [
+    {
+      title: "💘 User's Valentine",
+      description: "Design that flirts with users and romances your KPIs. I make things people love—and love to click."
+    },
+    {
+      title: "🧠 Pixel-Perfect with a Purpose",
+      description: "Looks good. Works better. I blend beauty with brains to create designs that actually perform."
+    },
+    {
+      title: "🧱 Built From Front to Back (End)",
+      description: "I don't just design what users see—I engineer what makes it work. End-to-end. Pixel to database."
+    },
+    {
+      title: "🛰️ Full Stack. Full Power.",
+      description: "From responsive UIs to robust APIs, I build systems that work hard under the hood and look good doing it."
+    },
+    {
+      title: "🧰 Tech-Stacked and Impact-Backed",
+      description: "React, Node, Python, SQL—you name it. I use the right tools to solve the right problems."
+    },
+    {
+      title: "📦 Modular, Maintainable, Made to Scale",
+      description: "Code should grow with your product. I architect systems ready to scale without the chaos."
+    }
+
+
+  ]
+
   const skillSet = [
     ['React', 'React Native', 'Redux', 'React State Management', 'React Spring', 'Angular', 'Vue js', 'Tailwind CSS', 'Ecmascript', 'Typescript', 'JSON', 'GSAP', 'Next JS', 'Sass', 'HTML/CSS'],
     ['Java Spring', 'Java MVC', 'Hibernate', 'POGO', 'Java Springboot', 'JDBC', 'Microservices architecture', 'Restful API design', 'JUnit', 'Microservices Architechture'],
@@ -122,7 +151,7 @@ export default function Index() {
 
     gsap.fromTo(container.current.querySelector('#super-powers-heading'), { scale: 1, opacity: 1 },
       {
-        opacity: 0, scale: 0.8, ease: 'power2.inOut', duration: 2, scrollTrigger: {
+        opacity: 0.5, scale: 0.95, ease: 'power2.inOut', duration: 2, scrollTrigger: {
           scrub: 2,
           trigger: container.current.querySelector('#third-inner-wrapper'),
           start: 'top center',
@@ -217,12 +246,26 @@ export default function Index() {
 
   }, { scope: container });
 
+  useEffect(() => {
+    gsap.to("#why-consider-heading", {
+      scrollTrigger: {
+        trigger: "#why-consider",
+        start: "top top",
+        end: "bottom bottom",
+        pin: "#why-consider-heading",
+        anticipatePin: 1,
+        pinSpacing: false,
+        pinReparent: false
+      }
+    });
+  }, []);
+
   return (
     <div id="main-container" ref={container} className='h-auto overflow-hidden'>
 
       <section id="start-page" className="relative h-[100vh] max-[500px]:h-[100svh] overflow-hidden">
         <div id="image" className='absolute top-0 left-0 h-screen w-screen max-[500px]:h-screen'>
-          <Image quality={100} src={'/goku.jpg'} alt="" fill style={{objectFit: "cover"}} priority />
+          <Image quality={100} src={'/goku.jpg'} alt="" fill style={{ objectFit: "cover" }} priority />
         </div>
         <AnimatedElement config={{
           to: {
@@ -275,11 +318,11 @@ export default function Index() {
                 <div id="some-words-content" className='z-10 flex-[2] text-2xl max-[500px]:text-xl'>
 
                   <p className="text-left max-[500px]:text-left font-light inline-block">
-                    Hey there! I’m a 24-year-old developer with a passion for creating intuitive and engaging digital experiences. My journey in tech has equipped me with a diverse skill set in front-end development, primarily using React and JavaScript, but I also love exploring the depths of design and user experience. <br /><br />
+                    Hey there! I'm a 24-year-old developer with a passion for creating intuitive and engaging digital experiences. My journey in tech has equipped me with a diverse skill set in front-end development, primarily using React and JavaScript, but I also love exploring the depths of design and user experience. <br /><br />
 
-                    When I’m not coding, you can find me immersed in competitive games, sketching out my next creative project, or delving into the fascinating stories of history. Badminton is my go-to sport on the weekends, where I enjoy the thrill of a good match, and music is a big part of my life—I’m a professional Veena player, blending traditional artistry with my tech-savvy nature.<br /><br />
+                    When I'm not coding, you can find me immersed in competitive games, sketching out my next creative project, or delving into the fascinating stories of history. Badminton is my go-to sport on the weekends, where I enjoy the thrill of a good match, and music is a big part of my life—I'm a professional Veena player, blending traditional artistry with my tech-savvy nature.<br /><br />
 
-                    I believe in the power of collaboration and creativity, and I’m always eager to take on new challenges that push my boundaries. Welcome to my portfolio, where I share my projects and passion for innovation!
+                    I believe in the power of collaboration and creativity, and I'm always eager to take on new challenges that push my boundaries. Welcome to my portfolio, where I share my projects and passion for innovation!
                   </p>
 
                 </div>
@@ -361,7 +404,7 @@ export default function Index() {
           <div id="third-wrapper" className={`relative h-[600lvh] max-[500px]:h-[800vh] w-full box-border overflow-hidden`}>
             <div ref={pinElement1} id="super-powers-heading" className='relative top-0 w-full left-0 h-screen max-[500px]:h-screen flex flex-col justify-center items-center'>
               <h1 className='text-[8vw] text-stone-700 font-bold max-[500px]:font-light max-[500px]:text-4xl text-center leading-tight'>What are my</h1>
-              <h1 className='text-[8vw] max-[500px]:text-[20vw] text-stone-700 font-bold text-center  leading-none'>Super Powers?</h1>
+              <h1 className='text-[8vw] max-[500px]:text-[20vw] text-stone-700 font-bold text-center leading-none'>Super Powers?</h1>
             </div>
             <div id="third-inner-wrapper" className='absolute top-[70vh] max-[500px]:top-[500px] h-auto max-[500px]:h-lvh box-border flex flex-row w-full'>
               <div id="super-power-card-data1" className='h-auto max-[500px]:absolute z-10 top-full box-border p-10 flex-1 flex flex-col justify-center items-center relative w-full'>
@@ -370,7 +413,7 @@ export default function Index() {
                 })}
               </div>
               <div id='super-power-card-wrapper' className='flex max-[500px]:pt-24 box-border w-full h-screen max-[500px]:h-[100svh] justify-center items-center top-0 flex-1'>
-                <div id="super-power-card" className='h-[80vh] max-[500px]:h-[70svh] border-4 border-orange-500 w-full overflow-hidden justify-center items-center border-black/50 rounded-3xl relative'>
+                <div id="super-power-card" className='h-[70%] max-[500px]:h-[50%] border-2 border-slate-900/20 w-full overflow-hidden justify-center items-center rounded-3xl relative'>
                   {superImageContent.map((data, index) => {
                     return <SuperImageContent key={index} data={data} />
                   })}
@@ -388,15 +431,57 @@ export default function Index() {
 
 
         </section>
+        <section id="why-consider" className='h-full w-full'>
+          <div id="why-consider-heading" className='h-[50vh] flex flex-col items-center justify-center w-full'>
+            <h1 className='text-9xl max-[500px]:text-7xl font-black text-center'>Why Consider Me?</h1>
+          </div>
+          <div id="why-consider-content" className='h-auto p-40 max-[500px]:p-10 flex flex-col items-center justify-center w-full'>
+            {whyConsiderData.map((data, index) => {
+              return <WhyConsiderCards key={index} data={data} index={index} />
+            })}
+          </div>
+        </section>
       </div>
-
-
-
 
       {/* Prevent extra space at the end */}
       <div className="h-0"></div>
     </div >
   );
+}
+
+const WhyConsiderCards = ({ data, index }) => {
+
+  const getAlignment = (index) => {
+    const alignments = ['center', 'flex-start', 'center', 'flex-end'];
+    return alignments[index % alignments.length];
+  };
+
+  return (
+    <div
+      id="why-consider-cards"
+      className='h-[40vh] m-2 flex flex-col items-center justify-center max-[500px]:w-full w-[20vw]'
+      style={{ alignSelf: getAlignment(index) }}
+    >
+      <AnimatedElement id="why-consider-card-wrapper" className='h-full flex bg-slate-400/20 rounded-xl backdrop-blur-sm flex-col justify-between p-10' config={{
+        from: {
+          rotateY: 180,
+        },
+        to: {
+          rotateY: 0,
+          ease: "slow(0.7,0.7,false)"
+        },
+        scrollTrigger: {
+          scrub: 1,
+          duration: 100,
+          start: 'top bottom',
+          end: 'bottom center'
+        }
+      }}>
+        <h1 className='text-4xl max-[500px]:text-3xl font-bold'>{data.title}</h1>
+        <p className='text-md opacity-75 font-light'>{data.description}</p>
+      </AnimatedElement>
+    </div>
+  )
 }
 
 const FourthWrapper = () => {
@@ -486,7 +571,7 @@ const FourthWrapper = () => {
         <div id="fourth-heading" className='relative max-[500px]:p-2 h-auto max-[500px]:h-screen max-[500px]:flex flex-col justify-center'>
           <h1 className="text-[10vw] max-[500px]:text-7xl text-white font-semibold leading-[0.8]">Of everything I've shared, this one means the most</h1>
           <div id="fourth-image" className='flex flex-col items-center justify-end'>
-            <Image id="fourth-image-img" alt="" className='w-[70vw] rounded-3xl max-[500px]:w-auto max-[500px]:h-auto' src={'/luffy2.jpg'} style={{objectFit: 'cover'}} height={10000} width={10000} />
+            <Image id="fourth-image-img" alt="" className='w-[70vw] rounded-3xl max-[500px]:w-auto max-[500px]:h-auto' src={'/luffy2.jpg'} style={{ objectFit: 'cover' }} height={10000} width={10000} />
           </div>
         </div>
       </div>
@@ -550,7 +635,7 @@ const SuperImageContent = ({ data }) => {
         {data.content.map((datam, index) => {
           return <div key={index} className='mb-5' id="text-content">
             <h2 className={`${data.headingColor} text-xl max-[500px]:text-sm font-semibold`}>{datam.subHeading}</h2>
-            <p className={`${data.textColor} text-lg max-[500px]:text-sm`}>{datam.text}</p>
+            {/* <p className={`${data.textColor} text-lg max-[500px]:text-sm`}>{datam.text}</p> */}
           </div>
         })}
       </div>
@@ -599,8 +684,8 @@ const SuperCardBox = ({ cardInfo }) => {
         className='h-screen w-full justify-center items-center flex-1'
       >
         <div ref={container} id="container" className='h-full flex justify-center py-10 items-center'>
-          <div ref={contContent} id="container-content" className='translate-x-0 w-full flex justify-center backdrop-blur-sm items-center h-1/5 max-[500px]:h-auto bg-white/60 shadow-inner shadow-slate-400 rounded-xl'>
-            <h1 className='text-5xl max-[500px]:text-lg text-black max-[500px]:text-center font-medium max-[500px]:p-5 px-10 py-20'>{cardInfo.data}</h1>
+          <div ref={contContent} id="container-content" className='translate-x-0 w-full flex justify-center backdrop-blur-sm items-center h-1/5 max-[500px]:h-auto bg-slate-300/50 shadow-slate-400 rounded-xl'>
+            <h1 className='text-5xl max-[500px]:text-3xl text-black max-[500px]:text-center font-medium max-[500px]:p-5 px-10 py-20'>{cardInfo.data}</h1>
           </div>
         </div>
       </div>

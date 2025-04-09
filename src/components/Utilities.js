@@ -50,18 +50,15 @@ const useGsap = (config, staggerEl, trigger) => {
 
 
 export const WordSplit = ({ children }) => {
-
     const arr = Array.isArray(children) ? children : [children];
     const splitRef = useRef(null);
 
-    //console.log(arr);
-
     return (
         arr.map((child, index) => {
-            //console.log(arr);
-            return <div ref={splitRef} className={child.props.splitStyle} key={index} id="split">
-                {child.props.children.split(child.props.words ? ' ' : '').map((split, index) => {
-                    return <span key={index} id="cover" className={child.props.className + ' origin-center overflow-y-hidden'}> {split === ' ' ? '\u00A0' : <span className="relative" id="alpha">{split}</span>}</span>
+            const { splitStyle, className, words, children: content } = child.props;
+            return <div ref={splitRef} className={splitStyle} key={`split-${index}-${content.slice(0,5)}`} id="split">
+                {content.split(words ? ' ' : '').map((split, index) => {
+                    return <span key={`char-${index}-${split}`} id="cover" className={className + ' origin-center overflow-y-hidden'}> {split === ' ' ? '\u00A0' : <span className="relative" id="alpha">{split}</span>}</span>
                 })}
             </div>
         })
