@@ -8,7 +8,7 @@ import { useBodyRef, useScrollTriggger } from "@/context/BodyRefContext";
 import { AnimatedElement, WordSplit, getRandomNumber } from '@/components/Utilities';
 
 import gsap from "gsap";
-import {useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 
 export default function Home() {
   // const { timeline } = useContext(TransitionContext);
@@ -24,7 +24,7 @@ export default function Home() {
         trigger: homeRef.current,
         pin: homeRef.current.parentElement,
         anticipatePin: 1,
-        pinSpacing: false
+        pinSpacing: false,
       }
     })
 
@@ -33,7 +33,7 @@ export default function Home() {
   useGSAP(() => {
     const targets = gsap.utils.toArray(["h1", "p", "div"])
 
-    gsap.fromTo(targets, { opacity: 0.1 }, {opacity: 1, ease: 'power4.inOut', duration: 1 })
+    gsap.fromTo(targets, { opacity: 0.1 }, { opacity: 1, ease: 'power4.inOut', duration: 1 })
 
   }, { scope: homeRef });
 
@@ -49,63 +49,66 @@ export default function Home() {
         },
         scrollTrigger: { scrub: 1, start: 'center top', end: 'bottom top' }
       }}>
-        <section ref={homeRef} id='home-page-wrapper' className="h-[150vh] w-screen">
-          <div id="home-page" className="relative top-0 m-0 p-0 overflow-hidden h-screen w-screen">
-            <div id="home-page-content" className="h-full bg-stone-950 flex flex-col p-[5em] max-[500px]:p-[2em]">
-              <div id="home-page-heading" className="flex-[2] max-[500px]:flex-[8] w-full h-auto flex flex-row max-[500px]:flex-col justify-center items-center">
-                <h1 className="flex-1 text-stone-400 text-3xl max-[500px]:text-2xl font-light flex items-center">Software</h1>
-                <div id="middle-content-wrapper" className="flex-1 h-full flex flex-col justify-center items-center">
-                  <p className="text-stone-300 leading-none">Meet</p>
-                  <AnimatedElement staggerEl="span" config={{
-                    from: {
-                      transform: 'translate(0%, 0%)',
+        <div ref={homeRef} className='overlap-wrapper relative h-[150vh]'>
+          <section id='home-page-wrapper' className="h-[150vh] absolute inset-0 z-10 w-screen">
+            <div id="home-page" className="relative top-0 m-0 p-0 overflow-hidden h-screen w-screen">
+              <div id="home-page-content" className="h-full bg-stone-950 flex flex-col p-[5em] max-[500px]:p-[2em]">
+                <div id="home-page-heading" className="flex-[2] max-[500px]:flex-[8] w-full h-auto flex flex-row max-[500px]:flex-col justify-center items-center">
+                  <h1 className="flex-1 text-stone-400 text-3xl max-[500px]:text-2xl font-light flex items-center">Software</h1>
+                  <div id="middle-content-wrapper" className="flex-1 h-full flex flex-col justify-center items-center">
+                    <p className="text-stone-300 leading-none">Meet</p>
+                    <AnimatedElement staggerEl="span" config={{
+                      from: {
+                        transform: 'translate(0%, 0%)',
 
-                    },
-                    to: {
-                      transform: 'translate(0%, -150%)',
-                      stagger: 0.01,
-                      ease: 'power4.inOut'
-                    },
-                    scrollTrigger: {
-                      scrub: 4,
-                      start: 'top top',
-                      end: 'bottom top'
-                    }
-                  }}>
-                    <WordSplit>
-                      <h1 splitStyle="flex overflow-hidden leading-none" className="leading-none my-5 text-white font-normal text-[10vw] max-[500px]:text-[20vw] tracking-normal">Karthik</h1>
-                    </WordSplit>
-                  </AnimatedElement>
-                  <p className="text-white text-center text-xl max-[500px]:text-sm">Seasoned software developer crafting innovative digital solutions, from web pages to complex applications, all while embracing the journey of code magic.</p>
+                      },
+                      to: {
+                        transform: 'translate(0%, -150%)',
+                        stagger: 0.01,
+                        ease: 'power4.inOut'
+                      },
+                      scrollTrigger: {
+                        scrub: 4,
+                        start: 'top top',
+                        end: 'bottom top'
+                      }
+                    }}>
+                      <WordSplit>
+                        <h1 splitStyle="flex overflow-hidden leading-none" className="leading-none my-5 text-white font-normal text-[10vw] max-[500px]:text-[20vw] tracking-normal">Karthik</h1>
+                      </WordSplit>
+                    </AnimatedElement>
+                    <p className="text-white text-center text-xl max-[500px]:text-sm">Seasoned software developer crafting innovative digital solutions, from web pages to complex applications, all while embracing the journey of code magic.</p>
+                  </div>
+                  <h1 className="flex-1 text-white/50 text-3xl max-[500px]:text-2xl font-light flex items-center justify-end">Developer</h1>
                 </div>
-                <h1 className="flex-1 text-white/50 text-3xl max-[500px]:text-2xl font-light flex items-center justify-end">Developer</h1>
+                <AnimatedElement staggerEl="#graphic" className="relative left-0 top-0 h-auto w-full flex-[1.5] max-[500px]:flex-[4] flex items-end" config={{
+                  from: {
+                    transform: 'translate(0%,0%)',
+                  },
+                  to: {
+                    transform: 'translate(0%,-120vh)',
+                    stagger: 0.5,
+                    ease: 'sine.inOut',
+                    duration: 5,
+                  },
+                  scrollTrigger: {
+                    scrub: 3,
+                    start: 'top top',
+                  }
+                }}>
+                  <div id="graphic-wrapper" className="flex h-full w-full">
+                    <div id="graphic" className="origin-center relative rounded-full w-full full bg-white mx-2"></div>
+                    <div id="graphic" className="origin-center relative rounded-full w-full h-full bg-white mx-2 "></div>
+                    <div id="graphic" className="origin-center relative rounded-full w-full h-full bg-white mx-2 "></div>
+                    <div id="graphic" className="origin center relative rounded-full w-full h-full bg-white mx-2 "></div>
+                    <div id="graphic" className="origin-center relative max-[500px]:hidden rounded-full w-full h-full bg-white mx-2"></div>
+                  </div>
+                </AnimatedElement>
               </div>
-              <AnimatedElement staggerEl="#graphic" className="relative left-0 top-0 h-auto w-full flex-[1.5] max-[500px]:flex-[4] flex items-end" config={{
-                from: {
-                  transform: 'translate(0%,0%)',
-                },
-                to: {
-                  transform: 'translate(0%,-120vh)',
-                  stagger: 0.5,
-                  ease: 'sine.inOut',
-                  duration: 5,
-                },
-                scrollTrigger: {
-                  scrub: 3,
-                  start: 'top top',
-                }
-              }}>
-                <div id="graphic-wrapper" className="flex h-full w-full">
-                  <div id="graphic" className="origin-center relative rounded-full w-full full bg-white mx-2"></div>
-                  <div id="graphic" className="origin-center relative rounded-full w-full h-full bg-white mx-2 "></div>
-                  <div id="graphic" className="origin-center relative rounded-full w-full h-full bg-white mx-2 "></div>
-                  <div id="graphic" className="origin center relative rounded-full w-full h-full bg-white mx-2 "></div>
-                  <div id="graphic" className="origin-center relative max-[500px]:hidden rounded-full w-full h-full bg-white mx-2"></div>
-                </div>
-              </AnimatedElement>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
+
       </AnimatedElement>
       <div id="pages-wrapper" className='border-2 border-red relative z-[2] h-auto w-screen box-border rounded-3xl max-[500px]:rounded-[30px] px-[2em] pb-[5em] max-[500px]:px-[1.5em] pt-[6em] max-[500px]:pt-0 bg-[#e3e6e4]'>
         <IntroPage />
@@ -170,7 +173,7 @@ const IntroPage = () => {
           scrub: 0.2,
         }
       }}>
-        <Image src={'/me1.jpg'} width={500} height={500} className="rounded-3xl w-1/2 max-[500px]:w-full rotate-[-90deg]" alt="me-image" loading="lazy" />
+        <Image src={'/me1.jpg'} width={1000} height={1000} className="rounded-3xl w-1/2 max-[500px]:w-full rotate-[-90deg]" alt="me-image" loading="lazy" />
       </AnimatedElement>
     </div>
   </section >
@@ -258,9 +261,9 @@ const About = () => {
       start: 'top 5%',
       end: 'bottom bottom ',
       anticipatePin: 1,
-      pinSpacing: false,  
+      pinSpacing: false,
     });
-  }, [bodyRef,st]);
+  }, [bodyRef, st]);
 
   const aboutData = [
     {
@@ -313,7 +316,7 @@ const About = () => {
       </div> */}
     <div id="about-cards-wrapper" className="w-full pb-[50em] box-border flex-1 justify-center items-center flex flex-col max-[500px]:w-full">
       {aboutData.map((el, index) => {
-        return <div key={index} id={"about-cards" + index} className={`w-full ${index != (aboutData.length - 1) ? "mb-[20em]" : "mb-0"} flex justify-center px-[0em] relative h-auto max-[500px]:px-0`}>
+        return <div key={index} id={"about-cards" + index} className={`w-full ${index != (aboutData.length - 1) ? "mb-[20em]" : "mb-0"} flex items-center justify-center px-[0em] relative h-[50vh] max-[500px]:px-0`}>
           <AboutCard content={el.content} heading={el.title} index={index} id={'page' + index} src={el.src}></AboutCard>
         </div>
       })}
@@ -337,7 +340,6 @@ const AboutCard = ({ id, index, heading, content }) => {
       endTrigger: bodyRef.current.querySelector('#about-cards-wrapper'),
       start: `top ${startPos + (index * 15) + 70}`,
       end: 'bottom bottom',
-      anticipatePin: 1,
       pinSpacing: false,
     })
   }, [id, index, st, bodyRef]);
@@ -347,16 +349,16 @@ const AboutCard = ({ id, index, heading, content }) => {
       scale: 1,
     },
     to: {
-      scale: 0.98,
+      scale: 1,
       duration: 4
     },
     scrollTrigger: {
       scrub: 1,
       start: 'top center',
       end: 'center top',
-      ease: 'power4.inOut',
+      ease: 'power4.inOut'
     }
-  }} id={id} className="h-[50vh] max-[500px]:h-[40svh] max-[500px]:p-5 max-[500px]:py-10 border-orange-500 border-2 w-2/3 max-[500px]:w-full overflow-hidden bg-stone-900 rounded-3xl box-border shadow-2xl">
+  }} id={id} style={{ willChange: "transform" }} className="h-full absolute max-[500px]:h-[40svh] max-[500px]:p-5 max-[500px]:py-10 border-orange-500 border-2 w-2/3 max-[500px]:w-full overflow-hidden bg-stone-900 rounded-3xl box-border shadow-2xl">
     <div id="about-content" className="relative flex h-full px-10 max-[500px]:px-0 flex-row max-[500px]:flex-col max-[500px]:align-center max-[500px]:justify-center overflow-hidden">
       {/* <div id="about-content-image" className="flex flex-1 shadow-[10px_0_20px_1px] shadow-black/30 items-center justify-center overflow-hidden max-[500px]:absolute max-[500px]:h-[100%] top-0 left-0">
         <Image loading="lazy" alt='alt' width={800} height={800} className="h-full w-auto max-[500px]:w-auto max-[500px]:h-full max-w-[100vw]" src={src} />
@@ -378,11 +380,10 @@ const AboutCard = ({ id, index, heading, content }) => {
             <h1 words={false} splitStyle='overflow-hidden flex items-center justify-center relative' className="relative opacity-1 translate-y-[100%] tracking-normal leading-none font-semibold text-white text-8xl max-[500px]:text-white/30 max-[500px]:text-center max-[500px]:text-lg">{heading}</h1>
           </WordSplit>
         </AnimatedElement>
-        <p className="z-2 text-stone-400 text-4xl max-[500px]:text-xl max-[500px]:text-white">{content}</p> 
+        <p className="z-2 text-stone-400 text-4xl max-[500px]:text-xl max-[500px]:text-white">{content}</p>
       </div>
     </div>
   </AnimatedElement>
-
 }
 
 const Projects = () => {
@@ -539,8 +540,8 @@ const Project = ({ data, id }) => {
         end: 'top top',
       }
     }}>
-      <div id="image-wrapper" className="h-full w-full flex items-center justify-center">
-        <Image className="w-full border-2 border-red max-[500px]:h-auto max-[500px]:w-full" src={data.image} fetchPriority='high' quality={100} width={10000} height={10000} alt="project-image" />
+      <div id="image-wrapper" className="h-full w-full flex items-center justify-center" style={{ aspectRatio: "16/9" }}>
+        <Image className="w-full border-2 border-red max-[500px]:h-auto max-[500px]:w-full" src={data.image} layout='responsive' fetchPriority='high' quality={100} width={800} height={450} alt="project-image" />
       </div>
     </AnimatedElement>
   </div>
