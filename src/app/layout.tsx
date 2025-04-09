@@ -12,7 +12,7 @@ import React, { useRef } from 'react';
 
 import './globals.css';
 import { ScrollTrigger } from "gsap/all";
-//import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function RootLayout({
   children,
@@ -33,7 +33,7 @@ export default function RootLayout({
                  <Header />
                   <LenisScroller>
                     {children}
-                    {/* <SpeedInsights /> */}
+                    <SpeedInsights />
                   </LenisScroller>
                   <Footer />
                 </Transition>
