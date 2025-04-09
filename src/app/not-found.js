@@ -1,20 +1,18 @@
 "use client"
 import './globals.css';
 
-import React, { useContext, useRef } from 'react';
+import React, { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { TransitionContext } from '@/context/TransitionContext';
 
 export default function NotFound() {
 
   const container = useRef(null);
-  const { timeline } = useContext(TransitionContext);
 
   useGSAP(() => {
     const targets = gsap.utils.toArray(["h1"])
 
-    gsap.fromTo(targets, { opacity: 0, y:50 }, { opacity: 1, y:0, ease: 'power4.inOut', duration: 2 })
+    gsap.fromTo(targets, { opacity: 0, y: 50 }, { opacity: 1, y: 0, ease: 'power4.inOut', duration: 2 })
 
   }, { scope: container });
 
