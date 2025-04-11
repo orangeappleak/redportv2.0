@@ -47,7 +47,6 @@ export default function Index() {
       description: "Code should grow with your product. I architect systems ready to scale without the chaos."
     }
 
-
   ]
 
   const skillSet = [
@@ -130,7 +129,7 @@ export default function Index() {
         start: 'top top',
         end: 'bottom bottom',
         pinSpacing: false,
-        pinReparent: false
+        pinReparent: false,
       }
     });
 
@@ -138,23 +137,24 @@ export default function Index() {
       scrollTrigger: {
         trigger: "#third-inner-wrapper",       // The section where the pinning happens
         start: "top top",                // Start pinning when the top of the wrapper reaches the top of the viewport
-        end: "bottom bottom",
-        endTrigger: "#third-wrapper",           // Adjust based on how long you want the card to stay pinned
+        end: "top bottom",
+        endTrigger: "#why-consider",           // Adjust based on how long you want the card to stay pinned
         pin: "#super-power-card",
         anticipatePin: 1,      // Pin the card
         scrub: 2,
         pinReparent: false,
-        pinSpacing: false, // Smooth scrubbing as you scroll
+        pinSpacing: false, // Smooth scrubbing as you scroll,
+        markers: true
       }
     });
 
 
-    gsap.fromTo(container.current.querySelector('#super-powers-heading'), { scale: 1, opacity: 1 },
+    gsap.fromTo(container.current.querySelector('#super-powers-heading'), { scale: 1, opacity: 1, y: 0 },
       {
-        opacity: 0.5, scale: 0.95, ease: 'power2.inOut', duration: 2, scrollTrigger: {
+        opacity: 0.3, scale: 0.95, y: 50, ease: 'power2.inOut', duration: 2, scrollTrigger: {
           scrub: 2,
           trigger: container.current.querySelector('#third-inner-wrapper'),
-          start: 'top center',
+          start: 'top bottom',
           end: 'top top'
         }
       },);
@@ -184,9 +184,10 @@ export default function Index() {
     targets.forEach((target, index) => {
       gsap.to(target, {
         transform: index > 0 ? `translate(0%, -${index * 100}%)` : 'translate(0%, 0%)', z: 10, stagger: 2, duration: 2, scrollTrigger: {
-          trigger: index > 0 ? containers[index] : containers[0],
+          // trigger: index > 0 ? containers[index] : containers[0],
+          trigger: target,
           start: "top bottom",
-          end: "bottom center",
+          end: "bottom bottom",
           pinSpacing: false,
           pinReparent: false,
           scrub: 1,
@@ -406,24 +407,24 @@ export default function Index() {
               <h1 className='text-[8vw] text-stone-700 font-bold max-[500px]:font-light max-[500px]:text-4xl text-center leading-tight'>What are my</h1>
               <h1 className='text-[8vw] max-[500px]:text-[20vw] text-stone-700 font-bold text-center leading-none'>Super Powers?</h1>
             </div>
-            <div id="third-inner-wrapper" className='absolute top-[70vh] max-[500px]:top-[500px] h-auto max-[500px]:h-lvh box-border flex flex-row w-full'>
-              <div id="super-power-card-data1" className='h-auto max-[500px]:absolute z-10 top-full box-border p-10 flex-1 flex flex-col justify-center items-center relative w-full'>
+            <div id="third-inner-wrapper" className='absolute max-[500px]:top-[500px] h-auto max-[500px]:h-lvh box-border flex flex-row w-full'>
+              {/* <div id="super-power-card-data1" className='h-auto max-[500px]:absolute z-10 top-full box-border p-10 flex-1 flex flex-col justify-center items-center relative w-full'>
                 {superPowerData1.map((data, index) => {
                   return <SuperCardBox key={index} cardInfo={{ data, index }} />
                 })}
-              </div>
-              <div id='super-power-card-wrapper' className='flex max-[500px]:pt-24 box-border w-full h-screen max-[500px]:h-[100svh] justify-center items-center top-0 flex-1'>
-                <div id="super-power-card" className='h-[70%] max-[500px]:h-[50%] border-2 border-slate-900/20 w-full overflow-hidden justify-center items-center rounded-3xl relative'>
+              </div> */}
+              <div id='super-power-card-wrapper' className='flex max-[500px]:pt-24 box-border w-full h-screen max-[500px]:h-[100vh] justify-center items-center top-0 flex-[2]'>
+                <div id="super-power-card" className='h-screen max-[500px]:h-[70%] w-full overflow-hidden justify-center items-center relative'>
                   {superImageContent.map((data, index) => {
-                    return <SuperImageContent key={index} data={data} />
+                    return <SuperImageContent key={index} data={data} index={index} />
                   })}
                 </div>
               </div>
-              <div id="super-power-card-data2" className='h-screen max-[500px]:hidden flex-1 p-10 relative top-0 w-full'>
+              {/* <div id="super-power-card-data2" className='h-screen max-[500px]:hidden flex-1 p-10 relative top-0 w-full'>
                 {skillSet.map((data, index) => {
                   return <SuperCardBoxSkills key={index} data={data} />
                 })}
-              </div>
+              </div> */}
 
             </div>
           </div>
@@ -478,7 +479,7 @@ const WhyConsiderCards = ({ data, index }) => {
         }
       }}>
         <h1 className='text-4xl max-[500px]:text-3xl font-bold'>{data.title}</h1>
-        <p className='text-md opacity-75 font-light'>{data.description}</p>
+        <p className='text-2xl max-[500px]:text-xl opacity-75 font-light'>{data.description}</p>
       </AnimatedElement>
     </div>
   )
@@ -621,7 +622,7 @@ const MeImages = ({ title, img, number, color }) => {
 }
 
 
-const SuperImageContent = ({ data }) => {
+const SuperImageContent = ({ data, index }) => {
 
   // const [col, updateCol] = useState(null);
 
@@ -629,20 +630,30 @@ const SuperImageContent = ({ data }) => {
   //   updateCol(data.bgColor);
   // }, [data])
 
-  return <div id="image-wrapper" className={`flex p-10 max-[500px]:p-5 super-image top-0 relative box-border w-full h-full overflow-hidden ${data.bgColor}`} >
-    <div id="content-wrapper" className='w-full flex flex-col justify-around'>
-      <div id="content-2">
+  return <div id="image-wrapper" className={`flex p-10 bg-white/50 backdrop-blur-sm max-[500px]:p-5 border-red-600 border-t-4 super-image top-0 translate-y-[${index * 100}%] relative box-border w-full h-screen overflow-hidden`} >
+    <div id="content-wrapper" className='w-full flex flex-row justify-around'>
+      {/* <div id="content-2" className='max-[500px]:collapse'>
         {data.content.map((datam, index) => {
           return <div key={index} className='mb-5' id="text-content">
             <h2 className={`${data.headingColor} text-xl max-[500px]:text-sm font-semibold`}>{datam.subHeading}</h2>
-            {/* <p className={`${data.textColor} text-lg max-[500px]:text-sm`}>{datam.text}</p> */}
+            <p className={`${data.textColor} text-lg max-[500px]:text-sm`}>{datam.text}</p>
           </div>
         })}
       </div>
       <div id="content-1" className='flex flex-col flex-wrap box-border items-start max-[500px]:items-center max-[500px]:w-full max-[500px]:h-full max-[500px]:justify-center max-[500px]:absolute max-[500px]:top-0 max-[500px]:left-0'>
         {data.headings.map((heading, index) => {
-          return <h1 key={index} className={`${data.headingColor} max-[500px]:opacity-25 font-bold text-8xl max-[500px]:text-left max-[500px]:mx-0 max-[500px]:text-6xl`}>{heading}</h1>
+          return <div>
+            <h1 key={index} className={`${data.headingColor} max-[500px]:opacity-25 font-bold text-8xl max-[500px]:text-left max-[500px]:mx-0 max-[500px]:text-6xl`}>{heading}</h1>
+          </div>
         })}
+      </div> */}
+      <div id="content-1" className='flex-1 flex items-start justify-start border-2 border-red-500'>
+        <h1 className='text-6xl w-1/2 text-black'>Accessing our values</h1>
+      </div>
+      <div id="content-2" className='flex-[1.5] border-2 border-red-500 overflow-hidden'>
+        <Image className='w-auto h-full' layout='responsive' fetchPriority='high' quality={100} width={800} height={450} src="https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-52f4-61f7-9809-99411384c785/raw?se=2025-04-10T06%3A19%3A01Z&sp=r&sv=2024-08-04&sr=b&scid=e9b51514-5a3c-5115-868d-356f4ce69629&skoid=f0c3f613-0f9b-4a8a-a29a-c1a910343ad7&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-10T01%3A50%3A59Z&ske=2025-04-11T01%3A50%3A59Z&sks=b&skv=2024-08-04&sig=EEu2N1ZlGRgBj0yRiLJK2v%2BySAKwkjgsRd/%2Biy8vcPk%3D" alt="" priority />
+      </div>
+      <div id="content-3" className='flex-1 border-2 border-red-500'>
       </div>
     </div>
 
@@ -670,7 +681,7 @@ const SuperCardBox = ({ cardInfo }) => {
           endTrigger: '#third-inner-wrapper',
           end: 'bottom bottom',
           anticipatePin: 1,
-          toggleActions: 'play reverse play none'
+          toggleActions: 'play reverse play none',
         }
       });
     }
