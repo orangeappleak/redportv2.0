@@ -54,9 +54,9 @@ export default function Home() {
             <div id="home-page" className="relative top-0 m-0 p-0 overflow-hidden h-screen w-screen">
               <div id="home-page-content" className="h-full bg-stone-950 flex flex-col p-[5em] max-[500px]:p-[2em]">
                 <div id="home-page-heading" className="flex-[2] max-[500px]:flex-[8] w-full h-auto flex flex-row max-[500px]:flex-col justify-center items-center">
-                  <h1 className="flex-1 text-stone-400 text-3xl max-[500px]:text-2xl font-light flex items-center">Software</h1>
+                  <h1 className="flex-1 text-stone-400 text-3xl max-[500px]:text-2xl 2k:text-4xl 3xl:text-xl font-light flex items-center">Software</h1>
                   <div id="middle-content-wrapper" className="flex-1 h-full flex flex-col justify-center items-center">
-                    <p className="text-stone-300 leading-none">Meet</p>
+                    <p className="text-stone-300 leading-none 2k:text-2xl">Meet</p>
                     <AnimatedElement staggerEl="span" config={{
                       from: {
                         transform: 'translate(0%, 0%)',
@@ -77,9 +77,9 @@ export default function Home() {
                         <h1 splitStyle="flex overflow-hidden leading-none" className="leading-none my-5 text-white font-normal text-[10vw] max-[500px]:text-[20vw] tracking-normal">Karthik</h1>
                       </WordSplit>
                     </AnimatedElement>
-                    <p className="text-white text-center text-xl max-[500px]:text-sm">Seasoned software developer crafting innovative digital solutions, from web pages to complex applications, all while embracing the journey of code magic.</p>
+                    <p className="text-white text-center text-xl max-[500px]:text-sm 2k:text-3xl 3xl:text-xl">Seasoned software developer crafting innovative digital solutions, from web pages to complex applications, all while embracing the journey of code magic.</p>
                   </div>
-                  <h1 className="flex-1 text-white/50 text-3xl max-[500px]:text-2xl font-light flex items-center justify-end">Developer</h1>
+                  <h1 className="flex-1 text-white/50 text-3xl max-[500px]:text-2xl 2k:text-4xl font-light flex items-center justify-end 3xl:text-xl">Developer</h1>
                 </div>
                 <AnimatedElement staggerEl="#graphic" className="relative left-0 top-0 h-auto w-full flex-[1.5] max-[500px]:flex-[4] flex items-end" config={{
                   from: {
@@ -184,7 +184,7 @@ const Manifesto = () => {
 
   return <section id="manifesto-page" className="relative h-screen max-[500px]:h-auto items-center max-[500px]:items-end flex justify-start">
     <div id="manifesto-content" className="max-[500px]:mr-0 relative flex flex-col items-center justify-center max-[500px]:w-full py-[2em] z-2">
-      <h1 className="text-slate-700 text-center text-xl font-bold my-4">Manifesto</h1>
+      <h1 className="text-slate-700 text-center text-xl 2k:text-2xl font-bold my-4">Manifesto</h1>
       <AnimatedElement staggerEl="#alpha" className="w-3/4 max-[500px]:w-full flex justify-center border-box" config={{
         from: {
           top: 200,
@@ -203,7 +203,7 @@ const Manifesto = () => {
       }}>
 
         <WordSplit>
-          <p words={true} splitStyle="text-center max-[500px]:text-left inline-block" className={`text-black text-6xl leading-snug inline-block p-1 max-[500px]:text-4xl max-[500px]:pl-0`}>In the realm of technology, I wield code as my tool, crafting digital experiences that inspire and empower. Fueled by curiosity, I constantly explore new frontiers, embracing challenges as opportunities for innovation. My mission is to push creative boundaries and shape a limitless future.
+          <p words={true} splitStyle="text-center max-[500px]:text-left inline-block" className={`text-black text-6xl 2k:text-7xl 3xl:text-5xl leading-snug inline-block p-1 max-[500px]:text-4xl max-[500px]:pl-0`}>In the realm of technology, I wield code as my tool, crafting digital experiences that inspire and empower. Fueled by curiosity, I constantly explore new frontiers, embracing challenges as opportunities for innovation. My mission is to push creative boundaries and shape a limitless future.
           </p>
         </WordSplit>
       </AnimatedElement>
@@ -261,7 +261,7 @@ const About = () => {
       trigger: headingRef.current,
       pin: true,
       endTrigger: bodyRef.current.querySelector('#about-cards-wrapper'),
-      start: 'top top',
+      start: 'top 10%',
       end: 'bottom bottom',
       anticipatePin: 1,
       pinSpacing: false,
@@ -293,12 +293,12 @@ const About = () => {
 
   return <section id='about-page' className="relative h-full w-full my-20 box-border flex items-center flex-col max-[500px]:flex-col">
     <div ref={headingRef} id="curly-heading" className="h-lvh w-1/2 flex py-[5em] max-[500px]:py-[2em] flex-col justify-center flex-1 max-[500px]:w-full">
-      <h1 className="text-xl text-slate-700 font-bold text-left">Why Consider</h1>
-      <p className="text-3xl text-left mt-5">Innovating solutions, perfecting user experiences, and delivering high-quality software with precision and agility.</p>
+      <h1 className="text-xl 2k:text-2xl text-slate-700 font-bold text-left">Why Consider</h1>
+      <p className="text-3xl 2k:text-5xl text-left mt-5">Innovating solutions, perfecting user experiences, and delivering high-quality software with precision and agility.</p>
     </div>
     <div id="about-cards-wrapper" className="w-full pb-[50em] box-border flex-1 justify-center items-center flex flex-col max-[500px]:w-full">
       {aboutData.map((el, index) => {
-        return <div key={index} id={"about-cards" + index} className={`w-full ${index !== (aboutData.length - 1) ? "mb-[20em]" : "mb-0"} flex items-center justify-center px-[0em] relative h-[50vh] max-[500px]:px-0`}>
+        return <div key={index} id={"about-cards" + index} className={`w-full ${index !== (aboutData.length - 1) ? "mb-[20em]" : "mb-0"} flex items-center justify-center px-[0em] relative h-[50vh] 2k:h-[100vh] max-[500px]:px-0`}>
           <AboutCard content={el.content} heading={el.title} index={index} id={'page' + index} src={el.src}></AboutCard>
         </div>
       })}
@@ -346,7 +346,7 @@ const AboutCard = ({ id, index, heading, content }) => {
       pin: true,
       ease: 'power4.inOut',
       endTrigger: bodyRef.current.querySelector('#about-cards-wrapper'),
-      start: `top ${startPos + (index * 15) + 70}`,
+      start: `top ${startPos + (index * 15) + 90}`,
       end: 'bottom bottom',
       pinSpacing: false,
       anticipatePin: 1,
@@ -357,7 +357,7 @@ const AboutCard = ({ id, index, heading, content }) => {
   }, [id, index, st, bodyRef]);
 
   return (
-    <div ref={containerRef} className="relative w-full flex items-center justify-center">
+    <div ref={containerRef} className="relative w-full 2k:h-[70vh] flex items-center justify-center">
       <AnimatedElement config={{
         from: {
           scale: 1,
@@ -372,8 +372,8 @@ const AboutCard = ({ id, index, heading, content }) => {
           end: 'center top',
           ease: 'power4.inOut'
         }
-      }} id={id} ref={cardRef} className="overflow-hidden w-2/3 py-10 bg-stone-900 rounded-3xl box-border shadow-2xl">
-        <div className="relative flex h-full px-10 max-[500px]:px-0 flex-row max-[500px]:flex-col max-[500px]:align-center max-[500px]:justify-center overflow-hidden">
+      }} id={id} ref={cardRef} className="overflow-hidden max-[500px]:w-full w-2/3 2k:h-1/2 py-10 2k:py-20 bg-stone-900 rounded-3xl box-border shadow-2xl">
+        <div className="relative flex h-full px-10 max-[500px]:px-10 flex-row max-[500px]:flex-col max-[500px]:align-center max-[500px]:justify-center overflow-hidden">
           <div className="flex-col w-full max-[500px]:w-full flex items-start p-10 max-[500px]:p-0 justify-center">
             <AnimatedElement className="mb-5 max-[500px]:mb-0" staggerEl="span" config={{
               to: {
@@ -388,10 +388,10 @@ const AboutCard = ({ id, index, heading, content }) => {
               }
             }}>
               <WordSplit>
-                <h1 words={false} splitStyle='overflow-hidden flex items-center justify-center relative' className="relative opacity-1 translate-y-[100%] tracking-normal leading-none font-semibold text-white text-8xl max-[500px]:text-white/30 max-[500px]:text-center max-[500px]:text-lg">{heading}</h1>
+                <h1 words={false} splitStyle='overflow-hidden flex items-center justify-center relative' className="relative opacity-1 translate-y-[100%] tracking-normal leading-none font-semibold text-white text-8xl max-[500px]:text-white/30 max-[500px]:text-center max-[500px]:text-lg 3xl:text-6xl">{heading}</h1>
               </WordSplit>
             </AnimatedElement>
-            <p className="z-2 text-stone-400 text-4xl max-[500px]:text-xl max-[500px]:text-white">{content}</p>
+            <p className="z-2 text-stone-400 text-4xl 2k:text-5xl 3xl:text-2xl max-[500px]:text-lg max-[500px]:text-white">{content}</p>
           </div>
         </div>
       </AnimatedElement>

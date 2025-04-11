@@ -88,8 +88,8 @@ const Footer = () => {
                     }} id="footer-content" className="z-30 p-10 max-[500px]:p-5 box-border flex flex-col items-stretch w-full h-[100%] backdrop-blur-xl rounded-3xl bg-white/10 shadow-2xl shadow-white/10">
                         <div id="footer-cotent-upper" className="flex-[1] items-start justify-center flex flex-row max-[500px]:flex-col">
                             <div id="footer-cotent-upper-left" className="flex-[2]  max-[500px]:mb-5 h-full items-start flex flex-col justify-start">
-                                <h1 className="text-white/50 text-lg">🌊 Chasing My All Blue Across Tech and Creativity</h1>
-                                <p className="text-white text-4xl max-[500px]:text-sm">Like the mythical All Blue, I seek the perfect fusion of innovation, creativity, and purpose in everything I do—whether it’s developing intuitive web applications, designing immersive experiences, or creating impactful solutions. Every project is a step closer to my ultimate dream.
+                                <h1 className="text-white/50 2k:text-2xl text-lg max-[500px]:text-sm ">🌊 Chasing My All Blue Across Tech and Creativity</h1>
+                                <p className="text-white 2k:text-5xl text-4xl max-[500px]:text-lg">Like the mythical All Blue, I seek the perfect fusion of innovation, creativity, and purpose in everything I do—whether it’s developing intuitive web applications, designing immersive experiences, or creating impactful solutions. Every project is a step closer to my ultimate dream.
                                 </p>
                             </div>
                             <div id="footer-cotent-upper-right" className="flex-[3] max-[500px]:flex-[2] max-[500px]:w-full h-[100%] box-border">
@@ -127,9 +127,8 @@ const Footer = () => {
                                 </div>
                             </div>
                         </div>
-                        <div id="footer-content-lower" className="flex flex-col text-center items-center justify-between box-border">
-                            <h1 className="text-white/10 max-[500px]:text-[8px]">Copyright © 2024 redport Limited</h1>
-                            <h1 className="text-white/10 max-[500px]:text-[8px]">Designed and developed by Karthik.A, Made with ❤️ with nextJS GSAP.</h1>
+                        <div id="footer-content-lower" className="flex flex-col mt-5 text-center items-center justify-between box-border">
+                            <h1 className="text-white/10 max-[500px]:text-[8px]">Copyright © 2024 redport Limited || Designed and developed by Karthik.A, Made with ❤️ with nextJS GSAP.</h1>
                         </div>
                     </AnimatedElement>
 
