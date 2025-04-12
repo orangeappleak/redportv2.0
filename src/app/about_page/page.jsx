@@ -13,14 +13,6 @@ export default function Index() {
   const container = useRef(null);
   const pinElement1 = useRef(null);
 
-  const superPowerData1 = [
-    "Full Stack Development",
-    "Java Full Stack",
-    "Game Development",
-    "UI/UX Development",
-    "Amazon Cloud Services"
-  ]
-
   const whyConsiderData = [
     {
       title: "💘 User's Valentine",
@@ -47,14 +39,6 @@ export default function Index() {
       description: "Code should grow with your product. I architect systems ready to scale without the chaos."
     }
 
-  ]
-
-  const skillSet = [
-    ['React', 'React Native', 'Redux', 'React State Management', 'React Spring', 'Angular', 'Vue js', 'Tailwind CSS', 'Ecmascript', 'Typescript', 'JSON', 'GSAP', 'Next JS', 'Sass', 'HTML/CSS'],
-    ['Java Spring', 'Java MVC', 'Hibernate', 'POGO', 'Java Springboot', 'JDBC', 'Microservices architecture', 'Restful API design', 'JUnit', 'Microservices Architechture'],
-    ['Unreal Engine', 'Blender', 'PhotoShop', 'Unity', 'Unity Web', 'Unreal Environments', 'C#', 'Visual Studio', 'Unity Lighting', 'Animation Rigs'],
-    ['Figma', 'Adobe XD', 'Wordpress', 'Wix', 'Photoshop', 'Prototyping', 'Wireframing', 'Design'],
-    ['CloudFront', 'EC2', 'Beanstalk', 'Lambda', 'RDS', 'S3', 'IAM', 'Cloudwatch', 'Elasticache', 'Sagemaker']
   ]
 
   const superImageContent = [
@@ -159,7 +143,7 @@ export default function Index() {
       })
     })
 
-    content1.forEach((target, index) => {
+    content1.forEach((target) => {
       gsap.fromTo(target, {
         y: -300,
         opacity: 0
@@ -175,7 +159,7 @@ export default function Index() {
       })
     })
 
-    content2.forEach((target, index) => {
+    content2.forEach((target) => {
       gsap.fromTo(target, {
         y: -600,
         opacity: 0
@@ -627,57 +611,6 @@ const SuperImageContent = ({ data, index }) => {
   );
 };
 
-
-const SuperCardBox = ({ cardInfo }) => {
-  const container = useRef(null);
-  const box = useRef(null);
-  const contContent = useRef(null);
-
-
-  return (
-    <div id='box-wrapper' className='h-auto w-full flex-1 flex'>
-      <div
-        ref={box}// Store the ref for each boxs
-        className='h-screen w-full justify-center items-center flex-1'
-      >
-        <div ref={container} id="container" className='h-full flex justify-center py-10 items-center'>
-          <div ref={contContent} id="container-content" className='translate-x-0 w-full flex justify-center backdrop-blur-sm items-center h-1/5 max-[500px]:h-auto bg-slate-300/50 shadow-slate-400 rounded-xl'>
-            <h1 className='text-5xl max-[500px]:text-3xl text-black max-[500px]:text-center font-medium max-[500px]:p-5 px-10 py-20'>{cardInfo.data}</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const SuperCardBoxSkills = ({ data }) => {
-  const container = useRef(null);
-  const box = useRef(null);
-  const contContent = useRef(null);
-
-
-  return (
-    <div id='box-wrapper' className='h-auto w-full flex-1 flex'>
-      <div
-        ref={box}// Store the ref for each boxs
-        className='h-screen w-full py-10 flex-1 flex flex-col justify-end items-end'
-      >
-        <div ref={container} id="container" className='h-1/2 w-full flex justify-center items-center'>
-          <div ref={contContent} id="container-content" className='translate-x-0 w-full inline-block justify-center items-center h-full rounded-xl'>
-
-            <div id="skill-wrapper" className='flex flex-wrap justify-start items-start p-4'> {/* Added flex and wrap here */}
-              {data.map((skill, index) => (
-                <p id="skill" key={index} className='text-xl m-1 p-3 rounded-lg border-[1px] border-black whitespace-nowrap'>
-                  {skill}
-                </p>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 
 const FactCards = ({ number, title, colorG }) => {
