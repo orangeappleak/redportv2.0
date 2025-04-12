@@ -54,9 +54,9 @@ export default function Home() {
             <div id="home-page" className="relative top-0 m-0 p-0 overflow-hidden h-screen w-screen">
               <div id="home-page-content" className="h-full bg-stone-950 flex flex-col p-[5em] max-[500px]:p-[2em]">
                 <div id="home-page-heading" className="flex-[2] max-[500px]:flex-[8] w-full h-auto flex flex-row max-[500px]:flex-col justify-center items-center">
-                  <h1 className="flex-1 text-stone-400 text-3xl max-[500px]:text-2xl font-light flex items-center">Software</h1>
+                  <h1 className="flex-1 text-stone-400 text-3xl max-[500px]:text-2xl 2k:text-4xl 3xl:text-xl font-light flex items-center">Software</h1>
                   <div id="middle-content-wrapper" className="flex-1 h-full flex flex-col justify-center items-center">
-                    <p className="text-stone-300 leading-none">Meet</p>
+                    <p className="text-stone-300 leading-none 2k:text-2xl">Meet</p>
                     <AnimatedElement staggerEl="span" config={{
                       from: {
                         transform: 'translate(0%, 0%)',
@@ -77,9 +77,9 @@ export default function Home() {
                         <h1 splitStyle="flex overflow-hidden leading-none" className="leading-none my-5 text-white font-normal text-[10vw] max-[500px]:text-[20vw] tracking-normal">Karthik</h1>
                       </WordSplit>
                     </AnimatedElement>
-                    <p className="text-white text-center text-xl max-[500px]:text-sm">Seasoned software developer crafting innovative digital solutions, from web pages to complex applications, all while embracing the journey of code magic.</p>
+                    <p className="text-white text-center text-xl max-[500px]:text-sm 2k:text-3xl 3xl:text-xl">Seasoned software developer crafting innovative digital solutions, from web pages to complex applications, all while embracing the journey of code magic.</p>
                   </div>
-                  <h1 className="flex-1 text-white/50 text-3xl max-[500px]:text-2xl font-light flex items-center justify-end">Developer</h1>
+                  <h1 className="flex-1 text-white/50 text-3xl max-[500px]:text-2xl 2k:text-4xl font-light flex items-center justify-end 3xl:text-xl">Developer</h1>
                 </div>
                 <AnimatedElement staggerEl="#graphic" className="relative left-0 top-0 h-auto w-full flex-[1.5] max-[500px]:flex-[4] flex items-end" config={{
                   from: {
@@ -184,7 +184,7 @@ const Manifesto = () => {
 
   return <section id="manifesto-page" className="relative h-screen max-[500px]:h-auto items-center max-[500px]:items-end flex justify-start">
     <div id="manifesto-content" className="max-[500px]:mr-0 relative flex flex-col items-center justify-center max-[500px]:w-full py-[2em] z-2">
-      <h1 className="text-slate-700 text-center text-xl font-bold my-4">Manifesto</h1>
+      <h1 className="text-slate-700 text-center text-xl 2k:text-2xl font-bold my-4">Manifesto</h1>
       <AnimatedElement staggerEl="#alpha" className="w-3/4 max-[500px]:w-full flex justify-center border-box" config={{
         from: {
           top: 200,
@@ -203,7 +203,7 @@ const Manifesto = () => {
       }}>
 
         <WordSplit>
-          <p words={true} splitStyle="text-center max-[500px]:text-left inline-block" className={`text-black text-6xl leading-snug inline-block p-1 max-[500px]:text-4xl max-[500px]:pl-0`}>In the realm of technology, I wield code as my tool, crafting digital experiences that inspire and empower. Fueled by curiosity, I constantly explore new frontiers, embracing challenges as opportunities for innovation. My mission is to push creative boundaries and shape a limitless future.
+          <p words={true} splitStyle="text-center max-[500px]:text-left inline-block" className={`text-black text-6xl 2k:text-7xl 3xl:text-5xl leading-snug inline-block p-1 max-[500px]:text-4xl max-[500px]:pl-0`}>In the realm of technology, I wield code as my tool, crafting digital experiences that inspire and empower. Fueled by curiosity, I constantly explore new frontiers, embracing challenges as opportunities for innovation. My mission is to push creative boundaries and shape a limitless future.
           </p>
         </WordSplit>
       </AnimatedElement>
@@ -249,17 +249,20 @@ const Manifesto = () => {
 }
 
 const About = () => {
-
   const bodyRef = useBodyRef()
   const st = useScrollTriggger();
+  const headingRef = useRef(null);
 
   useEffect(() => {
+    if (!bodyRef?.current || !st) return;
+    
+    // Pin the heading section
     st.create({
-      trigger: bodyRef.current.querySelector('#about-page #curly-heading'),
+      trigger: headingRef.current,
       pin: true,
       endTrigger: bodyRef.current.querySelector('#about-cards-wrapper'),
-      start: 'top 5%',
-      end: 'bottom bottom ',
+      start: 'top 10%',
+      end: 'bottom bottom',
       anticipatePin: 1,
       pinSpacing: false,
     });
@@ -286,37 +289,16 @@ const About = () => {
       src: 'https://images.unsplash.com/photo-1697898783543-18651b0db28f?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       content: "I navigate development with precision, delivering high-quality software from concept to deployment. Agile and focused, I create timely, innovative solutions that enrich users' lives.",
     },
-
   ]
 
-
   return <section id='about-page' className="relative h-full w-full my-20 box-border flex items-center flex-col max-[500px]:flex-col">
-    <div id="curly-heading" className="h-lvh w-1/2 flex py-[5em] max-[500px]:py-[2em] flex-col justify-center flex-1 max-[500px]:w-full">
-      <h1 className="text-xl text-slate-700 font-bold text-left">Work Flow</h1>
-      <p className="text-3xl text-left mt-5">Innovating solutions, perfecting user experiences, and delivering high-quality software with precision and agility.</p>
+    <div ref={headingRef} id="curly-heading" className="h-lvh w-1/2 flex py-[5em] max-[500px]:py-[2em] flex-col justify-center flex-1 max-[500px]:w-full">
+      <h1 className="text-xl 2k:text-2xl text-slate-700 font-bold text-left">Why Consider</h1>
+      <p className="text-3xl 2k:text-5xl text-left mt-5">Innovating solutions, perfecting user experiences, and delivering high-quality software with precision and agility.</p>
     </div>
-    {/* <div id="curly" className="top-0 absolute h-screen w-full flex flex-col left-0">
-          <div id="curly-content" className="relative flex-2 flex flex-row w-full h-full items-center">
-              <h1 className="relative opacity-5 flex-1 text-[40vw] text-center leading-none">&#123;</h1>
-              <AnimatedElement config={{
-                  to: {
-                      width: '60vw',
-                      ease: 'sine.inOut'
-                  },
-                  scrollTrigger: {
-                      scrub: 0.2,
-                      start: 'top center',
-                      end: '+=2500px',
-                  }
-              }}>
-                  <div id="box" className="flex-1 max-h-full w-[25vw]"></div>
-              </AnimatedElement>
-              <h1 className="relative flex-1 opacity-5 text-[40vw] text-center leading-none">&#125;</h1>
-          </div>
-      </div> */}
     <div id="about-cards-wrapper" className="w-full pb-[50em] box-border flex-1 justify-center items-center flex flex-col max-[500px]:w-full">
       {aboutData.map((el, index) => {
-        return <div key={index} id={"about-cards" + index} className={`w-full ${index != (aboutData.length - 1) ? "mb-[20em]" : "mb-0"} flex items-center justify-center px-[0em] relative h-[50vh] max-[500px]:px-0`}>
+        return <div key={index} id={"about-cards" + index} className={`w-full ${index !== (aboutData.length - 1) ? "mb-[20em]" : "mb-0"} flex items-center justify-center px-[0em] relative h-[50vh] 2k:h-[100vh] max-[500px]:px-0`}>
           <AboutCard content={el.content} heading={el.title} index={index} id={'page' + index} src={el.src}></AboutCard>
         </div>
       })}
@@ -325,65 +307,96 @@ const About = () => {
 }
 
 const AboutCard = ({ id, index, heading, content }) => {
-
   const bodyRef = useBodyRef();
   const st = useScrollTriggger();
+  const cardRef = useRef(null);
+  const containerRef = useRef(null);
 
   useEffect(() => {
-
+    if (!bodyRef?.current || !st) return;
+    
     const startPos = bodyRef.current.querySelector('#curly-heading').offsetHeight;
-
+    const card = cardRef.current;
+    const container = containerRef.current;
+    
+    if (card && container) {
+      // Set fixed container dimensions
+      gsap.set(container, {
+        position: 'relative',
+        height: '50vh', // Fixed height
+        width: '100%',
+        overflow: 'hidden'
+      });
+      
+      // Set fixed card dimensions
+      gsap.set(card, {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        x: '-50%',
+        y: '-50%',
+        width: '66.666667%',
+        height: '100%',
+        zIndex: 1000 - index
+      });
+    }
+    
     st.create({
       trigger: bodyRef.current.querySelector(`#about-page #${id}`),
       pin: true,
       ease: 'power4.inOut',
       endTrigger: bodyRef.current.querySelector('#about-cards-wrapper'),
-      start: `top ${startPos + (index * 15) + 70}`,
+      start: `top ${startPos + (index * 15) + 90}`,
       end: 'bottom bottom',
       pinSpacing: false,
-    })
+      anticipatePin: 1,
+      onEnter: () => {
+        gsap.set(card, { clearProps: "all" });
+      }
+    });
   }, [id, index, st, bodyRef]);
 
-  return <AnimatedElement config={{
-    from: {
-      scale: 1,
-    },
-    to: {
-      scale: 1,
-      duration: 4
-    },
-    scrollTrigger: {
-      scrub: 1,
-      start: 'top center',
-      end: 'center top',
-      ease: 'power4.inOut'
-    }
-  }} id={id} style={{ willChange: "transform" }} className="h-full absolute max-[500px]:h-[40svh] max-[500px]:p-5 max-[500px]:py-10 border-orange-500 border-2 w-2/3 max-[500px]:w-full overflow-hidden bg-stone-900 rounded-3xl box-border shadow-2xl">
-    <div id="about-content" className="relative flex h-full px-10 max-[500px]:px-0 flex-row max-[500px]:flex-col max-[500px]:align-center max-[500px]:justify-center overflow-hidden">
-      {/* <div id="about-content-image" className="flex flex-1 shadow-[10px_0_20px_1px] shadow-black/30 items-center justify-center overflow-hidden max-[500px]:absolute max-[500px]:h-[100%] top-0 left-0">
-        <Image loading="lazy" alt='alt' width={800} height={800} className="h-full w-auto max-[500px]:w-auto max-[500px]:h-full max-w-[100vw]" src={src} />
-      </div> */}
-      <div id="about-content-left" className="flex-col w-full max-[500px]:w-full flex items-start p-10 max-[500px]:p-0 justify-center">
-        <AnimatedElement className="mb-5 max-[500px]:mb-0" staggerEl="span" config={{
-          to: {
-            transform: 'translate(0%, 0%)',
-            opacity: 1,
-            stagger: 0.05,
-          },
-          scrollTrigger: {
-            scrub: 2,
-            start: 'top 80%',
-            end: '+=50px',
-          }
-        }}>
-          <WordSplit>
-            <h1 words={false} splitStyle='overflow-hidden flex items-center justify-center relative' className="relative opacity-1 translate-y-[100%] tracking-normal leading-none font-semibold text-white text-8xl max-[500px]:text-white/30 max-[500px]:text-center max-[500px]:text-lg">{heading}</h1>
-          </WordSplit>
-        </AnimatedElement>
-        <p className="z-2 text-stone-400 text-4xl max-[500px]:text-xl max-[500px]:text-white">{content}</p>
-      </div>
+  return (
+    <div ref={containerRef} className="relative w-full 2k:h-[70vh] flex items-center justify-center">
+      <AnimatedElement config={{
+        from: {
+          scale: 1,
+        },
+        to: {
+          scale: 1,
+          duration: 4
+        },
+        scrollTrigger: {
+          scrub: 1,
+          start: 'top center',
+          end: 'center top',
+          ease: 'power4.inOut'
+        }
+      }} id={id} ref={cardRef} className="overflow-hidden max-[500px]:w-full w-2/3 2k:h-1/2 py-10 2k:py-20 bg-stone-900 rounded-3xl box-border shadow-2xl">
+        <div className="relative flex h-full px-10 max-[500px]:px-10 flex-row max-[500px]:flex-col max-[500px]:align-center max-[500px]:justify-center overflow-hidden">
+          <div className="flex-col w-full max-[500px]:w-full flex items-start p-10 max-[500px]:p-0 justify-center">
+            <AnimatedElement className="mb-5 max-[500px]:mb-0" staggerEl="span" config={{
+              to: {
+                transform: 'translate(0%, 0%)',
+                opacity: 1,
+                stagger: 0.05,
+              },
+              scrollTrigger: {
+                scrub: 2,
+                start: 'top 80%',
+                end: '+=50px',
+              }
+            }}>
+              <WordSplit>
+                <h1 words={false} splitStyle='overflow-hidden flex items-center justify-center relative' className="relative opacity-1 translate-y-[100%] tracking-normal leading-none font-semibold text-white text-8xl max-[500px]:text-white/30 max-[500px]:text-center max-[500px]:text-lg 3xl:text-6xl">{heading}</h1>
+              </WordSplit>
+            </AnimatedElement>
+            <p className="z-2 text-stone-400 text-4xl 2k:text-5xl 3xl:text-2xl max-[500px]:text-lg max-[500px]:text-white">{content}</p>
+          </div>
+        </div>
+      </AnimatedElement>
     </div>
-  </AnimatedElement>
+  );
 }
 
 const Projects = () => {
@@ -480,14 +493,14 @@ const Project = ({ data, id }) => {
   //   // })
   // }, [mobile])
 
-  return <div id={id} className="relative h-[100vh] max-[500px]:h-[35vh] w-full max-[500px]:w-screen max-[500px]:my-10 flex items-center justify-center">
-    <div id="project-heading" className="absolute z-[4] w-full h-auto top-0 left-0 font-normal flex items-center justify-center">
-      <AnimatedElement className="relative max-[500px]:translate-y-0 flex flex-col items-center justify-center" config={{
+  return <div id={id} className="relative h-auto my-20 max-[500px]:h-[35vh] w-full max-[500px]:w-screen max-[500px]:my-10 flex flex-col items-center justify-center">
+    <div id="project-heading" className="relative z-[4] w-full h-auto top-0 left-0 font-normal flex items-center justify-center">
+      <AnimatedElement className="z-10 translate-y-[50px] relative max-[500px]:translate-y-0 flex flex-col items-center justify-center" config={{
         to: {
-          yPercent: "-=20"
+          yPercent: "-=65"
         },
         scrollTrigger: {
-          scrub: 0.3
+          scrub: 1
         }
       }}>
         <h1 className="text-black leading-none relative text-[7vw] max-[500px]:text-[10vw] text-center">{data.title}</h1>

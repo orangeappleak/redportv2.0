@@ -21,6 +21,34 @@ export default function Index() {
     "Amazon Cloud Services"
   ]
 
+  const whyConsiderData = [
+    {
+      title: "💘 User's Valentine",
+      description: "Design that flirts with users and romances your KPIs. I make things people love—and love to click."
+    },
+    {
+      title: "🧠 Pixel-Perfect with a Purpose",
+      description: "Looks good. Works better. I blend beauty with brains to create designs that actually perform."
+    },
+    {
+      title: "🧱 Built From Front to Back (End)",
+      description: "I don't just design what users see—I engineer what makes it work. End-to-end. Pixel to database."
+    },
+    {
+      title: "🛰️ Full Stack. Full Power.",
+      description: "From responsive UIs to robust APIs, I build systems that work hard under the hood and look good doing it."
+    },
+    {
+      title: "🧰 Tech-Stacked and Impact-Backed",
+      description: "React, Node, Python, SQL—you name it. I use the right tools to solve the right problems."
+    },
+    {
+      title: "📦 Modular, Maintainable, Made to Scale",
+      description: "Code should grow with your product. I architect systems ready to scale without the chaos."
+    }
+
+  ]
+
   const skillSet = [
     ['React', 'React Native', 'Redux', 'React State Management', 'React Spring', 'Angular', 'Vue js', 'Tailwind CSS', 'Ecmascript', 'Typescript', 'JSON', 'GSAP', 'Next JS', 'Sass', 'HTML/CSS'],
     ['Java Spring', 'Java MVC', 'Hibernate', 'POGO', 'Java Springboot', 'JDBC', 'Microservices architecture', 'Restful API design', 'JUnit', 'Microservices Architechture'],
@@ -34,56 +62,34 @@ export default function Index() {
       bgColor: 'bg-[#90e0ef]',
       textColor: 'text-[#0077b6]',
       headingColor: 'text-[#03045e]',
-      headings: ['Build', 'Optimize', 'Deploy'],
-      content: [
-        { subHeading: '1. Front-end Development', text: 'Developed responsive, user-centric web applications using modern frameworks like React and Angular, ensuring seamless cross-browser functionality and smooth UI/UX.' },
-        { subHeading: '2. Back-End & Cloud Integration', text: 'Designed and deployed scalable APIs with Spring Boot, integrated AWS services like EC2, S3, and Lambda to enhance performance and maintainability.' },
-        { subHeading: '3. Full-Stack Solutions', text: 'Delivered end-to-end web solutions by combining front-end and back-end expertise, utilizing cloud technologies for secure, scalable, and efficient platforms.' },
-      ],
-    },
-    {
-      bgColor: 'bg-[#f6fff8]',
-      textColor: 'text-[#a4c3b2]',
-      headingColor: 'text-[#6b9080]',
-      headings: ['Code', 'Integrate', 'Scale'],
-      content: [
-        { subHeading: '1. Front-End Development & User Experience', text: 'I design intuitive, responsive interfaces using Angular and React, focusing on visually appealing and accessible layouts for a smooth user experience.' },
-        { subHeading: '2. Back-End Architecture & API Implementation', text: 'I develop robust back-end systems with Java and Spring Boot, creating scalable RESTful APIs to manage secure data flow between client and server.' },
-        { subHeading: '3. End-to-End Integration & Deployment', text: 'I integrate the front and back ends into a cohesive full-stack solution, utilizing microservices and AWS for scalability, maintainability, and efficient deployment.' },
-      ],
+      heading: ['Build', 'Optimize', 'Deploy'],
+      description: "I build with intent, optimize for performance, and deploy with precision. Every project I take on is crafted to work well, run fast, and launch without friction. No fluff—just solid, thoughtful work that's built to make an impact.",
+      imageSrc: "https://videos.openai.com/vg-assets/assets%2Ftask_01jrk2xjrhe7aawzkncgye6sqt%2Fimg_0.webp?st=2025-04-11T17%3A32%3A56Z&se=2025-04-17T18%3A32%3A56Z&sks=b&skt=2025-04-11T17%3A32%3A56Z&ske=2025-04-17T18%3A32%3A56Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=aa5ddad1-c91a-4f0a-9aca-e20682cc8969&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=pdp7%2FpXyT4R8k9vVLY1Ky7ZVM%2BvnFQrqXxC5LFWYvAw%3D&az=oaivgprodscus"
     },
     {
       bgColor: 'bg-[#e0c3fc]',
       textColor: 'text-[#8187dc]',
       headingColor: 'text-[#757bc8]',
-      headings: ['Play', 'Create', 'Conquer'],
-      content: [
-        { subHeading: '1. Game Concept & Design', text: 'I brainstorm and design engaging mechanics and immersive environments in Unity and C#, ensuring each feature enhances player interaction.' },
-        { subHeading: '2. Development & Optimization', text: 'I develop game logic and interactions, optimizing performance through effective asset management and code refinement for smooth gameplay.' },
-        { subHeading: '3. Multiplayer Systems & Deployment', text: 'I build scalable back-end systems with Java, Spring Boot, and AWS, integrating real-time multiplayer features and deploying to AWS ECS for global access' },
-      ],
+      heading: ['Code', 'Integrate', 'Scale'],
+      description: "I write clean code, integrate systems smoothly, and scale solutions that grow with real needs. I care about long-term value—not just getting things to work, but making sure they work well, together, and over time.",
+      imageSrc: "https://videos.openai.com/vg-assets/assets%2Ftask_01jrk35bv8e12sp31mjnkkej9e%2Fimg_0.webp?st=2025-04-11T17%3A44%3A36Z&se=2025-04-17T18%3A44%3A36Z&sks=b&skt=2025-04-11T17%3A44%3A36Z&ske=2025-04-17T18%3A44%3A36Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=aa5ddad1-c91a-4f0a-9aca-e20682cc8969&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=BGNyiJWn8MvekBFZWeO73KdTCvMCrmUN4MNb0Tm0OZQ%3D&az=oaivgprodscus"
     },
     {
       bgColor: 'bg-[#e1ecf7]',
       textColor: 'text-[#83b0e1]',
       headingColor: 'text-[#71a5de]',
-      headings: ['Inspire', 'Design', 'Elevate'],
-      content: [
-        { subHeading: '1. User Research', text: 'I start by conducting user research to understand target audience needs, utilizing surveys and interviews to create user personas.' },
-        { subHeading: '2. Wireframing & Prototyping', text: 'Next, I develop wireframes and interactive prototypes in tools like Figma, focusing on layout and navigation for early feedback.' },
-        { subHeading: '3. Visual Design & Testing', text: 'Finally, I create visually appealing interfaces and conduct usability testing to refine the design, ensuring a smooth user experience.' },
-      ],
+      heading: ['Inspire', 'Design', 'Elevate'],
+      description: "I draw inspiration from the problem, the people, and the potential. I design with empathy, and develop with focus—balancing creativity and logic. Every decision is intentional, and every line of code has a purpose.",
+      imageSrc: "https://videos.openai.com/vg-assets/assets%2Ftask_01jrmadq77fvebhky3t9hvpb8j%2Fimg_0.webp?st=2025-04-12T05%3A20%3A04Z&se=2025-04-18T06%3A20%3A04Z&sks=b&skt=2025-04-12T05%3A20%3A04Z&ske=2025-04-18T06%3A20%3A04Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=aa5ddad1-c91a-4f0a-9aca-e20682cc8969&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=%2BH7kTmX8RVFXzAuPpCIRHW97s1YRW9W73osYUcfFhYw%3D&az=oaivgprodscus"
+
     },
     {
       bgColor: 'bg-[#cad2c5]',
       textColor: 'text-[#52796f]',
       headingColor: 'text-[#2f3e46]',
-      headings: ['Deploy', 'Scale', 'Secure'],
-      content: [
-        { subHeading: '1. Infrastructure Setup', text: 'I configure and deploy scalable cloud infrastructures using AWS services like EC2, S3, and RDS, ensuring optimal performance and resource management.' },
-        { subHeading: '2. Security & Compliance', text: 'I implement security best practices, including IAM policies and encryption, to safeguard data and ensure compliance with industry standards.' },
-        { subHeading: '3. Monitoring & Optimization', text: 'I monitor application performance using AWS CloudWatch, optimizing resources and costs while maintaining high availability and reliability for seamless user experiences.' },
-      ],
+      heading: ['Deploy', 'Scale', 'Secure'],
+      description: "I deploy with care, scale with foresight, and build security into every layer. Whether it’s a feature, a system, or a whole app, I aim for reliability and resilience from day one—because good tech should feel invisible when it’s working right.",
+      imageSrc: "https://videos.openai.com/vg-assets/assets%2Ftask_01jrmasfq5f7qsh7cfdjg7b6df%2Fimg_0.webp?st=2025-04-12T05%3A19%3A28Z&se=2025-04-18T06%3A19%3A28Z&sks=b&skt=2025-04-12T05%3A19%3A28Z&ske=2025-04-18T06%3A19%3A28Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=aa5ddad1-c91a-4f0a-9aca-e20682cc8969&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=JD39otB%2ByvwLVxS74hTzylX%2F3qfE24wRRRGTMogn27c%3D&az=oaivgprodscus"
     }
   ]
 
@@ -101,7 +107,7 @@ export default function Index() {
         start: 'top top',
         end: 'bottom bottom',
         pinSpacing: false,
-        pinReparent: false
+        pinReparent: false,
       }
     });
 
@@ -109,38 +115,39 @@ export default function Index() {
       scrollTrigger: {
         trigger: "#third-inner-wrapper",       // The section where the pinning happens
         start: "top top",                // Start pinning when the top of the wrapper reaches the top of the viewport
-        end: "bottom bottom",
-        endTrigger: "#third-wrapper",           // Adjust based on how long you want the card to stay pinned
+        end: "top bottom",
+        endTrigger: "#why-consider",           // Adjust based on how long you want the card to stay pinned
         pin: "#super-power-card",
         anticipatePin: 1,      // Pin the card
         scrub: 2,
         pinReparent: false,
-        pinSpacing: false, // Smooth scrubbing as you scroll
+        pinSpacing: false, // Smooth scrubbing as you scroll,
       }
     });
 
 
-    gsap.fromTo(container.current.querySelector('#super-powers-heading'), { scale: 1, opacity: 1 },
+
+    gsap.fromTo(container.current.querySelector('#super-powers-heading'), { scale: 1, opacity: 1, y: 0 },
       {
-        opacity: 0, scale: 0.8, ease: 'power2.inOut', duration: 2, scrollTrigger: {
+        opacity: 0.3, scale: 0.95, y: 50, ease: 'power2.inOut', duration: 2, scrollTrigger: {
           scrub: 2,
           trigger: container.current.querySelector('#third-inner-wrapper'),
-          start: 'top center',
+          start: 'top bottom',
           end: 'top top'
         }
       },);
 
     const targets = gsap.utils.toArray([".super-image"]);
     const containers = gsap.utils.toArray(['#container-content']);
+    const content1 = gsap.utils.toArray(['#content-1']);
+    const content2 = gsap.utils.toArray(['#content-2 #content-2-image']);
     // setConts(containers);
 
     containers.forEach((target) => {
       gsap.fromTo(target, {
         opacity: 0,
-        scale: 0.95,
       }, {
         opacity: 1,
-        scale: 1,
         scrollTrigger: {
           trigger: target,
           start: 'top bottom',
@@ -152,59 +159,55 @@ export default function Index() {
       })
     })
 
+    content1.forEach((target, index) => {
+      gsap.fromTo(target, {
+        y: -300,
+        opacity: 0
+      }, {
+        y: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: target,
+          start: 'top center',
+          end: 'bottom center',
+          scrub: 1
+        }
+      })
+    })
+
+    content2.forEach((target, index) => {
+      gsap.fromTo(target, {
+        y: -600,
+        opacity: 0
+      }, {
+        y: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: target,
+          start: 'top top',
+          end: 'bottom center',
+          scrub: 1
+        }
+      })
+    })
+
+
     targets.forEach((target, index) => {
+
+      console.log(target, index);
+
       gsap.to(target, {
-        transform: index > 0 ? `translate(0%, -${index * 100}%)` : 'translate(0%, 0%)', z: 10, stagger: 2, duration: 2, scrollTrigger: {
-          trigger: index > 0 ? containers[index] : containers[0],
+        transform: index > 0 ? `translate(0%, -${index * 100}%)` : 'translate(0%, 0%)', z: 10, stagger: 1, duration: 1, scrollTrigger: {
+          // trigger: index > 0 ? containers[index] : containers[0],
+          trigger: target,
           start: "top bottom",
-          end: "bottom center",
+          end: "bottom bottom",
           pinSpacing: false,
           pinReparent: false,
-          scrub: 1,
+          scrub: 1
         }
       });
     });
-
-    const skills = gsap.utils.toArray(['#skill-wrapper']);
-
-    skills.forEach(skillSet => {
-      //console.log(skillSet.querySelectorAll("#skill"));
-
-      gsap.to(skillSet.querySelectorAll("#skill"), {
-        x: 100,
-        opacity: 0,
-        stagger: 0.2,
-        ease: 'power4.inOut',
-        duration: 1,
-        scrollTrigger: {
-          scrub: 2,
-          trigger: skillSet,
-          start: 'top 20%',
-          end: 'top top',
-          fastScrollEnd: true,
-        }
-      })
-
-      gsap.fromTo(skillSet.querySelectorAll("#skill"), {
-        x: -100,
-        opacity: 0,
-      }, {
-        x: 0,
-        opacity: 1,
-        stagger: 0.2,
-        duration: 1,
-        ease: 'power4.inOut',
-        scrollTrigger: {
-          scrub: 2,
-          trigger: skillSet,
-          start: 'top bottom',
-          end: 'bottom bottom',
-          fastScrollEnd: true,
-        }
-      })
-
-    });
-
 
 
   }, []);
@@ -217,12 +220,26 @@ export default function Index() {
 
   }, { scope: container });
 
+  useEffect(() => {
+    gsap.to("#why-consider-heading", {
+      scrollTrigger: {
+        trigger: "#why-consider",
+        start: "top top",
+        end: "bottom bottom",
+        pin: "#why-consider-heading",
+        anticipatePin: 1,
+        pinSpacing: false,
+        pinReparent: false
+      }
+    });
+  }, []);
+
   return (
     <div id="main-container" ref={container} className='h-auto overflow-hidden'>
 
       <section id="start-page" className="relative h-[100vh] max-[500px]:h-[100svh] overflow-hidden">
         <div id="image" className='absolute top-0 left-0 h-screen w-screen max-[500px]:h-screen'>
-          <Image quality={100} src={'/goku.jpg'} alt="" fill style={{objectFit: "cover"}} priority />
+          <Image quality={100} src={'/goku.jpg'} alt="" fill style={{ objectFit: "cover" }} priority />
         </div>
         <AnimatedElement config={{
           to: {
@@ -236,7 +253,7 @@ export default function Index() {
           }
         }}>
           <div id="image-content" className='p-32 max-[500px]:p-5 box-border h-screen max-[500px]:h-svh flex items-end relative z-10'>
-            <h1 className='text-7xl max-[500px]:text-3xl font-medium w-[50%] max-[500px]:w-full text-black'>Creating pixel perfect implementations from design to development</h1>
+            <h1 className='text-7xl max-[500px]:text-3xl 3xl:w-1/2 font-medium w-[50%] max-[500px]:w-full text-black 2k:text-8xl'>Creating pixel perfect implementations from design to development</h1>
           </div>
         </AnimatedElement>
       </section>
@@ -275,11 +292,11 @@ export default function Index() {
                 <div id="some-words-content" className='z-10 flex-[2] text-2xl max-[500px]:text-xl'>
 
                   <p className="text-left max-[500px]:text-left font-light inline-block">
-                    Hey there! I’m a 24-year-old developer with a passion for creating intuitive and engaging digital experiences. My journey in tech has equipped me with a diverse skill set in front-end development, primarily using React and JavaScript, but I also love exploring the depths of design and user experience. <br /><br />
+                    Hey there! I'm a 24-year-old developer with a passion for creating intuitive and engaging digital experiences. My journey in tech has equipped me with a diverse skill set in front-end development, primarily using React and JavaScript, but I also love exploring the depths of design and user experience. <br /><br />
 
-                    When I’m not coding, you can find me immersed in competitive games, sketching out my next creative project, or delving into the fascinating stories of history. Badminton is my go-to sport on the weekends, where I enjoy the thrill of a good match, and music is a big part of my life—I’m a professional Veena player, blending traditional artistry with my tech-savvy nature.<br /><br />
+                    When I'm not coding, you can find me immersed in competitive games, sketching out my next creative project, or delving into the fascinating stories of history. Badminton is my go-to sport on the weekends, where I enjoy the thrill of a good match, and music is a big part of my life—I'm a professional Veena player, blending traditional artistry with my tech-savvy nature.<br /><br />
 
-                    I believe in the power of collaboration and creativity, and I’m always eager to take on new challenges that push my boundaries. Welcome to my portfolio, where I share my projects and passion for innovation!
+                    I believe in the power of collaboration and creativity, and I'm always eager to take on new challenges that push my boundaries. Welcome to my portfolio, where I share my projects and passion for innovation!
                   </p>
 
                 </div>
@@ -358,29 +375,29 @@ export default function Index() {
             </div>
           </div>
 
-          <div id="third-wrapper" className={`relative h-[600lvh] max-[500px]:h-[800vh] w-full box-border overflow-hidden`}>
+          <div id="third-wrapper" className={`relative h-[600vh] w-full box-border overflow-hidden`}>
             <div ref={pinElement1} id="super-powers-heading" className='relative top-0 w-full left-0 h-screen max-[500px]:h-screen flex flex-col justify-center items-center'>
               <h1 className='text-[8vw] text-stone-700 font-bold max-[500px]:font-light max-[500px]:text-4xl text-center leading-tight'>What are my</h1>
-              <h1 className='text-[8vw] max-[500px]:text-[20vw] text-stone-700 font-bold text-center  leading-none'>Super Powers?</h1>
+              <h1 className='text-[8vw] max-[500px]:text-[20vw] text-stone-700 font-bold text-center leading-none'>Super Powers?</h1>
             </div>
-            <div id="third-inner-wrapper" className='absolute top-[70vh] max-[500px]:top-[500px] h-auto max-[500px]:h-lvh box-border flex flex-row w-full'>
-              <div id="super-power-card-data1" className='h-auto max-[500px]:absolute z-10 top-full box-border p-10 flex-1 flex flex-col justify-center items-center relative w-full'>
+            <div id="third-inner-wrapper" className='absolute max-[500px]:top-[800px] h-auto max-[500px]:h-lvh box-border flex flex-row w-full'>
+              {/* <div id="super-power-card-data1" className='h-auto max-[500px]:absolute z-10 top-full box-border p-10 flex-1 flex flex-col justify-center items-center relative w-full'>
                 {superPowerData1.map((data, index) => {
                   return <SuperCardBox key={index} cardInfo={{ data, index }} />
                 })}
-              </div>
-              <div id='super-power-card-wrapper' className='flex max-[500px]:pt-24 box-border w-full h-screen max-[500px]:h-[100svh] justify-center items-center top-0 flex-1'>
-                <div id="super-power-card" className='h-[80vh] max-[500px]:h-[70svh] border-4 border-orange-500 w-full overflow-hidden justify-center items-center border-black/50 rounded-3xl relative'>
+              </div> */}
+              <div id='super-power-card-wrapper' className='flex max-[500px]:pt-0 box-border w-full h-screen justify-center items-center top-0 flex-[2]'>
+                <div id="super-power-card" className='h-screen w-full overflow-hidden justify-center items-center relative'>
                   {superImageContent.map((data, index) => {
-                    return <SuperImageContent key={index} data={data} />
+                    return <SuperImageContent key={index} data={data} index={index} />
                   })}
                 </div>
               </div>
-              <div id="super-power-card-data2" className='h-screen max-[500px]:hidden flex-1 p-10 relative top-0 w-full'>
+              {/* <div id="super-power-card-data2" className='h-screen max-[500px]:hidden flex-1 p-10 relative top-0 w-full'>
                 {skillSet.map((data, index) => {
                   return <SuperCardBoxSkills key={index} data={data} />
                 })}
-              </div>
+              </div> */}
 
             </div>
           </div>
@@ -388,15 +405,57 @@ export default function Index() {
 
 
         </section>
+        <section id="why-consider" className='h-full w-full'>
+          <div id="why-consider-heading" className='h-[50vh] flex flex-col items-center justify-center w-full'>
+            <h1 className='text-9xl max-[500px]:text-7xl font-black text-center'>Why Consider Me?</h1>
+          </div>
+          <div id="why-consider-content" className='h-auto p-40 max-[500px]:p-10 flex flex-col items-center justify-center w-full'>
+            {whyConsiderData.map((data, index) => {
+              return <WhyConsiderCards key={index} data={data} index={index} />
+            })}
+          </div>
+        </section>
       </div>
-
-
-
 
       {/* Prevent extra space at the end */}
       <div className="h-0"></div>
     </div >
   );
+}
+
+const WhyConsiderCards = ({ data, index }) => {
+
+  const getAlignment = (index) => {
+    const alignments = ['center', 'flex-start', 'center', 'flex-end'];
+    return alignments[index % alignments.length];
+  };
+
+  return (
+    <div
+      id="why-consider-cards"
+      className='h-[40vh] m-2 flex flex-col items-center justify-center max-[500px]:w-full w-[20vw]'
+      style={{ alignSelf: getAlignment(index) }}
+    >
+      <AnimatedElement id="why-consider-card-wrapper" className='h-full flex bg-slate-400/20 rounded-xl backdrop-blur-sm flex-col justify-between p-16 max-[500px]:p-10 3xl:p-10' config={{
+        from: {
+          rotateY: 180,
+        },
+        to: {
+          rotateY: 0,
+          ease: "slow(0.7,0.7,false)"
+        },
+        scrollTrigger: {
+          scrub: 1,
+          duration: 100,
+          start: 'top bottom',
+          end: 'bottom center'
+        }
+      }}>
+        <h1 className='text-4xl 2k:text-5xl max-[500px]:text-3xl font-bold'>{data.title}</h1>
+        <p className='text-2xl 2k:text-3xl max-[500px]:text-xl opacity-75 font-light'>{data.description}</p>
+      </AnimatedElement>
+    </div>
+  )
 }
 
 const FourthWrapper = () => {
@@ -486,7 +545,7 @@ const FourthWrapper = () => {
         <div id="fourth-heading" className='relative max-[500px]:p-2 h-auto max-[500px]:h-screen max-[500px]:flex flex-col justify-center'>
           <h1 className="text-[10vw] max-[500px]:text-7xl text-white font-semibold leading-[0.8]">Of everything I've shared, this one means the most</h1>
           <div id="fourth-image" className='flex flex-col items-center justify-end'>
-            <Image id="fourth-image-img" alt="" className='w-[70vw] rounded-3xl max-[500px]:w-auto max-[500px]:h-auto' src={'/luffy2.jpg'} style={{objectFit: 'cover'}} height={10000} width={10000} />
+            <Image id="fourth-image-img" alt="" className='w-[70vw] rounded-3xl max-[500px]:w-auto max-[500px]:h-auto' src={'/luffy2.jpg'} style={{ objectFit: 'cover' }} height={10000} width={10000} />
           </div>
         </div>
       </div>
@@ -536,60 +595,43 @@ const MeImages = ({ title, img, number, color }) => {
 }
 
 
-const SuperImageContent = ({ data }) => {
+const SuperImageContent = ({ data, index }) => {
 
-  // const [col, updateCol] = useState(null);
-
-  // useEffect(() => {
-  //   updateCol(data.bgColor);
-  // }, [data])
-
-  return <div id="image-wrapper" className={`flex p-10 max-[500px]:p-5 super-image top-0 relative box-border w-full h-full overflow-hidden ${data.bgColor}`} >
-    <div id="content-wrapper" className='w-full flex flex-col justify-around'>
-      <div id="content-2">
-        {data.content.map((datam, index) => {
-          return <div key={index} className='mb-5' id="text-content">
-            <h2 className={`${data.headingColor} text-xl max-[500px]:text-sm font-semibold`}>{datam.subHeading}</h2>
-            <p className={`${data.textColor} text-lg max-[500px]:text-sm`}>{datam.text}</p>
+  return (
+    <div id="image-wrapper" className={`super-image flex p-10 bg-white/80 backdrop-blur-md max-[500px]:p-0 border-black-600/50 border-t-[10px] top-0 translate-y-[${index * 200}%] relative box-border w-full h-screen overflow-hidden`}>
+      <div id="content-wrapper" className='w-full flex flex-row max-[500px]:flex-col p-16 max-[500px]:py-20 max-[500px]:px-10 justify-around'>
+        <div id="content-1" className='flex-1 flex flex-col items-start justify-start max-[500px]:z-10'>
+          {data.heading.map((heading) => {
+            return <h1 key={index} className={`text-8xl max-[500px]:text-5xl font-bold w-1/2 max-[500px]:w-full max-[500px]:text-white text-${data.headingColor}-500`}>{heading}</h1>
+          })}
+        </div>
+        <div id="content-2" className='flex-[1.5] max-[500px]:flex-[2] w-full h-full overflow-hidden'>
+          <div id="image-wrapper" className='w-auto flex items-center justify-center h-full'>
+            <Image
+              id="content-2-image"
+              className='w-auto h-full max-[500px]:h-full max-[500px]:w-auto object-cover rounded-3xl max-[500px]:absolute max-[500px]:rounded-none max-[500px]:contrast-50'
+              quality={100}
+              src={data.imageSrc}
+              width={10000}
+              height={10000}
+              alt=""
+              priority
+            />
           </div>
-        })}
-      </div>
-      <div id="content-1" className='flex flex-col flex-wrap box-border items-start max-[500px]:items-center max-[500px]:w-full max-[500px]:h-full max-[500px]:justify-center max-[500px]:absolute max-[500px]:top-0 max-[500px]:left-0'>
-        {data.headings.map((heading, index) => {
-          return <h1 key={index} className={`${data.headingColor} max-[500px]:opacity-25 font-bold text-8xl max-[500px]:text-left max-[500px]:mx-0 max-[500px]:text-6xl`}>{heading}</h1>
-        })}
+        </div>
+        <div id="content-3" className='flex-1 flex items-end justify-end max-[500px]:justify-start max-[500px]:z-10'>
+          <p className='text-4xl max-[500px]:text-white max-[500px]:text-xl text-black'>{data.description}</p>
+        </div>
       </div>
     </div>
-
-  </div >
-}
+  );
+};
 
 
 const SuperCardBox = ({ cardInfo }) => {
   const container = useRef(null);
   const box = useRef(null);
   const contContent = useRef(null);
-
-  useEffect(() => {
-
-    const screenWidth = window.innerWidth;
-
-    if (screenWidth > 500) {
-      gsap.to(container.current, {
-        opacity: 1,
-        scale: 1,
-        scrollTrigger: {
-          pin: container.current,
-          trigger: box.current,
-          start: `top ${cardInfo.index * 1}%`,
-          endTrigger: '#third-inner-wrapper',
-          end: 'bottom bottom',
-          anticipatePin: 1,
-          toggleActions: 'play reverse play none'
-        }
-      });
-    }
-  })
 
 
   return (
@@ -599,8 +641,8 @@ const SuperCardBox = ({ cardInfo }) => {
         className='h-screen w-full justify-center items-center flex-1'
       >
         <div ref={container} id="container" className='h-full flex justify-center py-10 items-center'>
-          <div ref={contContent} id="container-content" className='translate-x-0 w-full flex justify-center backdrop-blur-sm items-center h-1/5 max-[500px]:h-auto bg-white/60 shadow-inner shadow-slate-400 rounded-xl'>
-            <h1 className='text-5xl max-[500px]:text-lg text-black max-[500px]:text-center font-medium max-[500px]:p-5 px-10 py-20'>{cardInfo.data}</h1>
+          <div ref={contContent} id="container-content" className='translate-x-0 w-full flex justify-center backdrop-blur-sm items-center h-1/5 max-[500px]:h-auto bg-slate-300/50 shadow-slate-400 rounded-xl'>
+            <h1 className='text-5xl max-[500px]:text-3xl text-black max-[500px]:text-center font-medium max-[500px]:p-5 px-10 py-20'>{cardInfo.data}</h1>
           </div>
         </div>
       </div>
