@@ -63,6 +63,7 @@ export default function Index() {
       textColor: 'text-[#0077b6]',
       headingColor: 'text-[#03045e]',
       heading: ['Build', 'Optimize', 'Deploy'],
+      description: "I build with intent, optimize for performance, and deploy with precision. Every project I take on is crafted to work well, run fast, and launch without friction. No fluff—just solid, thoughtful work that's built to make an impact.",
       imageSrc: "https://videos.openai.com/vg-assets/assets%2Ftask_01jrk2xjrhe7aawzkncgye6sqt%2Fimg_0.webp?st=2025-04-11T17%3A32%3A56Z&se=2025-04-17T18%3A32%3A56Z&sks=b&skt=2025-04-11T17%3A32%3A56Z&ske=2025-04-17T18%3A32%3A56Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=aa5ddad1-c91a-4f0a-9aca-e20682cc8969&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=pdp7%2FpXyT4R8k9vVLY1Ky7ZVM%2BvnFQrqXxC5LFWYvAw%3D&az=oaivgprodscus"
     },
     {
@@ -70,6 +71,7 @@ export default function Index() {
       textColor: 'text-[#8187dc]',
       headingColor: 'text-[#757bc8]',
       heading: ['Code', 'Integrate', 'Scale'],
+      description: "I write clean code, integrate systems smoothly, and scale solutions that grow with real needs. I care about long-term value—not just getting things to work, but making sure they work well, together, and over time.",
       imageSrc: "https://videos.openai.com/vg-assets/assets%2Ftask_01jrk35bv8e12sp31mjnkkej9e%2Fimg_0.webp?st=2025-04-11T17%3A44%3A36Z&se=2025-04-17T18%3A44%3A36Z&sks=b&skt=2025-04-11T17%3A44%3A36Z&ske=2025-04-17T18%3A44%3A36Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=aa5ddad1-c91a-4f0a-9aca-e20682cc8969&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=BGNyiJWn8MvekBFZWeO73KdTCvMCrmUN4MNb0Tm0OZQ%3D&az=oaivgprodscus"
     },
     {
@@ -77,7 +79,8 @@ export default function Index() {
       textColor: 'text-[#83b0e1]',
       headingColor: 'text-[#71a5de]',
       heading: ['Inspire', 'Design', 'Elevate'],
-      imageSrc: "https://videos.openai.com/vg-assets/assets%2Ftask_01jrjwwjvtfhgs5pdq2rb4810h%2Fimg_0.webp?st=2025-04-11T15%3A30%3A02Z&se=2025-04-17T16%3A30%3A02Z&sks=b&skt=2025-04-11T15%3A30%3A02Z&ske=2025-04-17T16%3A30%3A02Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=aa5ddad1-c91a-4f0a-9aca-e20682cc8969&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=K6eginhHuL%2BkvvNuJli4UxCQ4xFhYPnxiI7h%2BFIDEg8%3D&az=oaivgprodscus"
+      description: "I draw inspiration from the problem, the people, and the potential. I design with empathy, and develop with focus—balancing creativity and logic. Every decision is intentional, and every line of code has a purpose.",
+      imageSrc: "https://videos.openai.com/vg-assets/assets%2Ftask_01jrmadq77fvebhky3t9hvpb8j%2Fimg_0.webp?st=2025-04-12T05%3A20%3A04Z&se=2025-04-18T06%3A20%3A04Z&sks=b&skt=2025-04-12T05%3A20%3A04Z&ske=2025-04-18T06%3A20%3A04Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=aa5ddad1-c91a-4f0a-9aca-e20682cc8969&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=%2BH7kTmX8RVFXzAuPpCIRHW97s1YRW9W73osYUcfFhYw%3D&az=oaivgprodscus"
 
     },
     {
@@ -85,7 +88,8 @@ export default function Index() {
       textColor: 'text-[#52796f]',
       headingColor: 'text-[#2f3e46]',
       heading: ['Deploy', 'Scale', 'Secure'],
-      imageSrc: "https://videos.openai.com/vg-assets/assets%2Ftask_01jrjwwjvtfhgs5pdq2rb4810h%2Fimg_0.webp?st=2025-04-11T15%3A30%3A02Z&se=2025-04-17T16%3A30%3A02Z&sks=b&skt=2025-04-11T15%3A30%3A02Z&ske=2025-04-17T16%3A30%3A02Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=aa5ddad1-c91a-4f0a-9aca-e20682cc8969&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=K6eginhHuL%2BkvvNuJli4UxCQ4xFhYPnxiI7h%2BFIDEg8%3D&az=oaivgprodscus"
+      description: "I deploy with care, scale with foresight, and build security into every layer. Whether it’s a feature, a system, or a whole app, I aim for reliability and resilience from day one—because good tech should feel invisible when it’s working right.",
+      imageSrc: "https://videos.openai.com/vg-assets/assets%2Ftask_01jrmasfq5f7qsh7cfdjg7b6df%2Fimg_0.webp?st=2025-04-12T05%3A19%3A28Z&se=2025-04-18T06%3A19%3A28Z&sks=b&skt=2025-04-12T05%3A19%3A28Z&ske=2025-04-18T06%3A19%3A28Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=aa5ddad1-c91a-4f0a-9aca-e20682cc8969&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=JD39otB%2ByvwLVxS74hTzylX%2F3qfE24wRRRGTMogn27c%3D&az=oaivgprodscus"
     }
   ]
 
@@ -173,15 +177,15 @@ export default function Index() {
 
     content2.forEach((target, index) => {
       gsap.fromTo(target, {
-        y: 300,
+        y: -600,
         opacity: 0
       }, {
         y: 0,
         opacity: 1,
         scrollTrigger: {
           trigger: target,
-          start: 'top bottom',
-          end: 'center bottom',
+          start: 'top top',
+          end: 'bottom center',
           scrub: 1
         }
       })
@@ -200,8 +204,7 @@ export default function Index() {
           end: "bottom bottom",
           pinSpacing: false,
           pinReparent: false,
-          scrub: 1,
-          markers: true,
+          scrub: 1
         }
       });
     });
@@ -250,7 +253,7 @@ export default function Index() {
           }
         }}>
           <div id="image-content" className='p-32 max-[500px]:p-5 box-border h-screen max-[500px]:h-svh flex items-end relative z-10'>
-            <h1 className='text-7xl max-[500px]:text-3xl 3xl:text-5xl font-medium w-[50%] max-[500px]:w-full text-black 2k:text-8xl'>Creating pixel perfect implementations from design to development</h1>
+            <h1 className='text-7xl max-[500px]:text-3xl 3xl:w-1/2 font-medium w-[50%] max-[500px]:w-full text-black 2k:text-8xl'>Creating pixel perfect implementations from design to development</h1>
           </div>
         </AnimatedElement>
       </section>
@@ -372,19 +375,19 @@ export default function Index() {
             </div>
           </div>
 
-          <div id="third-wrapper" className={`relative h-[600lvh] max-[500px]:h-[800vh] w-full box-border overflow-hidden`}>
+          <div id="third-wrapper" className={`relative h-[600vh] w-full box-border overflow-hidden`}>
             <div ref={pinElement1} id="super-powers-heading" className='relative top-0 w-full left-0 h-screen max-[500px]:h-screen flex flex-col justify-center items-center'>
               <h1 className='text-[8vw] text-stone-700 font-bold max-[500px]:font-light max-[500px]:text-4xl text-center leading-tight'>What are my</h1>
               <h1 className='text-[8vw] max-[500px]:text-[20vw] text-stone-700 font-bold text-center leading-none'>Super Powers?</h1>
             </div>
-            <div id="third-inner-wrapper" className='absolute max-[500px]:top-[500px] h-auto max-[500px]:h-lvh box-border flex flex-row w-full'>
+            <div id="third-inner-wrapper" className='absolute max-[500px]:top-[800px] h-auto max-[500px]:h-lvh box-border flex flex-row w-full'>
               {/* <div id="super-power-card-data1" className='h-auto max-[500px]:absolute z-10 top-full box-border p-10 flex-1 flex flex-col justify-center items-center relative w-full'>
                 {superPowerData1.map((data, index) => {
                   return <SuperCardBox key={index} cardInfo={{ data, index }} />
                 })}
               </div> */}
-              <div id='super-power-card-wrapper' className='flex max-[500px]:pt-24 box-border w-full h-screen max-[500px]:h-[100vh] justify-center items-center top-0 flex-[2]'>
-                <div id="super-power-card" className='h-screen max-[500px]:h-[70%] w-full overflow-hidden justify-center items-center relative'>
+              <div id='super-power-card-wrapper' className='flex max-[500px]:pt-0 box-border w-full h-screen justify-center items-center top-0 flex-[2]'>
+                <div id="super-power-card" className='h-screen w-full overflow-hidden justify-center items-center relative'>
                   {superImageContent.map((data, index) => {
                     return <SuperImageContent key={index} data={data} index={index} />
                   })}
@@ -433,7 +436,7 @@ const WhyConsiderCards = ({ data, index }) => {
       className='h-[40vh] m-2 flex flex-col items-center justify-center max-[500px]:w-full w-[20vw]'
       style={{ alignSelf: getAlignment(index) }}
     >
-      <AnimatedElement id="why-consider-card-wrapper" className='h-full flex bg-slate-400/20 rounded-xl backdrop-blur-sm flex-col justify-between p-16 3xl:p-10' config={{
+      <AnimatedElement id="why-consider-card-wrapper" className='h-full flex bg-slate-400/20 rounded-xl backdrop-blur-sm flex-col justify-between p-16 max-[500px]:p-10 3xl:p-10' config={{
         from: {
           rotateY: 180,
         },
@@ -448,8 +451,8 @@ const WhyConsiderCards = ({ data, index }) => {
           end: 'bottom center'
         }
       }}>
-        <h1 className='text-4xl 2k:text-5xl 3xl:text-3xl max-[500px]:text-3xl font-bold'>{data.title}</h1>
-        <p className='text-2xl 2k:text-3xl 3xl:text-xl max-[500px]:text-xl opacity-75 font-light'>{data.description}</p>
+        <h1 className='text-4xl 2k:text-5xl max-[500px]:text-3xl font-bold'>{data.title}</h1>
+        <p className='text-2xl 2k:text-3xl max-[500px]:text-xl opacity-75 font-light'>{data.description}</p>
       </AnimatedElement>
     </div>
   )
@@ -595,18 +598,18 @@ const MeImages = ({ title, img, number, color }) => {
 const SuperImageContent = ({ data, index }) => {
 
   return (
-    <div id="image-wrapper" className={`super-image flex p-10 bg-white/30 backdrop-blur-sm max-[500px]:p-5 border-black-600/50 border-t-[10px] super-image top-0 translate-y-[${index * 200}%] relative box-border w-full h-screen overflow-hidden`}>
-      <div id="content-wrapper" className='w-full flex flex-row justify-around'>
-        <div id="content-1" className='flex-1 flex flex-col items-start justify-start'>
+    <div id="image-wrapper" className={`super-image flex p-10 bg-white/80 backdrop-blur-md max-[500px]:p-0 border-black-600/50 border-t-[10px] top-0 translate-y-[${index * 200}%] relative box-border w-full h-screen overflow-hidden`}>
+      <div id="content-wrapper" className='w-full flex flex-row max-[500px]:flex-col p-16 max-[500px]:py-20 max-[500px]:px-10 justify-around'>
+        <div id="content-1" className='flex-1 flex flex-col items-start justify-start max-[500px]:z-10'>
           {data.heading.map((heading) => {
-            return <h1 key={index} className={`text-8xl w-1/2 text-${data.headingColor}-500`}>{heading}</h1>
+            return <h1 key={index} className={`text-8xl max-[500px]:text-5xl font-bold w-1/2 max-[500px]:w-full max-[500px]:text-white text-${data.headingColor}-500`}>{heading}</h1>
           })}
         </div>
-        <div id="content-2" className='flex-[1.5] w-full h-full overflow-hidden'>
+        <div id="content-2" className='flex-[1.5] max-[500px]:flex-[2] w-full h-full overflow-hidden'>
           <div id="image-wrapper" className='w-auto flex items-center justify-center h-full'>
             <Image
               id="content-2-image"
-              className='w-auto h-full object-cover rounded-3xl'
+              className='w-auto h-full max-[500px]:h-full max-[500px]:w-auto object-cover rounded-3xl max-[500px]:absolute max-[500px]:rounded-none max-[500px]:contrast-50'
               quality={100}
               src={data.imageSrc}
               width={10000}
@@ -616,7 +619,8 @@ const SuperImageContent = ({ data, index }) => {
             />
           </div>
         </div>
-        <div id="content-3" className='flex-1'>
+        <div id="content-3" className='flex-1 flex items-end justify-end max-[500px]:justify-start max-[500px]:z-10'>
+          <p className='text-4xl max-[500px]:text-white max-[500px]:text-xl text-black'>{data.description}</p>
         </div>
       </div>
     </div>
