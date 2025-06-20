@@ -48,7 +48,7 @@ export default function Index() {
       headingColor: 'text-[#03045e]',
       heading: ['Build', 'Optimize', 'Deploy'],
       description: "I build with intent, optimize for performance, and deploy with precision. Every project I take on is crafted to work well, run fast, and launch without friction. No fluff—just solid, thoughtful work that's built to make an impact.",
-      imageSrc: "https://videos.openai.com/vg-assets/assets%2Ftask_01jrk2xjrhe7aawzkncgye6sqt%2Fimg_0.webp?st=2025-04-11T17%3A32%3A56Z&se=2025-04-17T18%3A32%3A56Z&sks=b&skt=2025-04-11T17%3A32%3A56Z&ske=2025-04-17T18%3A32%3A56Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=aa5ddad1-c91a-4f0a-9aca-e20682cc8969&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=pdp7%2FpXyT4R8k9vVLY1Ky7ZVM%2BvnFQrqXxC5LFWYvAw%3D&az=oaivgprodscus"
+      imageSrc: "/Build.png"
     },
     {
       bgColor: 'bg-[#e0c3fc]',
@@ -56,7 +56,7 @@ export default function Index() {
       headingColor: 'text-[#757bc8]',
       heading: ['Code', 'Integrate', 'Scale'],
       description: "I write clean code, integrate systems smoothly, and scale solutions that grow with real needs. I care about long-term value—not just getting things to work, but making sure they work well, together, and over time.",
-      imageSrc: "https://videos.openai.com/vg-assets/assets%2Ftask_01jrk35bv8e12sp31mjnkkej9e%2Fimg_0.webp?st=2025-04-11T17%3A44%3A36Z&se=2025-04-17T18%3A44%3A36Z&sks=b&skt=2025-04-11T17%3A44%3A36Z&ske=2025-04-17T18%3A44%3A36Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=aa5ddad1-c91a-4f0a-9aca-e20682cc8969&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=BGNyiJWn8MvekBFZWeO73KdTCvMCrmUN4MNb0Tm0OZQ%3D&az=oaivgprodscus"
+      imageSrc: "/Code.png"
     },
     {
       bgColor: 'bg-[#e1ecf7]',
@@ -64,7 +64,7 @@ export default function Index() {
       headingColor: 'text-[#71a5de]',
       heading: ['Inspire', 'Design', 'Elevate'],
       description: "I draw inspiration from the problem, the people, and the potential. I design with empathy, and develop with focus—balancing creativity and logic. Every decision is intentional, and every line of code has a purpose.",
-      imageSrc: "https://videos.openai.com/vg-assets/assets%2Ftask_01jrmadq77fvebhky3t9hvpb8j%2Fimg_0.webp?st=2025-04-12T05%3A20%3A04Z&se=2025-04-18T06%3A20%3A04Z&sks=b&skt=2025-04-12T05%3A20%3A04Z&ske=2025-04-18T06%3A20%3A04Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=aa5ddad1-c91a-4f0a-9aca-e20682cc8969&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=%2BH7kTmX8RVFXzAuPpCIRHW97s1YRW9W73osYUcfFhYw%3D&az=oaivgprodscus"
+      imageSrc: "/Inspire.png"
 
     },
     {
@@ -73,7 +73,7 @@ export default function Index() {
       headingColor: 'text-[#2f3e46]',
       heading: ['Deploy', 'Scale', 'Secure'],
       description: "I deploy with care, scale with foresight, and build security into every layer. Whether it’s a feature, a system, or a whole app, I aim for reliability and resilience from day one—because good tech should feel invisible when it’s working right.",
-      imageSrc: "https://videos.openai.com/vg-assets/assets%2Ftask_01jrmasfq5f7qsh7cfdjg7b6df%2Fimg_0.webp?st=2025-04-12T05%3A19%3A28Z&se=2025-04-18T06%3A19%3A28Z&sks=b&skt=2025-04-12T05%3A19%3A28Z&ske=2025-04-18T06%3A19%3A28Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=aa5ddad1-c91a-4f0a-9aca-e20682cc8969&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=JD39otB%2ByvwLVxS74hTzylX%2F3qfE24wRRRGTMogn27c%3D&az=oaivgprodscus"
+      imageSrc: "/Deploy.png"
     }
   ]
 
@@ -586,25 +586,25 @@ const SuperImageContent = ({ data, index }) => {
       <div id="content-wrapper" className='w-full flex flex-row max-[500px]:flex-col p-16 max-[500px]:py-20 max-[500px]:px-10 justify-around'>
         <div id="content-1" className='flex-1 flex flex-col items-start justify-start max-[500px]:z-10'>
           {data.heading.map((heading) => {
-            return <h1 key={index} className={`text-8xl max-[500px]:text-5xl font-bold w-1/2 max-[500px]:w-full max-[500px]:text-white text-${data.headingColor}-500`}>{heading}</h1>
+            return <h1 key={index} className={`text-8xl max-[500px]:text-6xl font-bold w-1/2 max-[500px]:w-full text-${data.headingColor}-500`}>{heading}</h1>
           })}
         </div>
-        <div id="content-2" className='flex-[1.5] max-[500px]:flex-[2] w-full h-full overflow-hidden'>
+        {/* <div id="content-2" className='flex-[1.5] max-[500px]:flex-[2] w-full h-full overflow-hidden'>
           <div id="image-wrapper" className='w-auto flex items-center justify-center h-full'>
             <Image
               id="content-2-image"
               className='w-auto h-full max-[500px]:h-full max-[500px]:w-auto object-cover rounded-3xl max-[500px]:absolute max-[500px]:rounded-none max-[500px]:contrast-50'
               quality={100}
-              src={data.imageSrc}
+              src={data.image}
               width={10000}
               height={10000}
               alt=""
               priority
             />
           </div>
-        </div>
+        </div> */}
         <div id="content-3" className='flex-1 flex items-end justify-end max-[500px]:justify-start max-[500px]:z-10'>
-          <p className='text-4xl max-[500px]:text-white max-[500px]:text-xl text-black'>{data.description}</p>
+          <p className='text-4xl max-[500px]:text-xl text-black'>{data.description}</p>
         </div>
       </div>
     </div>
