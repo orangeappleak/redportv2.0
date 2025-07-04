@@ -173,7 +173,7 @@ const IntroPage = () => {
           scrub: 0.2,
         }
       }}>
-        <Image src={'/me1.jpg'} width={1000} height={1000} className="rounded-3xl w-1/2 max-[500px]:w-full rotate-[-90deg]" alt="me-image" loading="lazy" />
+        <Image src={'/me1.jpg'} width={1000} height={1000} className="rounded-3xl w-1/2 max-[500px]:w-full rotate-[0deg]" alt="me-image" loading="lazy" />
       </AnimatedElement>
     </div>
   </section >
@@ -255,7 +255,7 @@ const About = () => {
 
   useEffect(() => {
     if (!bodyRef?.current || !st) return;
-    
+
     // Pin the heading section
     st.create({
       trigger: headingRef.current,
@@ -314,11 +314,11 @@ const AboutCard = ({ id, index, heading, content }) => {
 
   useEffect(() => {
     if (!bodyRef?.current || !st) return;
-    
+
     const startPos = bodyRef.current.querySelector('#curly-heading').offsetHeight;
     const card = cardRef.current;
     const container = containerRef.current;
-    
+
     if (card && container) {
       // Set fixed container dimensions
       gsap.set(container, {
@@ -327,7 +327,7 @@ const AboutCard = ({ id, index, heading, content }) => {
         width: '100%',
         overflow: 'hidden'
       });
-      
+
       // Set fixed card dimensions
       gsap.set(card, {
         position: 'absolute',
@@ -340,7 +340,7 @@ const AboutCard = ({ id, index, heading, content }) => {
         zIndex: 1000 - index
       });
     }
-    
+
     st.create({
       trigger: bodyRef.current.querySelector(`#about-page #${id}`),
       pin: true,
